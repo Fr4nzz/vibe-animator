@@ -1,0 +1,38 @@
+# dependencies
+node_modules/
+
+# render outputs and scratch (per episode and in the template)
+renders/
+work/
+shorts/raw/
+shorts/ass/
+**/engine/audio/*
+!**/engine/audio/.gitkeep
+dist/
+
+# media: large binaries stay out of git (tiny fixtures may be force-added)
+*.mp4
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.m4a
+*.webm
+
+# secrets and tokens (never commit)
+*.env
+.env*
+*.secret*
+*.key
+*token*.json
+*credentials*.json
+upload_session*.json
+
+# python / os
+__pycache__/
+*.pyc
+.DS_Store
+
+# optional local tool deps (tools/refart.py: uv venv tools/.venv)
+.venv/
+doi_cache.jsonl

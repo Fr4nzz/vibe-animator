@@ -1,0 +1,36 @@
+{
+  "id": "my-episode",
+  "title": "My episode",
+  "language": "en",
+  "voice": {
+    "provider": "elevenlabs",
+    "voice_id": "",
+    "voice_id_env": "ELEVENLABS_VOICE_ID",
+    "model": "eleven_multilingual_v2",
+    "api_key_env": "ELEVENLABS_API_KEY",
+    "pronounce": {},
+    "tempo": 1.0,
+    "gap": 0.3,
+    "chapter_gap": 0.9
+  },
+  "captions": {
+    "numbers": "none",
+    "acronyms": {},
+    "fixes": []
+  },
+  "render": {
+    "lock": "/tmp/vibe-animator-render.lock",
+    "min_free_gb": 3,
+    "gpu_env": {
+      "DRI_PRIME": "1"
+    },
+    "private_ports": [
+      5600,
+      5900
+    ],
+    "review_dir": null
+  },
+  "shorts": {
+    "brand_line": "MY SERIES"
+  }
+}

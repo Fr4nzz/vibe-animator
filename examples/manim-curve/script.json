@@ -1,0 +1,13 @@
+{
+ "title": "A curve that changes its power",
+ "chapters": [
+  {
+   "id": "C0",
+   "title": "A curve that changes its power",
+   "lines": [
+    {"id": "C0-L1", "text": "First the axes. Then the curve: y equals x squared. Now raise the power, and it bends into x cubed.", "refs": [],
+     "visual": "manim-web layer: axes draw in, y = x^2 is created, then the MathTex and the graph transform to x^3."}
+   ]
+  }
+ ]
+}

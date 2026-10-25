@@ -1,0 +1,23 @@
+{
+ "kind": "raster",
+ "png": "kidney_trace.png",
+ "w": 953,
+ "h": 1600,
+ "source": "kidney_clean.png",
+ "params": {
+  "mode": "xdog",
+  "scale": 2.286,
+  "levels": [
+   0.05,
+   0.95
+  ],
+  "sigma": 0.907,
+  "k": 1.6,
+  "p": 6.0,
+  "eps": 0.5,
+  "phi": 6.0,
+  "despeckle": 4
+ },
+ "engine": "rasterArt('refs/kidney_trace.png', null, 'bone') on ink plates, 'ink' on bone plates (alpha = darkness)",
+ "dark_fraction": 0.156
+}

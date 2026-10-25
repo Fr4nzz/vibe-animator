@@ -1,0 +1,9 @@
+{
+  "id": "manim-curve",
+  "title": "A curve that changes its power",
+  "language": "en",
+  "voice": {"provider": "elevenlabs", "voice_id": "", "model": "eleven_multilingual_v2", "tempo": 1.0, "gap": 0.3, "chapter_gap": 0.9},
+  "captions": {"numbers": "none", "acronyms": {}, "fixes": []},
+  "render": {"min_free_gb": 3, "gpu_env": {"DRI_PRIME": "1"}, "review_dir": null},
+  "shorts": {"brand_line": "VIBE-ANIMATOR · EXAMPLE"}
+}

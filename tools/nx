@@ -1,0 +1,76 @@
+#!/usr/bin/env bash
+# nx: one entry point for the pipeline.   tools/nx <command> <episode-dir> [args…]
+#   new <dest> [--id x --title "…" --script s.json] [--fake-vo] [--port N] [--no-dev] [--selftest]
+#              one-call scaffold: init + install + (voice data, captions, packs) + kit index + dev server  (tools/new_episode.py)
+#   init <dest> [--id x --title "…" --language en --script s.json --install]   bare episode from the template
+#   check      validate script.json, write SCRIPT.md                (tools/check_script.py)
+#   vo         TTS narration -> vo/voice.wav + timing.json          (tools/make_vo.py; needs a TTS key)
+#   fake-vo    estimated timings + silent track, no key             (tools/fake_vo.py [--wpm 160] [--tone])
+#   data       timing.json -> engine/data/*.json + engine/audio     (tools/make_engine_data.py)
+#   captions   caption chunks for the engine                        (tools/make_captions.py)
+#   prep       check + data + captions (run vo or fake-vo first)
+#   dev [port] Vite dev server for the episode engine (default port 5730; HMR on)
+#   qa         layout QA report        (engine/app/scripts/qa.ts [--chapter C3] [--url …])
+#   sheet C3   QA contact sheet PNG    (qa.ts --sheet C3)
+#   render     chapter clips + their Shorts (make_shorts.py --plan, then render_chapter.ts C3 … | --all-pending [--jobs 2] [--dry-run])
+#   wait-renders [--timeout s]  block until the render queue is done and nothing is pending (exit 0 = done; no pgrep)
+#   grid [C3 …|--all]  post-render stills grid per chapter clip (engine/work/renders/<CH>.grid.jpg)
+#   cleanup [--yes]    after the upload is verified: delete chapter clips + engine/work (dry run by default)
+#   stills     PNG stills              (engine/app/scripts/render.ts stills --t 1.5,4 [--only c0])
+#   encode     raw encoder             (engine/app/scripts/encode.ts --from a --to b --out f.mp4)
+#   assemble   join clips + narration -> renders/<id>_full.mp4
+#   shorts     Shorts the chapter pass did not make (tools/make_shorts.py [S01 …] [--separate])
+#   srt        publish/subtitles.<lang>.srt
+#   quote-budget [--timing]  translation-panel budget of public/papers/**/quotes.json   (tools/quote_budget.py)
+#   pron "a line"  how the TTS will say a line (voice.pronounce)                      (tools/pron.py)
+#   packs      per-chapter build packs packs/C<N>.md for scene builders            (tools/new_episode.py --packs)
+#   verify-fresh <file…>  receipts: fail if any input of a clip/master/Short changed (tools/receipts.py)
+#   typecheck  tsc on the episode engine (src and scripts); scene files only: typecheck <file|c3 …> or --chapter C3
+#   kit [show <name>]  KIT_INDEX.md of the scene kits, or one export's source   (engine/app/scripts/kit_index.ts)
+# No episode needed:  refart find|clean|trace …  (tools/refart.py)   fetch-ref URL -o FILE  (tools/fetch_ref.py)
+#                     doi check <file|DOI …>  cached DOI verification     (tools/doi_cache.py)
+# Browser commands (qa, sheet, render, stills, encode, shorts) take the shared render lock themselves.
+set -euo pipefail
+here="$(cd "$(dirname "$0")" && pwd)"
+usage() { sed -n 2,32p "$0"; exit 2; }
+[ $# -ge 1 ] || usage
+cmd=$1; shift
+if [ "$cmd" = init ]; then exec python3 "$here/init_episode.py" "$@"; fi
+if [ "$cmd" = new ]; then exec python3 "$here/new_episode.py" "$@"; fi
+if [ "$cmd" = doi ]; then exec python3 "$here/doi_cache.py" "$@"; fi
+if [ "$cmd" = refart ]; then exec python3 "$here/refart.py" "$@"; fi
+if [ "$cmd" = fetch-ref ]; then exec python3 "$here/fetch_ref.py" "$@"; fi
+[ $# -ge 1 ] || usage
+ep="$(cd "$1" && pwd)"; shift
+[ -f "$ep/episode.json" ] || { echo "no episode.json in $ep"; exit 2; }
+app="$ep/engine/app"
+py() { python3 "$here/$1" "$ep" "${@:2}"; }
+case $cmd in
+  check) py check_script.py "$@" ;;
+  kit) cd "$app"; if [ "${1:-}" = show ] || [ "${1:-}" = list ]; then exec bun scripts/kit_index.ts "$@"; else exec bun scripts/kit_index.ts --out KIT_INDEX.md "$@"; fi ;;
+  vo) py make_vo.py "$@" ;;
+  fake-vo) py fake_vo.py "$@" ;;
+  data) py make_engine_data.py "$@" ;;
+  captions) py make_captions.py "$@" ;;
+  prep) py check_script.py && py make_engine_data.py && py make_captions.py ;;
+  dev) cd "$app"; exec bunx vite --port "${1:-5730}" --strictPort ;;
+  qa) cd "$app"; exec bun scripts/qa.ts "$@" ;;
+  sheet) c=$1; shift; cd "$app"; exec bun scripts/qa.ts --sheet "$c" "$@" ;;
+  # (the Shorts plan first, so each chapter pass also makes its Shorts; no `short` markers: no plan, no Shorts)
+  render) if [[ " $* " != *" --no-shorts "* && " $* " != *" --dry-run "* ]]; then python3 "$here/make_shorts.py" "$ep" --plan >/dev/null 2>&1 || true; fi
+          cd "$app"; exec bun scripts/render_chapter.ts "$@" ;;
+  wait-renders) exec python3 "$here/wait_renders.py" "$ep" "$@" ;;
+  grid) cd "$app"; if [ $# -eq 0 ]; then set -- --all; fi; exec bun scripts/grid.ts "$@" ;;
+  cleanup) exec python3 "$here/cleanup.py" "$ep" "$@" ;;
+  stills) cd "$app"; exec bun scripts/render.ts stills "$@" ;;
+  encode) cd "$app"; exec bun scripts/encode.ts "$@" ;;
+  assemble) py assemble.py "$@" ;;
+  shorts) py make_shorts.py "$@" ;;
+  srt) py make_srt.py "$@" ;;
+  quote-budget) py quote_budget.py "$@" ;;
+  pron) py pron.py "$@" ;;
+  packs) py new_episode.py --packs "$@" ;;
+  verify-fresh) exec python3 "$here/receipts.py" verify-fresh --base "$ep" "$@" ;;
+  typecheck) cd "$app"; if [ $# -gt 0 ]; then exec bun scripts/typecheck.ts "$@"; fi; bunx tsc --noEmit -p tsconfig.json && bunx tsc --noEmit -p tsconfig.scripts.json && echo "typecheck ok" ;;
+  *) usage ;;
+esac

@@ -1,0 +1,27 @@
+{
+ "title": "How a candle burns",
+ "chapters": [
+  {
+   "id": "C0",
+   "title": "The flame",
+   "lines": [
+    {"id": "C0-L1", "text": "A candle flame looks like it burns the wick. It does not.", "refs": [],
+     "visual": "Engraved candle on ink; the flame glows; a leader names the wick, then a stamp says NOT THE WICK."},
+    {"id": "C0-L2", "text": "The heat melts the wax, the wick draws the liquid up, and the flame burns wax vapour, a few millimetres above the wick.", "refs": [],
+     "visual": "Camera pushes in: a melt pool, an arrow up the wick, and a hatched vapour zone just above it."}
+   ]
+  },
+  {
+   "id": "C1",
+   "title": "Where the wax goes",
+   "lines": [
+    {"id": "C1-L1", "text": "Each gram of wax meets oxygen from the air and leaves as two invisible gases: carbon dioxide and water vapour.", "refs": [],
+     "visual": "Bone paper: WAX + OXYGEN, arrows to two gases, all inside the Shorts square.",
+     "short": {"id": "S01", "hook_title": "Where does a candle go?", "edge": "start"}},
+    {"id": "C1-L2", "text": "So the candle does not vanish. It turns into air you cannot see.", "refs": [],
+     "visual": "The two gases rise and fade; one serif line closes the plate.",
+     "short": {"id": "S01", "hook_title": "Where does a candle go?", "edge": "end"}}
+   ]
+  }
+ ]
+}

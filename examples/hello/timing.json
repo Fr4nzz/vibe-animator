@@ -1,0 +1,425 @@
+{
+ "total": 31.72,
+ "chapters": [
+  {
+   "id": "C0",
+   "title": "The flame",
+   "start": 0.5,
+   "end": 15.83,
+   "lines": [
+    {
+     "id": "C0-L1",
+     "start": 0.5,
+     "end": 5.777,
+     "text": "A candle flame looks like it burns the wick. It does not.",
+     "display": "A candle flame looks like it burns the wick. It does not.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Engraved candle on ink; the flame glows; a leader names the wick, then a stamp says NOT THE WICK.",
+     "words": [
+      {
+       "w": "A",
+       "s": 0.5,
+       "e": 0.68
+      },
+      {
+       "w": "candle",
+       "s": 0.72,
+       "e": 1.307
+      },
+      {
+       "w": "flame",
+       "s": 1.347,
+       "e": 1.836
+      },
+      {
+       "w": "looks",
+       "s": 1.876,
+       "e": 2.365
+      },
+      {
+       "w": "like",
+       "s": 2.405,
+       "e": 2.797
+      },
+      {
+       "w": "it",
+       "s": 2.837,
+       "e": 3.032
+      },
+      {
+       "w": "burns",
+       "s": 3.072,
+       "e": 3.561
+      },
+      {
+       "w": "the",
+       "s": 3.601,
+       "e": 3.895
+      },
+      {
+       "w": "wick.",
+       "s": 3.935,
+       "e": 4.326
+      },
+      {
+       "w": "It",
+       "s": 4.546,
+       "e": 4.742
+      },
+      {
+       "w": "does",
+       "s": 4.782,
+       "e": 5.173
+      },
+      {
+       "w": "not.",
+       "s": 5.213,
+       "e": 5.507
+      }
+     ]
+    },
+    {
+     "id": "C0-L2",
+     "start": 6.077,
+     "end": 15.83,
+     "text": "The heat melts the wax, the wick draws the liquid up, and the flame burns wax vapour, a few millimetres above the wick.",
+     "display": "The heat melts the wax, the wick draws the liquid up, and the flame burns wax vapour, a few millimetres above the wick.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Camera pushes in: a melt pool, an arrow up the wick, and a hatched vapour zone just above it.",
+     "words": [
+      {
+       "w": "The",
+       "s": 6.077,
+       "e": 6.344
+      },
+      {
+       "w": "heat",
+       "s": 6.384,
+       "e": 6.739
+      },
+      {
+       "w": "melts",
+       "s": 6.779,
+       "e": 7.224
+      },
+      {
+       "w": "the",
+       "s": 7.264,
+       "e": 7.531
+      },
+      {
+       "w": "wax,",
+       "s": 7.571,
+       "e": 7.838
+      },
+      {
+       "w": "the",
+       "s": 7.958,
+       "e": 8.224
+      },
+      {
+       "w": "wick",
+       "s": 8.264,
+       "e": 8.62
+      },
+      {
+       "w": "draws",
+       "s": 8.66,
+       "e": 9.105
+      },
+      {
+       "w": "the",
+       "s": 9.145,
+       "e": 9.411
+      },
+      {
+       "w": "liquid",
+       "s": 9.451,
+       "e": 9.985
+      },
+      {
+       "w": "up,",
+       "s": 10.025,
+       "e": 10.205
+      },
+      {
+       "w": "and",
+       "s": 10.325,
+       "e": 10.592
+      },
+      {
+       "w": "the",
+       "s": 10.632,
+       "e": 10.898
+      },
+      {
+       "w": "flame",
+       "s": 10.938,
+       "e": 11.383
+      },
+      {
+       "w": "burns",
+       "s": 11.423,
+       "e": 11.867
+      },
+      {
+       "w": "wax",
+       "s": 11.907,
+       "e": 12.174
+      },
+      {
+       "w": "vapour,",
+       "s": 12.214,
+       "e": 12.748
+      },
+      {
+       "w": "a",
+       "s": 12.868,
+       "e": 13.048
+      },
+      {
+       "w": "few",
+       "s": 13.088,
+       "e": 13.354
+      },
+      {
+       "w": "millimetres",
+       "s": 13.394,
+       "e": 14.373
+      },
+      {
+       "w": "above",
+       "s": 14.413,
+       "e": 14.857
+      },
+      {
+       "w": "the",
+       "s": 14.897,
+       "e": 15.164
+      },
+      {
+       "w": "wick.",
+       "s": 15.204,
+       "e": 15.56
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C1",
+   "title": "Where the wax goes",
+   "start": 16.73,
+   "end": 31.122,
+   "lines": [
+    {
+     "id": "C1-L1",
+     "start": 16.73,
+     "end": 25.205,
+     "text": "Each gram of wax meets oxygen from the air and leaves as two invisible gases: carbon dioxide and water vapour.",
+     "display": "Each gram of wax meets oxygen from the air and leaves as two invisible gases: carbon dioxide and water vapour.",
+     "refs": [],
+     "short": {
+      "id": "S01",
+      "hook_title": "Where does a candle go?",
+      "edge": "start"
+     },
+     "hold": 0,
+     "visual": "Bone paper: WAX + OXYGEN, arrows to two gases, all inside the Shorts square.",
+     "words": [
+      {
+       "w": "Each",
+       "s": 16.73,
+       "e": 17.06
+      },
+      {
+       "w": "gram",
+       "s": 17.1,
+       "e": 17.429
+      },
+      {
+       "w": "of",
+       "s": 17.469,
+       "e": 17.649
+      },
+      {
+       "w": "wax",
+       "s": 17.689,
+       "e": 17.937
+      },
+      {
+       "w": "meets",
+       "s": 17.977,
+       "e": 18.389
+      },
+      {
+       "w": "oxygen",
+       "s": 18.429,
+       "e": 18.923
+      },
+      {
+       "w": "from",
+       "s": 18.963,
+       "e": 19.293
+      },
+      {
+       "w": "the",
+       "s": 19.333,
+       "e": 19.58
+      },
+      {
+       "w": "air",
+       "s": 19.62,
+       "e": 19.867
+      },
+      {
+       "w": "and",
+       "s": 19.907,
+       "e": 20.155
+      },
+      {
+       "w": "leaves",
+       "s": 20.195,
+       "e": 20.689
+      },
+      {
+       "w": "as",
+       "s": 20.729,
+       "e": 20.909
+      },
+      {
+       "w": "two",
+       "s": 20.949,
+       "e": 21.196
+      },
+      {
+       "w": "invisible",
+       "s": 21.236,
+       "e": 21.978
+      },
+      {
+       "w": "gases:",
+       "s": 22.018,
+       "e": 22.43
+      },
+      {
+       "w": "carbon",
+       "s": 22.55,
+       "e": 23.045
+      },
+      {
+       "w": "dioxide",
+       "s": 23.085,
+       "e": 23.662
+      },
+      {
+       "w": "and",
+       "s": 23.702,
+       "e": 23.949
+      },
+      {
+       "w": "water",
+       "s": 23.989,
+       "e": 24.401
+      },
+      {
+       "w": "vapour.",
+       "s": 24.441,
+       "e": 24.935
+      }
+     ]
+    },
+    {
+     "id": "C1-L2",
+     "start": 25.505,
+     "end": 31.122,
+     "text": "So the candle does not vanish. It turns into air you cannot see.",
+     "display": "So the candle does not vanish. It turns into air you cannot see.",
+     "refs": [],
+     "short": {
+      "id": "S01",
+      "hook_title": "Where does a candle go?",
+      "edge": "end"
+     },
+     "hold": 0,
+     "visual": "The two gases rise and fade; one serif line closes the plate.",
+     "words": [
+      {
+       "w": "So",
+       "s": 25.505,
+       "e": 25.693
+      },
+      {
+       "w": "the",
+       "s": 25.733,
+       "e": 26.014
+      },
+      {
+       "w": "candle",
+       "s": 26.054,
+       "e": 26.616
+      },
+      {
+       "w": "does",
+       "s": 26.656,
+       "e": 27.031
+      },
+      {
+       "w": "not",
+       "s": 27.071,
+       "e": 27.353
+      },
+      {
+       "w": "vanish.",
+       "s": 27.393,
+       "e": 27.955
+      },
+      {
+       "w": "It",
+       "s": 28.175,
+       "e": 28.362
+      },
+      {
+       "w": "turns",
+       "s": 28.402,
+       "e": 28.871
+      },
+      {
+       "w": "into",
+       "s": 28.911,
+       "e": 29.286
+      },
+      {
+       "w": "air",
+       "s": 29.326,
+       "e": 29.608
+      },
+      {
+       "w": "you",
+       "s": 29.648,
+       "e": 29.929
+      },
+      {
+       "w": "cannot",
+       "s": 29.969,
+       "e": 30.531
+      },
+      {
+       "w": "see.",
+       "s": 30.571,
+       "e": 30.853
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "fake": {
+  "wpm": 160.0,
+  "note": "estimated timings from tools/fake_vo.py; not a real narration"
+ }
+}

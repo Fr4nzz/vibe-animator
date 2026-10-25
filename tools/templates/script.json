@@ -1,0 +1,12 @@
+{
+  "title": "My episode",
+  "chapters": [
+    {
+      "id": "C0",
+      "title": "Opening",
+      "lines": [
+        {"id": "C0-L1", "text": "First narrated sentence of the episode.", "refs": [], "visual": "What the viewer sees while this line is spoken."}
+      ]
+    }
+  ]
+}

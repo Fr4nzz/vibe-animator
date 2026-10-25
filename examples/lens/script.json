@@ -1,0 +1,27 @@
+{
+ "title": "How a lens focuses light",
+ "chapters": [
+  {
+   "id": "C0",
+   "title": "Bending light",
+   "lines": [
+    {"id": "C0-L1", "text": "Light travels in straight lines, until it enters glass.", "refs": [],
+     "visual": "Ink plate: five parallel rays cross from the left and meet the hairline outline of a convex lens."},
+    {"id": "C0-L2", "text": "Glass slows it down, so every ray bends toward the thick middle, and they all cross at one point: the focus.", "refs": [],
+     "visual": "The rays refract at the lens and converge; the focal point is the one glowing thing (signal layer)."}
+   ]
+  },
+  {
+   "id": "C1",
+   "title": "The lens equation",
+   "lines": [
+    {"id": "C1-L1", "text": "Move the object closer, and its image moves away.", "refs": [],
+     "visual": "Bone paper, inside the Shorts square: an object arrow slides toward the lens and its inverted image slides out.",
+     "short": {"id": "S01", "hook_title": "Why a lens has one focus", "edge": "start"}},
+    {"id": "C1-L2", "text": "One short equation predicts exactly where the image lands.", "refs": [],
+     "visual": "manim-web layer: the thin-lens equation is written in, 1/f = 1/d_o + 1/d_i.",
+     "short": {"id": "S01", "hook_title": "Why a lens has one focus", "edge": "end"}}
+   ]
+  }
+ ]
+}

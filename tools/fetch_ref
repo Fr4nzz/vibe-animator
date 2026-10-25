@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+# fetch_ref: the only way agents download external assets (fixed project User-Agent, polite per-host spacing,
+# refuses emails in the UA or URL). See tools/fetch_ref.py for options.
+exec python3 "$(dirname "$0")/fetch_ref.py" "$@"
