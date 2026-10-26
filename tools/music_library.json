@@ -1,0 +1,30 @@
+{
+ "about": "Demo mood library for tools/music.py (library mode). Only the manifest is in git: `tools/nx music <episode> fetch` (or `python3 tools/music.py fetch`) downloads the files into ~/.cache/vibe-animator/music/ and checks each sha256. All tracks: Kevin MacLeod (incompetech.com), CC BY 4.0; the credit lines below must go in the video description (music.py writes them to <episode>/music/CREDITS.txt). See THIRD_PARTY.md.",
+ "tracks": [
+  {"id": "dreamy-flashback", "mood": "wonder", "title": "Dreamy Flashback", "artist": "Kevin MacLeod",
+   "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Dreamy%20Flashback.mp3",
+   "sha256": "e63abdb9bcadadb48945760a06ccd56f7fe17207a940729cb9bc806bac636473", "duration": 126.62, "lufs": -15.4,
+   "license": "CC BY 4.0", "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "credit": "Dreamy Flashback Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0\nhttps://creativecommons.org/licenses/by/4.0/"},
+  {"id": "lightless-dawn", "mood": "struggle", "title": "Lightless Dawn", "artist": "Kevin MacLeod",
+   "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Lightless%20Dawn.mp3",
+   "sha256": "59fd69e4432c95887d626e8055113da8fb0da9a8ccac85c6b7da6a6031c4f325", "duration": 379.85, "lufs": -24.3,
+   "license": "CC BY 4.0", "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "credit": "Lightless Dawn Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0\nhttps://creativecommons.org/licenses/by/4.0/"},
+  {"id": "darkling", "mood": "tension", "title": "Darkling", "artist": "Kevin MacLeod",
+   "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Darkling.mp3",
+   "sha256": "71fcef204297b7cdbfd85b287687ab32cba65f08dd4d2f66299a041f370ac945", "duration": 169.77, "lufs": -9.8,
+   "license": "CC BY 4.0", "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "credit": "Darkling Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0\nhttps://creativecommons.org/licenses/by/4.0/"},
+  {"id": "inspired", "mood": "hope", "title": "Inspired", "artist": "Kevin MacLeod",
+   "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Inspired.mp3",
+   "sha256": "40b1af74145cedac77814d060155ad4658e04efa14d1b649decedc98fbb25f69", "duration": 286.07, "lufs": -12.8,
+   "license": "CC BY 4.0", "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "credit": "Inspired Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0\nhttps://creativecommons.org/licenses/by/4.0/"},
+  {"id": "wholesome", "mood": "resolution", "title": "Wholesome", "artist": "Kevin MacLeod",
+   "url": "https://incompetech.com/music/royalty-free/mp3-royaltyfree/Wholesome.mp3",
+   "sha256": "9eadc79a1a2cb68cd63be1432ebf8f8ae3387cb9d2e85f9b8dbc74ba5a96b231", "duration": 363.81, "lufs": -16.5,
+   "license": "CC BY 4.0", "license_url": "https://creativecommons.org/licenses/by/4.0/",
+   "credit": "Wholesome Kevin MacLeod (incompetech.com)\nLicensed under Creative Commons: By Attribution 4.0\nhttps://creativecommons.org/licenses/by/4.0/"}
+ ]
+}

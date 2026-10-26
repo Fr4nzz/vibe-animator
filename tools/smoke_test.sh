@@ -37,6 +37,8 @@ step "scene text at each line's end (captions off), one full-res still"
 "$nx" qa "$dest" --still C1-L1 --at end | tail -1
 "$nx" typecheck "$dest" c0 c1 | tail -1
 python3 "$root/tools/test_receipts.py" 2>&1 | tail -1
+python3 "$root/tools/test_music.py" 2>&1 | tail -1
+python3 "$root/tools/test_vo_level.py" 2>&1 | tail -1
 
 step "stills at 1.5 s and 9 s"
 "$nx" stills "$dest" --t 1.5,9 | tail -2

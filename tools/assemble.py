@@ -1,18 +1,23 @@
 """Join the chapter clips (engine/renders/<id>_c<N>.mp4, contiguous timeline windows) and lay the full narration
 (vo/voice.wav) over them. Checks each clip's duration against its window first.
 
-  python3 tools/assemble.py <episode>
+  python3 tools/assemble.py <episode> [--no-music]
 
 Output: <episode>/renders/<id>_full.mp4 (staged in engine/work/assembly/, checked with ffprobe, then renamed into
 place; never written in place; refused if the clips were encoded with different settings, since stream copy keeps
 the first clip's SPS/PPS: after switching render.encoder, re-render every chapter) and its receipt renders/<id>_full.mp4.receipt.json (sha256 of every clip, the
 narration, chapters.json and timing.json; `tools/receipts.py verify-fresh` also checks each clip's own receipt). If
 episode.json render.review_dir is set, a hard link (or copy) is refreshed there too.
+
+Music: with episode.json "music": "library" | "elevenlabs" the audio is music/mix.wav (tools/music.py: the narration
+over a mood bed, ducked and loudness-normalized, rebuilt when its inputs change) instead of vo/voice.wav. A music
+failure only warns: the master then carries the voice alone. --no-music forces the voice alone.
 """
 import json, os, pathlib, subprocess, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from common import duration, episode_from_argv, place_at, probe  # noqa: E402
+import music  # noqa: E402
 import receipts  # noqa: E402
 
 
@@ -34,7 +39,7 @@ def video_key(f):
 
 
 def main():
-    ep, _ = episode_from_argv()
+    ep, args = episode_from_argv()
     R = ep.engine / "renders"
     ch = json.loads((ep.engine / "data/chapters.json").read_text())
     total = ep.timing["total"]
@@ -68,9 +73,12 @@ def main():
     out = ep.p(f"renders/{ep.id}_full.mp4")
     out.parent.mkdir(exist_ok=True)
     staged = work / f"{ep.id}_full.{os.getpid()}.mp4"
-    deps = clips + [ep.p("vo/voice.wav"), ep.engine / "data/chapters.json", ep.p("timing.json")]
+    audio, minfo = music.audio_for(ep, no_music="--no-music" in args)
+    if minfo:
+        print(f"music: {minfo['mode']} ({minfo['lufs']} LUFS, true peak {minfo['true_peak']} dBTP)")
+    deps = clips + [ep.p("vo/voice.wav"), audio, ep.engine / "data/chapters.json", ep.p("timing.json")]
     before = receipts.hash_inputs(deps, out.parent)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(inputs), "-i", str(ep.p("vo/voice.wav")),
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", str(inputs), "-i", str(audio),
                     "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-shortest", "-movflags", "+faststart", str(staged)], check=True)
     pr = probe(staged)
     bad = ("no 1920x1080 video" if not any(s["codec_type"] == "video" and (s["width"], s["height"]) == (1920, 1080) for s in pr["streams"])
@@ -80,7 +88,8 @@ def main():
         sys.exit(f"assembled master failed its check ({bad}); staged file kept: {staged}")
     changed = receipts.changed_inputs(before, deps, out.parent)
     os.replace(staged, out)
-    receipts.write_receipt(out, before, {"total": total, "windows": [[c, a, b] for c, a, b in windows(ch, total)], "changed_mid_render": changed})
+    receipts.write_receipt(out, before, {"total": total, "windows": [[c, a, b] for c, a, b in windows(ch, total)], "changed_mid_render": changed,
+                                         "music": {k: minfo.get(k) for k in ("mode", "lufs", "true_peak")} if minfo else None})
     if changed:
         print("  warning: inputs changed while assembling:", ", ".join(changed))
     rd = ep.cfg["render"]["review_dir"]

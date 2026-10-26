@@ -2,7 +2,9 @@
 
 A Short is an ink canvas, hook title + brand line on top, the central 1080x1080 square (x 420-1500) of the 16:9 frame
 WITHOUT burned captions in the middle inside hairline rules, big word-timed captions below (the same caption chunks
-the episode shows), and a thin progress rule in the accent colour. Audio comes from the lossless vo/voice.wav.
+the episode shows), and a thin progress rule in the accent colour. Audio comes from the lossless vo/voice.wav, or with
+episode.json "music" on (and music.shorts true) from music/mix.wav, the master's narration + music mix, sliced to the
+Short's window (tools/music.py; a music failure falls back to the voice with a warning).
 
 Shorts are normally made by the chapter pass: `--plan` writes engine/work/shorts/plan.json (each Short's window,
 compose filter, captions and output; `nx render` runs it first), and render_chapter.ts hands each Short to the
@@ -26,6 +28,7 @@ import json, os, pathlib, subprocess, sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from common import caption_cues, episode_from_argv, opt, place_at, probe, save_json  # noqa: E402
+import music  # noqa: E402
 import receipts  # noqa: E402
 
 
@@ -165,6 +168,7 @@ def main():
         i0, i1 = line_idx[sh["start"]], line_idx[sh["end"]]
         return i0, i1, round(flat[i0]["start"] - 0.25, 3), round(flat[i1]["end"] + 0.6, 3)
 
+    audio = music.audio_for(ep, no_music="--no-music" in args, purpose="shorts")[0]
     if "--plan" in args:
         plan = {"crop": [1080, 1080, 420, 0], "size": [1080, 1920], "shorts": []}
         for sid in sorted(shorts):
@@ -173,9 +177,9 @@ def main():
             i0, i1, t0, t1 = window(sid)
             # (encode.ts prefixes "[0:v]setparams=<BT.709 tags>," to the graph)
             fc, ass = compose_graph(ep, sid, shorts[sid]["hook"], i0, i1, t0, t1, "")
-            plan["shorts"].append({"id": sid, "t0": t0, "t1": t1, "out": str(ep.p(f"shorts/{sid}.mp4")), "filter": fc, "audio": str(ep.p("vo/voice.wav")),
+            plan["shorts"].append({"id": sid, "t0": t0, "t1": t1, "out": str(ep.p(f"shorts/{sid}.mp4")), "filter": fc, "audio": str(audio),
                                    # (script.json: the hook; episode.json: the branding)
-                                   "inputs": [str(f) for f in (ep.p("vo/voice.wav"), ep.p("timing.json"), ep.p("script.json"), ep.p("episode.json"),
+                                   "inputs": [str(f) for f in (audio, ep.p("timing.json"), ep.p("script.json"), ep.p("episode.json"),
                                                                ep.app / "src/captions_chunks.json", ass)],
                                    "info": {"hook": shorts[sid]["hook"]}})
         out = work / "plan.json"
@@ -217,9 +221,9 @@ def main():
         if E["hwTail"]:
             fc += f";[v]{E['hwTail']}[vo]"
         staged = work / f"{sid}.final.{os.getpid()}.mp4"
-        compose_inputs = [raw, ep.p("vo/voice.wav"), ep.p("timing.json"), ep.app / "src/captions_chunks.json", ass]
+        compose_inputs = [raw, audio, ep.p("timing.json"), ep.app / "src/captions_chunks.json", ass]
         before = receipts.hash_inputs(compose_inputs, out.parent)
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *E["pre"], "-i", str(raw), "-ss", str(t0), "-t", str(dur), "-i", str(ep.p("vo/voice.wav")),
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", *E["pre"], "-i", str(raw), "-ss", str(t0), "-t", str(dur), "-i", str(audio),
                         "-filter_complex", fc, "-map", "[vo]" if E["hwTail"] else "[v]", "-map", "1:a",
                         *E["codec"], "-c:a", "aac", "-b:a", "256k", "-ar", "48000",
                         "-movflags", "+faststart", str(staged)], check=True)

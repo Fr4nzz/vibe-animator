@@ -21,6 +21,7 @@
 #   assemble   join clips + narration -> renders/<id>_full.mp4
 #   shorts     Shorts the chapter pass did not make (tools/make_shorts.py [S01 …] [--separate])
 #   srt        publish/subtitles.<lang>.srt
+#   music [plan|fetch|reuse|generate|mix|measure|cache]  story-beat music bed (episode.json "music"; tools/music.py, docs/STORY_MUSIC.md)
 #   quote-budget [--timing]  translation-panel budget of public/papers/**/quotes.json   (tools/quote_budget.py)
 #   pron "a line"  how the TTS will say a line (voice.pronounce)                      (tools/pron.py)
 #   packs      per-chapter build packs packs/C<N>.md for scene builders            (tools/new_episode.py --packs)
@@ -32,7 +33,7 @@
 # Browser commands (qa, sheet, render, stills, encode, shorts) take the shared render lock themselves.
 set -euo pipefail
 here="$(cd "$(dirname "$0")" && pwd)"
-usage() { sed -n 2,32p "$0"; exit 2; }
+usage() { sed -n 2,33p "$0"; exit 2; }
 [ $# -ge 1 ] || usage
 cmd=$1; shift
 if [ "$cmd" = init ]; then exec python3 "$here/init_episode.py" "$@"; fi
@@ -67,6 +68,7 @@ case $cmd in
   assemble) py assemble.py "$@" ;;
   shorts) py make_shorts.py "$@" ;;
   srt) py make_srt.py "$@" ;;
+  music) py music.py "$@" ;;
   quote-budget) py quote_budget.py "$@" ;;
   pron) py pron.py "$@" ;;
   packs) py new_episode.py --packs "$@" ;;

@@ -29,6 +29,8 @@ engine/audio/*
 !engine/audio/.gitkeep
 vo/*.mp3
 vo/*.wav
+music/cache/
+music/*.wav
 vo/*.json
 !vo/.gitkeep
 *.mp4

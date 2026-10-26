@@ -19,6 +19,10 @@ dist/
 *.m4a
 *.webm
 
+# generated music (ElevenLabs output must never be committed) and mixes
+music/cache/
+**/music/cache/
+
 # secrets and tokens (never commit)
 *.env
 .env*
@@ -36,3 +40,9 @@ __pycache__/
 # optional local tool deps (tools/refart.py: uv venv tools/.venv)
 .venv/
 doi_cache.jsonl
+
+# generated music artifacts with machine-local cache paths
+**/music/reuse_plan.json
+**/music/*.receipt.json
+# trailer publish receipts
+examples/trailer/publish/
