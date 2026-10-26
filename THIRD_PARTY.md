@@ -57,6 +57,41 @@ modified. Its transitive dependencies include MathJax (`@mathjax/src`, Apache-2.
 font data (`@mathjax/mathjax-newcm-font`, Apache-2.0), KaTeX (MIT), jsPDF (MIT), lottie-web (MIT), html2canvas (MIT),
 typia (MIT), earcut (ISC) and polygon-clipping (MIT). Rendered formulas are glyph outlines of that font.
 
+## Music (`tools/music_library.json`: a manifest only, no audio in the repository)
+
+The demo library for `tools/music.py` (library mode) lists five tracks by Kevin MacLeod (incompetech.com), each
+licensed under **Creative Commons Attribution 4.0** (https://creativecommons.org/licenses/by/4.0/). The files are
+downloaded on demand from incompetech.com into `~/.cache/vibe-animator/music/` and checked against the sha256 in the
+manifest; they are not redistributed here. A video that uses one must credit it, e.g. in its description
+(`music.py` writes the lines below for the tracks a mix used to `<episode>/music/CREDITS.txt`):
+
+```
+Dreamy Flashback Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+https://creativecommons.org/licenses/by/4.0/
+
+Lightless Dawn Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+https://creativecommons.org/licenses/by/4.0/
+
+Darkling Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+https://creativecommons.org/licenses/by/4.0/
+
+Inspired Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+https://creativecommons.org/licenses/by/4.0/
+
+Wholesome Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 4.0
+https://creativecommons.org/licenses/by/4.0/
+```
+
+Music generated with ElevenLabs (`music.py generate`) is never committed: ElevenLabs' music terms forbid using output
+to build a redistributable music library. It stays in each episode's git-ignored `music/cache/` and in the private,
+user-level cache `~/.cache/vibe-animator/music/takes/` (outside every repository), from which `music.py reuse` takes
+sections for your own later videos. Reusing your own takes in your own videos is fine; sharing the cache is not.
+
 ## Fonts (`engine/app/public/fonts/`)
 
 See `engine/app/public/fonts/LICENSES.md`. Summary: Archivo (Omnibus-Type), Cormorant Garamond (Christian Thalmann)

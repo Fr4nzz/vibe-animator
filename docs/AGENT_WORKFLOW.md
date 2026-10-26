@@ -92,8 +92,9 @@ glyphs are not checked, so keep them inside the square by construction. A delibe
 2. **Quotes (if the episode shows paper pages):** build `public/papers/**/quotes.json` and run
    `tools/nx quote-budget <ep>`. Launch the papers/asset agent the moment it passes, before voicing; it gathers
    reference art and pages and returns a table. Builders don't browse.
-3. **Voice:** `ELEVENLABS_API_KEY=… tools/nx vo <ep>` (voice id from `ELEVENLABS_VOICE_ID` or `voice.voice_id`). A line
-   whose spoken text changed is re-voiced. Run speech-to-text on every new take and read the worst pairs; re-voice
+3. **Voice:** `ELEVENLABS_API_KEY=… tools/nx vo <ep>` (voice id from `ELEVENLABS_VOICE_ID` or `voice.voice_id`; with
+   several speakers, `voice.voices` maps each line's `voice` role to an id, `docs/CONFIG.md`). A line whose spoken text
+   or voice changed is re-voiced. Run speech-to-text on every new take and read the worst pairs; re-voice
    misreads (delete `vo/<line id>.*`). Then `tools/nx quote-budget <ep> --timing`.
 4. **Data, captions, packs, dev server:** `python3 tools/new_episode.py <ep> --data`. After a script change,
    `tools/nx packs <ep>`.

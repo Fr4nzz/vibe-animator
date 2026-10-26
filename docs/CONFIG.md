@@ -13,6 +13,8 @@ scripts (`engine/app/scripts/lib.ts`) read the `id` and the `render` block.
 | `voice.provider` | `"elevenlabs"` | Only ElevenLabs is implemented (`tools/make_vo.py`). No key: `tools/fake_vo.py`. |
 | `voice.voice_id` | `""` | The TTS voice. Voice ids are tied to an account: leave it empty in anything you publish and set `ELEVENLABS_VOICE_ID` instead. |
 | `voice.voice_id_env` | `"ELEVENLABS_VOICE_ID"` | Environment variable read when `voice_id` is empty. |
+| `voice.voices` | `{}` | Several voices: role → voice id, e.g. `{"NARRATOR": "…", "GUEST": "…"}`. A script line's `voice` field names its role; each line is voiced with its role's id. An empty id reads `ELEVENLABS_VOICE_<ROLE>` from the environment, then falls back to `voice_id`. A role missing from the map stops `make_vo` before any characters are spent; `check_script` flags it too. Changing a role's id re-voices only that role's lines. |
+| `voice.default_role` | `null` | Role of lines without a `voice` field (e.g. `"NARRATOR"`). `null`: such lines use the single voice. |
 | `voice.model` | `"eleven_multilingual_v2"` | TTS model id. |
 | `voice.language_code` | `null` (= `language`) | Sent to the TTS. |
 | `voice.api_key_env` | `"ELEVENLABS_API_KEY"` | Environment variable holding the key. Keys are read **only** from the environment, never from files in the repo or the episode. |
@@ -21,6 +23,8 @@ scripts (`engine/app/scripts/lib.ts`) read the `id` and the `render` block.
 | `voice.gap` / `chapter_gap` | `0.3` / `0.9` | Seconds of silence after a line / between chapters. A line's own `hold` adds to its gap. |
 | `voice.lead_in` / `tail` | `0.5` / `0.6` | Silence before the first and after the last line. |
 | `voice.loudness_lufs` | `-14` | Integrated loudness of `vo/voice.wav` (one static gain plus a true-peak limiter). |
+| `voice.line_lufs` | `-20` | Before the mix, each line clip gets one static gain to this loudness, so voices that come out of the TTS several dB apart sit level (EBU R128 integrated for clips of 3 s or more; shorter clips use the speech-gated 400 ms momentary loudness). Timing and sample positions do not change. `null` turns it off. Rebuild without the TTS: `make_vo.py <episode> --cached`. |
+| `voice.line_peak` | `-1` | True-peak ceiling (dBTP) of a leveled clip; caps that clip's gain. |
 | **`captions`** | | |
 | `captions.numbers` | `"none"` | `"none"` or a module in `tools/lang/` (`"es"`: spelled-out Spanish numbers to digits). |
 | `captions.acronyms` | `{}` | Spoken form → shown form, e.g. `{"sequel": "SQL"}`. |
@@ -47,6 +51,21 @@ scripts (`engine/app/scripts/lib.ts`) read the `id` and the `render` block.
 | `shorts.caption_font` / `caption_size` | `"Archivo"` / `66` | Caption family (libass, from the fonts folder) and size. |
 | `shorts.samples` | `2` | Sub-frames for Shorts made separately (`make_shorts.py --separate`, or missing ones). Shorts made in the chapter pass have the chapter's `render.samples`. |
 | `shorts.max_hook_chars` | `60` | Checked by `check_script.py`. |
+| **`music`** | `"none"` | Story music (`tools/music.py`, `docs/STORY_MUSIC.md`): `"none"`, `"library"` (CC BY demo tracks, `tools/music_library.json`), `"elevenlabs"` (one composed bed per ≤ 290 s, key from `ELEVENLABS_API_KEY`, needs the `music_generation` permission; only `music generate` spends, see below) or `"reuse"` (sections of earlier takes from the private cache `~/.cache/vibe-animator/music/`, free). With music on, the master and the Shorts carry `music/mix.wav`; a failure falls back to the voice with a warning. |
+| `music.*` | see `tools/music.py` | As an object: `{"mode": "library", "bed_db": -15, "duck_db": 6, "duck": {…}, "loudness": -14, "true_peak": -1.5, "max_credits": null, "tracks": {"wonder": "<track id>"}, "elevenlabs": {"model": "music_v1"}, …}`. Defaults live in `DEFAULTS` in `tools/music.py`. |
+| `music.bed_db` | `-15` | Bed level under the voice during speech (dB, after ducking). Documentary −14 to −16; a trailer about −10 (`examples/trailer`). In the gaps the bed is `duck_db` louder. `bed_lufs` (absolute, unducked) overrides it. |
+| `music.duck_db` | `6` | Ducking depth under speech (dB), soft knee, attack 20 ms, release 300 ms (`music.duck`); the bed is back at full level in the gaps and the end card. |
+| `music.max_credits` | `null` | ElevenLabs budget for the episode, all takes together (summed from `music/spend.jsonl`). `music generate` refuses anything over it, even with `--yes`; with no budget it needs `--yes`. |
+
+## Several voices (script.json)
+
+A line may carry `"voice": "ROLE"` and `"typed": true` (or a string). Voicing, `timing.json`, the word timings and the
+captions are unchanged by either. `make_engine_data.py` copies the speaker (`voice`, defaulting to
+`voice.default_role`) and the typed text into `engine/data/lyrics.json`; scenes read them with `this.q.speaker(id)`,
+`this.q.speakerAt(t)` and `this.q.typed(id, t)`, the on-screen typing that follows the voice word by word
+(`scenes/_shots.ts`, `Cues`). The request context (`previous_text` / `next_text`) only uses neighbouring lines in the
+same voice. Packs and the generated SCRIPT view show each line's speaker; a hand-written `SCRIPT.md` is never
+overwritten (the generated view goes to `SCRIPT.generated.md`).
 
 ## Files an episode holds
 
@@ -54,6 +73,7 @@ scripts (`engine/app/scripts/lib.ts`) read the `id` and the `render` block.
 <episode>/
   episode.json   script.json   SCRIPT.md (generated)   timing.json (generated)
   vo/            per-line TTS cache, voice.wav (master), voice.mp3 (engine)
+  music/         music_plan.json, mix.wav (+ receipt), CREDITS.txt (library credits), spend.jsonl (every music spend), reuse_plan.json, cache/ (generated takes; never commit)
   engine/        the episode's own copy of the engine; scenes in engine/app/src/scenes/c<N>.ts
   renders/       <id>_full.mp4         shorts/  <S..>.mp4, raw/, ass/         publish/  subtitles.<lang>.srt
   packs/         per-chapter build packs (tools/new_episode.py)   BUILD_BRIEF.md   FACT_CHECK.md / refs.json (optional)

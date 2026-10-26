@@ -15,6 +15,9 @@ and captions. The engine template in `engine/` is copied into each episode; `too
 ```sh
 (cd engine/app && bun install && bun run typecheck)          # the engine and its scripts type-check
 python3 tools/test_receipts.py                               # receipts unit tests
+python3 tools/test_music.py                                  # story-music plan, cost guard, cache/reuse tests
+python3 tools/test_voices.py                                 # multi-voice narration unit tests
+python3 tools/test_vo_level.py                               # per-line loudness leveling (voice.line_lufs)
 tools/smoke_test.sh                                          # fake voice → data → qa → stills → 3 s encode (~30 s)
 tools/nx new work/lens --id lens --title "How a lens focuses light" \
   --script examples/lens/script.json --scenes examples/lens/scenes --fake-vo --selftest   # ends "TOTAL 0"
@@ -52,6 +55,9 @@ If you changed a kit export, regenerate the index: `(cd engine/app && bun script
   voice ids, tokens, account names, personal paths or emails in code, docs, examples or commit messages. Requests to
   third parties go through `tools/fetch_ref.py` (fixed User-Agent, no personal data).
 - **Examples stay neutral** (optics, combustion, algebra) and ship no media beyond tiny fixtures.
+  Exception: `examples/trailer/` may ship its T3 Code frame assets (`engine/app/public/t3/`, WebP, ≤ ~15 MB): they
+  are the trailer's on-screen proof of the real session and the typed prompts, cannot be regenerated without an
+  isolated T3 instance, and passed the privacy audit (OCR + DOM text, 0 hits). Nothing else large.
 - **Assets:** only CC0, CC BY or public-domain art, each logged with author, licence and source URL in
   `engine/app/public/refs/SOURCES.md` in the same commit; `THIRD_PARTY.md` stays complete. No share-alike,
   non-commercial or unknown-licence files; never pages of copyrighted papers.

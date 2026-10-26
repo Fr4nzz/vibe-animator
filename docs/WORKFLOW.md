@@ -11,8 +11,8 @@ scene-builder brief and the orchestrator checklists); this file is the reference
 |---|---|---|---|
 | 0. New episode | `tools/nx new <dir> --id x --title "…" --script s.json [--fake-vo]` (or the bare `tools/nx init`) | `tools/templates/`, `engine/` | `episode.json`, `script.json`, `engine/` copy, empty `renders/ work/ vo/ shorts/ publish/`; with a voice: engine data, captions, `packs/C<N>.md`, a running dev server |
 | 1. Script | edit `script.json`; `tools/nx check <ep>` | `script.json` | `SCRIPT.md` (review copy), errors |
-| 2. Voice | `tools/nx vo <ep>` (`ELEVENLABS_API_KEY`) or `tools/nx fake-vo <ep>` (no key) | `script.json`, `episode.json` voice (`pronounce`) | `vo/voice.wav` (master), `vo/voice.mp3`, `timing.json` |
-| 3. Engine data | `tools/nx data <ep>` | `timing.json` | `engine/data/{lyrics,audio,chapters}.json`, `engine/audio/voice.mp3` |
+| 2. Voice | `tools/nx vo <ep>` (`ELEVENLABS_API_KEY`) or `tools/nx fake-vo <ep>` (no key) | `script.json` (line `voice` roles), `episode.json` voice (`voices`, `default_role`, `pronounce`) | `vo/voice.wav` (master), `vo/voice.mp3`, `timing.json` |
+| 3. Engine data | `tools/nx data <ep>` | `timing.json`, `script.json` (speaker, `typed`) | `engine/data/{lyrics,audio,chapters}.json`, `engine/audio/voice.mp3` |
 | 4. Captions | `tools/nx captions <ep>` | `timing.json`, `episode.json` captions | `engine/app/src/captions_chunks.json` |
 | 5. Dev server | `tools/nx dev <ep> <port>` | | preview at `http://localhost:<port>` |
 | 6. Scenes | one agent per chapter (`docs/AGENT_WORKFLOW.md`) | `packs/C<N>.md`, `engine/data/lyrics.json`, kits | `engine/app/src/scenes/c<N>.ts` (+ a private kit) |

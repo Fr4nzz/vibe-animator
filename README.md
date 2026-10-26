@@ -70,10 +70,16 @@ tools/nx assemble ../my-episode && tools/nx shorts ../my-episode && tools/nx srt
 | Path | What |
 |---|---|
 | `engine/` | The engine template (Vite + TypeScript + three.js), copied into each episode. Core compositor and post (`src/engine/`), generic scene kits (`src/scenes/_kit.ts`, `_shots.ts`, `_devices.ts`, `_refart.ts`, `_papers.ts`, `_manim.ts`), agent scripts (`scripts/qa.ts`, `render_chapter.ts`, `encode.ts`, `grid.ts`, `typecheck.ts`, `kit_index.ts`), fonts and a CC/PD reference-art library. See `engine/README.md`. |
-| `tools/` | The Python pipeline behind the `tools/nx` dispatcher: `new_episode` (one-call scaffold + per-chapter packs), `check_script`, `make_vo` (ElevenLabs with timestamps), `fake_vo`, `pron` (pronunciation table), `make_engine_data`, `make_captions`, `assemble`, `make_shorts`, `make_srt`, `receipts`, `wait_renders`, `cleanup`, `quote_budget`, `doi_cache`, `fetch_ref`, `refart`. |
-| `docs/` | `AGENT_WORKFLOW.md` (builder and orchestrator briefs), `WORKFLOW.md` (pipeline reference, qa, machine rules), `STYLE_GUIDE.md`, `TONE.md`, `CONFIG.md` (`episode.json`), `LESSONS.md`, `templates/` (script and build briefs), `STORY_MUSIC.md` (planned), `research/`. |
+| `tools/` | The Python pipeline behind the `tools/nx` dispatcher: `new_episode` (one-call scaffold + per-chapter packs), `check_script`, `make_vo` (ElevenLabs with timestamps), `fake_vo`, `pron` (pronunciation table), `make_engine_data`, `make_captions`, `assemble`, `music` (story music), `make_shorts`, `make_srt`, `receipts`, `wait_renders`, `cleanup`, `quote_budget`, `doi_cache`, `fetch_ref`, `refart`. |
+| `docs/` | `AGENT_WORKFLOW.md` (builder and orchestrator briefs), `WORKFLOW.md` (pipeline reference, qa, machine rules), `STYLE_GUIDE.md`, `TONE.md`, `CONFIG.md` (`episode.json`), `LESSONS.md`, `templates/` (script and build briefs), `STORY_MUSIC.md` (mood music), `research/`. |
 | `skills/vibe-animator/` | A Claude Code skill that routes an agent to the right doc for each step. |
 | `examples/` | `lens/` (the demo), `hello/` (smoke test), `manim-curve/` (manim-web on its own), `refart-kidney/` (reference-art cleaning and tracing). |
+
+**Several voices.** A narrator plus characters: map roles to voice ids in `episode.json` (`"voice": {"voices":
+{"NARRATOR": "…", "GUEST": "…"}, "default_role": "NARRATOR"}`) and give a script line `"voice": "GUEST"`. Each line is
+voiced with its role's voice; timings and captions work exactly as with one voice. Scenes can read the speaker
+(`this.q.speaker(id)`) and type a line on screen in step with the voice (`"typed": true`, `this.q.typed(id, t)`).
+`docs/CONFIG.md` has the details.
 
 **Narration drives everything.** `make_vo.py` voices each line with ElevenLabs' timestamped endpoint and writes
 `timing.json` (absolute times for every word). The engine reads it as `data/lyrics.json`, and a scene never uses a
@@ -83,6 +89,18 @@ hard-coded second: `this.q.w('C0-L2', 'focus')` is the start of the word "focus"
 sub-frames), the QA tool can sample any line at any moment, and backward seeks give identical pixels. Frames are packed
 as I420 on the GPU and encoded with VAAPI (or in-page WebCodecs); `render_chapter.ts` stages each clip, checks frames
 and duration, writes a receipt with the sha256 of every input, and renames it into place.
+
+**Story music.** A line can carry a `mood` (wonder, struggle, tension, hope, resolution; `insight` is a subtle accent,
+not a track change). `tools/music.py` turns the moods into timed sections whose crossfades end on the cue word, takes
+the beds from a CC BY demo library (Kevin MacLeod, downloaded on demand), composes one ElevenLabs Music track with a
+section per mood, or reuses sections of your earlier takes from a private cache (`~/.cache/vibe-animator/music/`,
+never committed), ducks the bed under the voice (sidechain keyed by the narration; `music.bed_db` / `music.duck_db`
+per episode: −15 / 6 dB for a documentary, −10 / 5 dB for the trailer) and normalizes the mix to −14 LUFS (two-pass
+`loudnorm`, true peak ≤ −1.5 dBTP). Set `"music": "library"`, `"elevenlabs"` or `"reuse"` in `episode.json`; the
+master and the Shorts then carry the mix, the video is still stream-copied, and a music failure only warns.
+**Only `music generate` spends credits**: it prints a cost estimate (13.8 credits per second, measured), needs `--yes`
+or a `music.max_credits` budget, makes exactly one take (another needs `--retake`), tries the free `reuse` first and
+logs every spend to `music/spend.jsonl`; `assemble` never generates (`docs/STORY_MUSIC.md`).
 
 **Shorts and captions in the same pass.** Lines carry `short` markers. Inside a Short's window the chapter pass renders
 a second, caption-free copy of the frame, crops the central square on the GPU and composes the vertical Short (hook
@@ -122,11 +140,6 @@ work offline), `Create` / `Write` / `Transform`. The engine keeps the clock, the
 post-processing and the render path: every manim animation starts on a word cue, and a backward seek rebuilds the
 segment synchronously, so frames stay deterministic. `examples/lens/scenes/c1.ts` and `examples/manim-curve/` show the
 pattern; `docs/research/2026-10-25-manim-web-spike.md` has the measurements (about 0.7 ms per frame).
-
-## Planned
-
-- **Story music** (`docs/STORY_MUSIC.md`): mood cues in the script, crossfades that land on the cue line's first word,
-  a bed ducked under the voice, mixed in the existing assembly pass. Design only.
 
 ## Credits
 
