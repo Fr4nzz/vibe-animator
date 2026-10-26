@@ -1,0 +1,89 @@
+{
+ "version": 1,
+ "total": 164.27,
+ "sections": [
+  {
+   "mood": "wonder",
+   "start": 0.0,
+   "end": 80.891,
+   "fade": [
+    0.0,
+    1.5
+   ],
+   "line": "C0-L6",
+   "word": "This"
+  },
+  {
+   "mood": "struggle",
+   "start": 80.891,
+   "end": 118.855,
+   "fade": [
+    79.264,
+    80.891
+   ],
+   "line": "C3-L7",
+   "word": "Explain"
+  },
+  {
+   "mood": "wonder",
+   "start": 118.855,
+   "end": 144.582,
+   "fade": [
+    117.227,
+    118.855
+   ],
+   "line": "C4-L5",
+   "word": "Show"
+  },
+  {
+   "mood": "hope",
+   "start": 144.582,
+   "end": 164.27,
+   "fade": [
+    142.955,
+    144.582
+   ],
+   "line": "C5-L6",
+   "word": "One"
+  }
+ ],
+ "accents": [
+  {
+   "t": 68.055,
+   "line": "C2-L14",
+   "word": "Fill"
+  },
+  {
+   "t": 141.936,
+   "line": "C4-L9",
+   "word": "sit"
+  }
+ ],
+ "warnings": [],
+ "marks": [
+  {
+   "t": 46.127,
+   "line": "C2-L8"
+  },
+  {
+   "t": 74.173,
+   "line": "C2-L7"
+  },
+  {
+   "t": 90.873,
+   "line": "C3-L12"
+  },
+  {
+   "t": 111.555,
+   "line": "C3-L6"
+  },
+  {
+   "t": 118.855,
+   "line": "C4-L5"
+  },
+  {
+   "t": 156.227,
+   "line": "C6-L6"
+  }
+ ]
+}

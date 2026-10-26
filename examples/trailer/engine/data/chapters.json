@@ -1,0 +1,44 @@
+[
+ {
+  "id": "C0",
+  "title": "What vibe-animator does",
+  "start": 0.5,
+  "end": 21.391
+ },
+ {
+  "id": "C1",
+  "title": "A chatbot's next word",
+  "start": 23.091,
+  "end": 44.427
+ },
+ {
+  "id": "C2",
+  "title": "Completing the square",
+  "start": 46.127,
+  "end": 79.191
+ },
+ {
+  "id": "C3",
+  "title": "P versus NP",
+  "start": 80.891,
+  "end": 117.155
+ },
+ {
+  "id": "C4",
+  "title": "Kepler's page",
+  "start": 118.855,
+  "end": 142.882
+ },
+ {
+  "id": "C5",
+  "title": "How it's made",
+  "start": 144.582,
+  "end": 153.827
+ },
+ {
+  "id": "C6",
+  "title": "Try it",
+  "start": 156.227,
+  "end": 161.173
+ }
+]

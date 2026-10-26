@@ -1,0 +1,588 @@
+{
+ "line": "C1-L8",
+ "prompt": "Explain how a chatbot picks its next word.",
+ "chars": 42,
+ "size": [
+  1920,
+  1080
+ ],
+ "format": "webp q90",
+ "composer_bbox": [
+  721,
+  469,
+  734,
+  142
+ ],
+ "text_origin": [
+  737,
+  486
+ ],
+ "note": "frames[k] shows the first k characters typed (k = 0..chars), then 3 settle frames (chars = all). caret = [x, top, height] of the text end in frame px (screenshots hide the real caret; draw your own). Isolated T3 instance, new-thread draft page, prompt re-typed for this trailer, never sent.",
+ "frames": [
+  {
+   "file": "000.webp",
+   "chars": 0,
+   "caret": null,
+   "sha1": "ec0728273b24",
+   "hi": "hi/000.webp",
+   "hi_sha1": "f5d320e9ebe6"
+  },
+  {
+   "file": "001.webp",
+   "chars": 1,
+   "caret": [
+    745,
+    486,
+    19
+   ],
+   "sha1": "c3891661b732",
+   "hi": "hi/001.webp",
+   "hi_sha1": "a620342e419e"
+  },
+  {
+   "file": "002.webp",
+   "chars": 2,
+   "caret": [
+    752,
+    486,
+    19
+   ],
+   "sha1": "b1d7272990ab",
+   "hi": "hi/002.webp",
+   "hi_sha1": "7aa424265ca8"
+  },
+  {
+   "file": "003.webp",
+   "chars": 3,
+   "caret": [
+    761,
+    486,
+    19
+   ],
+   "sha1": "cb6b7e67ddbb",
+   "hi": "hi/003.webp",
+   "hi_sha1": "93ea5b21b199"
+  },
+  {
+   "file": "004.webp",
+   "chars": 4,
+   "caret": [
+    764,
+    486,
+    19
+   ],
+   "sha1": "c8cd5f3a31cd",
+   "hi": "hi/004.webp",
+   "hi_sha1": "6535aaf0e23e"
+  },
+  {
+   "file": "005.webp",
+   "chars": 5,
+   "caret": [
+    772,
+    486,
+    19
+   ],
+   "sha1": "698d79dfa575",
+   "hi": "hi/005.webp",
+   "hi_sha1": "f6332595f84c"
+  },
+  {
+   "file": "006.webp",
+   "chars": 6,
+   "caret": [
+    776,
+    486,
+    19
+   ],
+   "sha1": "a0928e4f33ce",
+   "hi": "hi/006.webp",
+   "hi_sha1": "06ec9c0251c3"
+  },
+  {
+   "file": "007.webp",
+   "chars": 7,
+   "caret": [
+    785,
+    486,
+    19
+   ],
+   "sha1": "1e384c340ea5",
+   "hi": "hi/007.webp",
+   "hi_sha1": "9d109b02d400"
+  },
+  {
+   "file": "008.webp",
+   "chars": 8,
+   "caret": [
+    788,
+    486,
+    19
+   ],
+   "sha1": "1e384c340ea5",
+   "hi": "hi/008.webp",
+   "hi_sha1": "9d109b02d400"
+  },
+  {
+   "file": "009.webp",
+   "chars": 9,
+   "caret": [
+    797,
+    486,
+    19
+   ],
+   "sha1": "ac6c5faa0336",
+   "hi": "hi/009.webp",
+   "hi_sha1": "a207a8ee6ca9"
+  },
+  {
+   "file": "010.webp",
+   "chars": 10,
+   "caret": [
+    805,
+    486,
+    19
+   ],
+   "sha1": "4d02927659fe",
+   "hi": "hi/010.webp",
+   "hi_sha1": "0b16e1723046"
+  },
+  {
+   "file": "011.webp",
+   "chars": 11,
+   "caret": [
+    816,
+    486,
+    19
+   ],
+   "sha1": "739634821ea3",
+   "hi": "hi/011.webp",
+   "hi_sha1": "947d543c0c3a"
+  },
+  {
+   "file": "012.webp",
+   "chars": 12,
+   "caret": [
+    820,
+    486,
+    19
+   ],
+   "sha1": "739634821ea3",
+   "hi": "hi/012.webp",
+   "hi_sha1": "947d543c0c3a"
+  },
+  {
+   "file": "013.webp",
+   "chars": 13,
+   "caret": [
+    828,
+    486,
+    19
+   ],
+   "sha1": "aa69203a2623",
+   "hi": "hi/013.webp",
+   "hi_sha1": "88fe522e5806"
+  },
+  {
+   "file": "014.webp",
+   "chars": 14,
+   "caret": [
+    831,
+    486,
+    19
+   ],
+   "sha1": "aa69203a2623",
+   "hi": "hi/014.webp",
+   "hi_sha1": "88fe522e5806"
+  },
+  {
+   "file": "015.webp",
+   "chars": 15,
+   "caret": [
+    838,
+    486,
+    19
+   ],
+   "sha1": "a7535dffa8ad",
+   "hi": "hi/015.webp",
+   "hi_sha1": "146cf2400d52"
+  },
+  {
+   "file": "016.webp",
+   "chars": 16,
+   "caret": [
+    847,
+    486,
+    19
+   ],
+   "sha1": "dfff8362a2b7",
+   "hi": "hi/016.webp",
+   "hi_sha1": "fd39987801aa"
+  },
+  {
+   "file": "017.webp",
+   "chars": 17,
+   "caret": [
+    854,
+    486,
+    19
+   ],
+   "sha1": "401e6e2e28f4",
+   "hi": "hi/017.webp",
+   "hi_sha1": "366a735fffa3"
+  },
+  {
+   "file": "018.webp",
+   "chars": 18,
+   "caret": [
+    859,
+    486,
+    19
+   ],
+   "sha1": "eba808579b4a",
+   "hi": "hi/018.webp",
+   "hi_sha1": "57630ecde0c2"
+  },
+  {
+   "file": "019.webp",
+   "chars": 19,
+   "caret": [
+    868,
+    486,
+    19
+   ],
+   "sha1": "412436e70125",
+   "hi": "hi/019.webp",
+   "hi_sha1": "979518b943f0"
+  },
+  {
+   "file": "020.webp",
+   "chars": 20,
+   "caret": [
+    877,
+    486,
+    19
+   ],
+   "sha1": "dab5c2bafa27",
+   "hi": "hi/020.webp",
+   "hi_sha1": "e163971fffad"
+  },
+  {
+   "file": "021.webp",
+   "chars": 21,
+   "caret": [
+    882,
+    486,
+    19
+   ],
+   "sha1": "21d7bff386cd",
+   "hi": "hi/021.webp",
+   "hi_sha1": "c4e37d06c5ce"
+  },
+  {
+   "file": "022.webp",
+   "chars": 22,
+   "caret": [
+    885,
+    486,
+    19
+   ],
+   "sha1": "21d7bff386cd",
+   "hi": "hi/022.webp",
+   "hi_sha1": "c4e37d06c5ce"
+  },
+  {
+   "file": "023.webp",
+   "chars": 23,
+   "caret": [
+    894,
+    486,
+    19
+   ],
+   "sha1": "35ea2d24f569",
+   "hi": "hi/023.webp",
+   "hi_sha1": "705d4e3e3a42"
+  },
+  {
+   "file": "024.webp",
+   "chars": 24,
+   "caret": [
+    897,
+    486,
+    19
+   ],
+   "sha1": "986f529f98c4",
+   "hi": "hi/024.webp",
+   "hi_sha1": "e63eb80c242c"
+  },
+  {
+   "file": "025.webp",
+   "chars": 25,
+   "caret": [
+    904,
+    486,
+    19
+   ],
+   "sha1": "5f1814ccd5ec",
+   "hi": "hi/025.webp",
+   "hi_sha1": "aa67f35da023"
+  },
+  {
+   "file": "026.webp",
+   "chars": 26,
+   "caret": [
+    912,
+    486,
+    19
+   ],
+   "sha1": "ada144d2c58c",
+   "hi": "hi/026.webp",
+   "hi_sha1": "e53a22ddccba"
+  },
+  {
+   "file": "027.webp",
+   "chars": 27,
+   "caret": [
+    918,
+    486,
+    19
+   ],
+   "sha1": "24bfc38112ff",
+   "hi": "hi/027.webp",
+   "hi_sha1": "3bae6a324863"
+  },
+  {
+   "file": "028.webp",
+   "chars": 28,
+   "caret": [
+    922,
+    486,
+    19
+   ],
+   "sha1": "24bfc38112ff",
+   "hi": "hi/028.webp",
+   "hi_sha1": "3bae6a324863"
+  },
+  {
+   "file": "029.webp",
+   "chars": 29,
+   "caret": [
+    926,
+    486,
+    19
+   ],
+   "sha1": "8899835cad7d",
+   "hi": "hi/029.webp",
+   "hi_sha1": "627579ffac9c"
+  },
+  {
+   "file": "030.webp",
+   "chars": 30,
+   "caret": [
+    931,
+    486,
+    19
+   ],
+   "sha1": "4c9ad3cd47c7",
+   "hi": "hi/030.webp",
+   "hi_sha1": "1bbb91fe6dd5"
+  },
+  {
+   "file": "031.webp",
+   "chars": 31,
+   "caret": [
+    937,
+    486,
+    19
+   ],
+   "sha1": "2e07daa28a1f",
+   "hi": "hi/031.webp",
+   "hi_sha1": "a944c24f3e93"
+  },
+  {
+   "file": "032.webp",
+   "chars": 32,
+   "caret": [
+    941,
+    486,
+    19
+   ],
+   "sha1": "2e07daa28a1f",
+   "hi": "hi/032.webp",
+   "hi_sha1": "a944c24f3e93"
+  },
+  {
+   "file": "033.webp",
+   "chars": 33,
+   "caret": [
+    950,
+    486,
+    19
+   ],
+   "sha1": "bb5c764e680f",
+   "hi": "hi/033.webp",
+   "hi_sha1": "0c060e3a9eed"
+  },
+  {
+   "file": "034.webp",
+   "chars": 34,
+   "caret": [
+    958,
+    486,
+    19
+   ],
+   "sha1": "fde97d9e10e9",
+   "hi": "hi/034.webp",
+   "hi_sha1": "e1c324efa8cd"
+  },
+  {
+   "file": "035.webp",
+   "chars": 35,
+   "caret": [
+    965,
+    486,
+    19
+   ],
+   "sha1": "26ab4798f798",
+   "hi": "hi/035.webp",
+   "hi_sha1": "8401a2f21e13"
+  },
+  {
+   "file": "036.webp",
+   "chars": 36,
+   "caret": [
+    970,
+    486,
+    19
+   ],
+   "sha1": "73e013198ada",
+   "hi": "hi/036.webp",
+   "hi_sha1": "046ead52349e"
+  },
+  {
+   "file": "037.webp",
+   "chars": 37,
+   "caret": [
+    973,
+    486,
+    19
+   ],
+   "sha1": "73e013198ada",
+   "hi": "hi/037.webp",
+   "hi_sha1": "046ead52349e"
+  },
+  {
+   "file": "038.webp",
+   "chars": 38,
+   "caret": [
+    984,
+    486,
+    19
+   ],
+   "sha1": "3ec3ad5c1012",
+   "hi": "hi/038.webp",
+   "hi_sha1": "60b015a38c09"
+  },
+  {
+   "file": "039.webp",
+   "chars": 39,
+   "caret": [
+    993,
+    486,
+    19
+   ],
+   "sha1": "576fffa5f940",
+   "hi": "hi/039.webp",
+   "hi_sha1": "048f2f066474"
+  },
+  {
+   "file": "040.webp",
+   "chars": 40,
+   "caret": [
+    999,
+    486,
+    19
+   ],
+   "sha1": "aaed295afb17",
+   "hi": "hi/040.webp",
+   "hi_sha1": "467a7593ed2b"
+  },
+  {
+   "file": "041.webp",
+   "chars": 41,
+   "caret": [
+    1007,
+    486,
+    19
+   ],
+   "sha1": "2acde25fb58a",
+   "hi": "hi/041.webp",
+   "hi_sha1": "7f51e05a76b5"
+  },
+  {
+   "file": "042.webp",
+   "chars": 42,
+   "caret": [
+    1011,
+    486,
+    19
+   ],
+   "sha1": "c4a0fbf7a2a2",
+   "hi": "hi/042.webp",
+   "hi_sha1": "93638d1e5442"
+  },
+  {
+   "file": "043.webp",
+   "chars": 42,
+   "caret": [
+    1011,
+    486,
+    19
+   ],
+   "sha1": "c4a0fbf7a2a2",
+   "hi": "hi/043.webp",
+   "hi_sha1": "93638d1e5442"
+  },
+  {
+   "file": "044.webp",
+   "chars": 42,
+   "caret": [
+    1011,
+    486,
+    19
+   ],
+   "sha1": "c4a0fbf7a2a2",
+   "hi": "hi/044.webp",
+   "hi_sha1": "93638d1e5442"
+  },
+  {
+   "file": "045.webp",
+   "chars": 42,
+   "caret": [
+    1011,
+    486,
+    19
+   ],
+   "sha1": "c4a0fbf7a2a2",
+   "hi": "hi/045.webp",
+   "hi_sha1": "93638d1e5442"
+  }
+ ],
+ "hi": {
+  "scale": 2,
+  "bg": [
+   380,
+   180,
+   1140,
+   640
+  ],
+  "clip": [
+   711,
+   459,
+   754,
+   162
+  ],
+  "bg_sha1": "e66a7fa7b956",
+  "note": "deviceScaleFactor 2 re-capture (same isolated instance, same layout, never sent): hi/bg.webp = static region around the composer, hi/NNN.webp = composer region per typed prefix; draw over the 1x frame"
+ }
+}

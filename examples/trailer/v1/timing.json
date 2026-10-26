@@ -1,0 +1,2325 @@
+{
+ "total": 188.4,
+ "chapters": [
+  {
+   "id": "C0",
+   "title": "One prompt",
+   "start": 0.5,
+   "end": 22.94,
+   "lines": [
+    {
+     "id": "C0-L1",
+     "start": 0.5,
+     "end": 1.86,
+     "text": "Make me a trailer.",
+     "display": "Make me a trailer.",
+     "refs": [],
+     "short": {
+      "id": "S01",
+      "hook_title": "One prompt made this whole video",
+      "edge": "start"
+     },
+     "hold": 1.0,
+     "visual": "Engraved-plate house style, warm paper. A cursor blinks; the prompt types itself, letter by letter, finishing on 'trailer'.",
+     "words": [
+      {
+       "w": "Make",
+       "s": 0.5,
+       "e": 0.82
+      },
+      {
+       "w": "me",
+       "s": 0.86,
+       "e": 0.9
+      },
+      {
+       "w": "a",
+       "s": 0.98,
+       "e": 1.06
+      },
+      {
+       "w": "trailer.",
+       "s": 1.14,
+       "e": 1.94
+      }
+     ]
+    },
+    {
+     "id": "C0-L2",
+     "start": 3.16,
+     "end": 6.36,
+     "text": "One sentence. That is the whole brief.",
+     "display": "One sentence. That is the whole brief.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "The typed line sits alone on the paper; an amber underline draws under it on 'sentence'.",
+     "words": [
+      {
+       "w": "One",
+       "s": 3.16,
+       "e": 3.48
+      },
+      {
+       "w": "sentence.",
+       "s": 3.56,
+       "e": 4.36
+      },
+      {
+       "w": "That",
+       "s": 4.6,
+       "e": 4.92
+      },
+      {
+       "w": "is",
+       "s": 5.0,
+       "e": 5.16
+      },
+      {
+       "w": "the",
+       "s": 5.28,
+       "e": 5.4
+      },
+      {
+       "w": "whole",
+       "s": 5.56,
+       "e": 5.72
+      },
+      {
+       "w": "brief.",
+       "s": 5.8,
+       "e": 6.36
+      }
+     ]
+    },
+    {
+     "id": "C0-L3",
+     "start": 6.66,
+     "end": 12.58,
+     "text": "Script, voices, scenes and cuts: Claude Code agents make them all.",
+     "display": "Script, voices, scenes and cuts: Claude Code agents make them all.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Four engraved labels (SCRIPT, VOICES, SCENES, CUTS) branch from the prompt; on 'agents' small agent nodes light up under each.",
+     "words": [
+      {
+       "w": "Script,",
+       "s": 6.66,
+       "e": 7.46
+      },
+      {
+       "w": "voices,",
+       "s": 7.54,
+       "e": 8.34
+      },
+      {
+       "w": "scenes",
+       "s": 8.58,
+       "e": 8.82
+      },
+      {
+       "w": "and",
+       "s": 8.9,
+       "e": 9.06
+      },
+      {
+       "w": "cuts:",
+       "s": 9.14,
+       "e": 10.1
+      },
+      {
+       "w": "Claude",
+       "s": 10.18,
+       "e": 10.5
+      },
+      {
+       "w": "Code",
+       "s": 10.58,
+       "e": 10.82
+      },
+      {
+       "w": "agents",
+       "s": 10.9,
+       "e": 11.3
+      },
+      {
+       "w": "make",
+       "s": 11.46,
+       "e": 11.62
+      },
+      {
+       "w": "them",
+       "s": 11.7,
+       "e": 11.86
+      },
+      {
+       "w": "all.",
+       "s": 12.02,
+       "e": 12.58
+      }
+     ]
+    },
+    {
+     "id": "C0-L4",
+     "start": 12.88,
+     "end": 21.28,
+     "text": "A language model. A ninth-century master. A million-dollar problem. A page from 1619.",
+     "display": "A language model. A ninth-century master. A million-dollar problem. A page from 1619.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Four half-second flash frames from this trailer's own segments, one per phrase: embedding cloud, watercolor Baghdad, exploding curve, the Kepler page. No footage from anywhere else.",
+     "words": [
+      {
+       "w": "A",
+       "s": 12.88,
+       "e": 12.96
+      },
+      {
+       "w": "language",
+       "s": 13.04,
+       "e": 13.44
+      },
+      {
+       "w": "model.",
+       "s": 13.6,
+       "e": 14.32
+      },
+      {
+       "w": "A",
+       "s": 14.4,
+       "e": 14.48
+      },
+      {
+       "w": "ninth-century",
+       "s": 14.56,
+       "e": 15.44
+      },
+      {
+       "w": "master.",
+       "s": 15.6,
+       "e": 16.56
+      },
+      {
+       "w": "A",
+       "s": 16.6,
+       "e": 16.64
+      },
+      {
+       "w": "million-dollar",
+       "s": 16.8,
+       "e": 17.6
+      },
+      {
+       "w": "problem.",
+       "s": 17.68,
+       "e": 18.64
+      },
+      {
+       "w": "A",
+       "s": 18.68,
+       "e": 18.72
+      },
+      {
+       "w": "page",
+       "s": 18.8,
+       "e": 19.2
+      },
+      {
+       "w": "from",
+       "s": 19.28,
+       "e": 19.52
+      },
+      {
+       "w": "1619.",
+       "s": 19.6,
+       "e": 21.28
+      }
+     ]
+    },
+    {
+     "id": "C0-L5",
+     "start": 21.58,
+     "end": 22.94,
+     "text": "Watch it build.",
+     "display": "Watch it build.",
+     "refs": [],
+     "short": {
+      "id": "S01",
+      "hook_title": "One prompt made this whole video",
+      "edge": "end"
+     },
+     "hold": 2.0,
+     "visual": "On 'build' the prompt's letters break into particles that rush into the first frame; the camera pulls back to reveal the vertical 35 mm film strip, which slides on.",
+     "words": [
+      {
+       "w": "Watch",
+       "s": 21.58,
+       "e": 21.9
+      },
+      {
+       "w": "it",
+       "s": 22.02,
+       "e": 22.14
+      },
+      {
+       "w": "build.",
+       "s": 22.22,
+       "e": 23.02
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C1",
+   "title": "Attention",
+   "start": 25.84,
+   "end": 49.1,
+   "lines": [
+    {
+     "id": "C1-L1",
+     "start": 25.84,
+     "end": 28.88,
+     "text": "Explain attention. Twenty seconds.",
+     "display": "Explain attention. Twenty seconds.",
+     "refs": [],
+     "short": {
+      "id": "S02",
+      "hook_title": "How an LLM picks its next word",
+      "edge": "start"
+     },
+     "hold": 1.0,
+     "visual": "Dark math look, glowing vector strokes. The prompt types in a corner; the sentence 'The cat sat on the mat because it was tired' writes in as tokens.",
+     "words": [
+      {
+       "w": "Explain",
+       "s": 25.84,
+       "e": 26.48
+      },
+      {
+       "w": "attention.",
+       "s": 26.56,
+       "e": 27.28
+      },
+      {
+       "w": "Twenty",
+       "s": 27.76,
+       "e": 28.0
+      },
+      {
+       "w": "seconds.",
+       "s": 28.16,
+       "e": 28.96
+      }
+     ]
+    },
+    {
+     "id": "C1-L2",
+     "start": 30.18,
+     "end": 36.74,
+     "text": "A language model turns each word into a point in space, where related meanings sit close together.",
+     "display": "A language model turns each word into a point in space, where related meanings sit close together.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'space' the tokens lift into a slowly rotating 3D embedding cloud; 'cat' and 'mat' drift near each other. All code original.",
+     "words": [
+      {
+       "w": "A",
+       "s": 30.18,
+       "e": 30.26
+      },
+      {
+       "w": "language",
+       "s": 30.34,
+       "e": 30.66
+      },
+      {
+       "w": "model",
+       "s": 30.82,
+       "e": 31.14
+      },
+      {
+       "w": "turns",
+       "s": 31.26,
+       "e": 31.62
+      },
+      {
+       "w": "each",
+       "s": 31.74,
+       "e": 31.86
+      },
+      {
+       "w": "word",
+       "s": 31.94,
+       "e": 32.34
+      },
+      {
+       "w": "into",
+       "s": 32.42,
+       "e": 32.58
+      },
+      {
+       "w": "a",
+       "s": 32.66,
+       "e": 32.82
+      },
+      {
+       "w": "point",
+       "s": 32.98,
+       "e": 33.14
+      },
+      {
+       "w": "in",
+       "s": 33.22,
+       "e": 33.3
+      },
+      {
+       "w": "space,",
+       "s": 33.46,
+       "e": 34.26
+      },
+      {
+       "w": "where",
+       "s": 34.34,
+       "e": 34.5
+      },
+      {
+       "w": "related",
+       "s": 34.74,
+       "e": 34.98
+      },
+      {
+       "w": "meanings",
+       "s": 35.06,
+       "e": 35.46
+      },
+      {
+       "w": "sit",
+       "s": 35.58,
+       "e": 35.7
+      },
+      {
+       "w": "close",
+       "s": 35.78,
+       "e": 36.02
+      },
+      {
+       "w": "together.",
+       "s": 36.1,
+       "e": 36.74
+      }
+     ]
+    },
+    {
+     "id": "C1-L3",
+     "start": 37.04,
+     "end": 44.16,
+     "text": "Each word looks back and weighs the words before. Here, \"it\" reaches for \"the cat\".",
+     "display": "Each word looks back and weighs the words before. Here, \"it\" reaches for \"the cat\".",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Faint attention lines from the last token to every earlier token; on the quoted 'it' the line from 'it' to 'the cat' brightens. Small corner tag: ILLUSTRATIVE.",
+     "words": [
+      {
+       "w": "Each",
+       "s": 37.04,
+       "e": 37.36
+      },
+      {
+       "w": "word",
+       "s": 37.44,
+       "e": 37.76
+      },
+      {
+       "w": "looks",
+       "s": 37.84,
+       "e": 38.16
+      },
+      {
+       "w": "back",
+       "s": 38.4,
+       "e": 38.64
+      },
+      {
+       "w": "and",
+       "s": 38.76,
+       "e": 38.88
+      },
+      {
+       "w": "weighs",
+       "s": 39.04,
+       "e": 39.28
+      },
+      {
+       "w": "the",
+       "s": 39.36,
+       "e": 39.44
+      },
+      {
+       "w": "words",
+       "s": 39.6,
+       "e": 39.76
+      },
+      {
+       "w": "before.",
+       "s": 40.32,
+       "e": 40.92
+      },
+      {
+       "w": "Here,",
+       "s": 40.96,
+       "e": 41.653
+      },
+      {
+       "w": "\"it\"",
+       "s": 41.707,
+       "e": 42.2
+      },
+      {
+       "w": "reaches",
+       "s": 42.24,
+       "e": 42.64
+      },
+      {
+       "w": "for",
+       "s": 42.72,
+       "e": 43.04
+      },
+      {
+       "w": "\"the",
+       "s": 43.093,
+       "e": 43.2
+      },
+      {
+       "w": "cat\".",
+       "s": 43.28,
+       "e": 44.16
+      }
+     ]
+    },
+    {
+     "id": "C1-L4",
+     "start": 44.46,
+     "end": 49.1,
+     "text": "Then it gives every word it knows a probability, and bets on one.",
+     "display": "Then it gives every word it knows a probability, and bets on one.",
+     "refs": [],
+     "short": {
+      "id": "S02",
+      "hook_title": "How an LLM picks its next word",
+      "edge": "end"
+     },
+     "hold": 0.8,
+     "visual": "Probability bars race for the next-word slot; on 'bets' one bar is sampled and drops into the sentence as the next token. Pull-back to the film strip.",
+     "words": [
+      {
+       "w": "Then",
+       "s": 44.46,
+       "e": 44.7
+      },
+      {
+       "w": "it",
+       "s": 44.74,
+       "e": 44.78
+      },
+      {
+       "w": "gives",
+       "s": 44.86,
+       "e": 45.18
+      },
+      {
+       "w": "every",
+       "s": 45.26,
+       "e": 45.58
+      },
+      {
+       "w": "word",
+       "s": 45.66,
+       "e": 45.9
+      },
+      {
+       "w": "it",
+       "s": 45.98,
+       "e": 46.06
+      },
+      {
+       "w": "knows",
+       "s": 46.14,
+       "e": 46.62
+      },
+      {
+       "w": "a",
+       "s": 46.7,
+       "e": 46.78
+      },
+      {
+       "w": "probability,",
+       "s": 47.34,
+       "e": 47.98
+      },
+      {
+       "w": "and",
+       "s": 48.06,
+       "e": 48.14
+      },
+      {
+       "w": "bets",
+       "s": 48.18,
+       "e": 48.46
+      },
+      {
+       "w": "on",
+       "s": 48.54,
+       "e": 48.62
+      },
+      {
+       "w": "one.",
+       "s": 48.7,
+       "e": 49.18
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C2",
+   "title": "Completing the square",
+   "start": 50.8,
+   "end": 84.52,
+   "lines": [
+    {
+     "id": "C2-L1",
+     "start": 50.8,
+     "end": 54.72,
+     "text": "Baghdad, ninth century. Complete the square.",
+     "display": "Baghdad, ninth century. Complete the square.",
+     "refs": [],
+     "short": {
+      "id": "S03",
+      "hook_title": "The 1,200-year-old trick behind the quadratic formula",
+      "edge": "start"
+     },
+     "hold": 0,
+     "visual": "Watercolor wash: a Baghdad courtyard, a master and a student at a table. The prompt types over the wash in ink.",
+     "words": [
+      {
+       "w": "Baghdad,",
+       "s": 50.8,
+       "e": 51.76
+      },
+      {
+       "w": "ninth",
+       "s": 51.84,
+       "e": 52.16
+      },
+      {
+       "w": "century.",
+       "s": 52.24,
+       "e": 52.8
+      },
+      {
+       "w": "Complete",
+       "s": 53.36,
+       "e": 53.76
+      },
+      {
+       "w": "the",
+       "s": 53.84,
+       "e": 53.92
+      },
+      {
+       "w": "square.",
+       "s": 54.0,
+       "e": 54.8
+      }
+     ]
+    },
+    {
+     "id": "C2-L2",
+     "start": 55.02,
+     "end": 59.5,
+     "text": "A square and ten roots make thirty-nine. I am stuck.",
+     "display": "A square and ten roots make thirty-nine. I am stuck.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Clean ink over the wash: an x-by-x square, then on 'ten' a 10-wide-by-x rectangle beside it; the label '= 39' (no symbols spoken). Student character is dramatized.",
+     "words": [
+      {
+       "w": "A",
+       "s": 55.02,
+       "e": 55.18
+      },
+      {
+       "w": "square",
+       "s": 55.42,
+       "e": 55.66
+      },
+      {
+       "w": "and",
+       "s": 55.78,
+       "e": 55.9
+      },
+      {
+       "w": "ten",
+       "s": 56.02,
+       "e": 56.14
+      },
+      {
+       "w": "roots",
+       "s": 56.22,
+       "e": 56.62
+      },
+      {
+       "w": "make",
+       "s": 56.7,
+       "e": 56.94
+      },
+      {
+       "w": "thirty-nine.",
+       "s": 57.02,
+       "e": 58.22
+      },
+      {
+       "w": "I",
+       "s": 58.3,
+       "e": 58.38
+      },
+      {
+       "w": "am",
+       "s": 58.46,
+       "e": 58.7
+      },
+      {
+       "w": "stuck.",
+       "s": 58.82,
+       "e": 59.58
+      }
+     ]
+    },
+    {
+     "id": "C2-L3",
+     "start": 59.8,
+     "end": 63.48,
+     "text": "Split the ten in half. Five on two sides.",
+     "display": "Split the ten in half. Five on two sides.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'half' the rectangle splits; two 5-wide strips swing onto two sides of the square.",
+     "words": [
+      {
+       "w": "Split",
+       "s": 59.8,
+       "e": 60.2
+      },
+      {
+       "w": "the",
+       "s": 60.24,
+       "e": 60.28
+      },
+      {
+       "w": "ten",
+       "s": 60.36,
+       "e": 60.6
+      },
+      {
+       "w": "in",
+       "s": 60.68,
+       "e": 60.84
+      },
+      {
+       "w": "half.",
+       "s": 60.92,
+       "e": 61.64
+      },
+      {
+       "w": "Five",
+       "s": 61.88,
+       "e": 62.2
+      },
+      {
+       "w": "on",
+       "s": 62.28,
+       "e": 62.44
+      },
+      {
+       "w": "two",
+       "s": 62.52,
+       "e": 62.68
+      },
+      {
+       "w": "sides.",
+       "s": 62.76,
+       "e": 63.48
+      }
+     ]
+    },
+    {
+     "id": "C2-L4",
+     "start": 63.78,
+     "end": 67.3,
+     "text": "Now a corner is missing: five by five.",
+     "display": "Now a corner is missing: five by five.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'corner' the empty 5x5 gap glows amber; '25' writes inside it.",
+     "words": [
+      {
+       "w": "Now",
+       "s": 63.78,
+       "e": 63.94
+      },
+      {
+       "w": "a",
+       "s": 64.1,
+       "e": 64.26
+      },
+      {
+       "w": "corner",
+       "s": 64.46,
+       "e": 64.66
+      },
+      {
+       "w": "is",
+       "s": 64.74,
+       "e": 64.82
+      },
+      {
+       "w": "missing:",
+       "s": 65.26,
+       "e": 65.74
+      },
+      {
+       "w": "five",
+       "s": 65.78,
+       "e": 66.1
+      },
+      {
+       "w": "by",
+       "s": 66.18,
+       "e": 66.42
+      },
+      {
+       "w": "five.",
+       "s": 66.5,
+       "e": 67.38
+      }
+     ]
+    },
+    {
+     "id": "C2-L5",
+     "start": 67.6,
+     "end": 72.88,
+     "text": "Fill it, and the square is whole: eight by eight. The root is three.",
+     "display": "Fill it, and the square is whole: eight by eight. The root is three.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'fill' the corner fills and the perfect 8x8 square locks (insight sting); 39 + 25 = 64 writes beside it; the side reads 5 + 3, and the 3 glows.",
+     "words": [
+      {
+       "w": "Fill",
+       "s": 67.6,
+       "e": 67.84
+      },
+      {
+       "w": "it,",
+       "s": 67.96,
+       "e": 68.24
+      },
+      {
+       "w": "and",
+       "s": 68.32,
+       "e": 68.4
+      },
+      {
+       "w": "the",
+       "s": 68.44,
+       "e": 68.48
+      },
+      {
+       "w": "square",
+       "s": 68.56,
+       "e": 68.88
+      },
+      {
+       "w": "is",
+       "s": 68.96,
+       "e": 69.04
+      },
+      {
+       "w": "whole:",
+       "s": 69.12,
+       "e": 69.84
+      },
+      {
+       "w": "eight",
+       "s": 69.92,
+       "e": 70.16
+      },
+      {
+       "w": "by",
+       "s": 70.32,
+       "e": 70.56
+      },
+      {
+       "w": "eight.",
+       "s": 70.76,
+       "e": 71.16
+      },
+      {
+       "w": "The",
+       "s": 71.36,
+       "e": 71.44
+      },
+      {
+       "w": "root",
+       "s": 71.52,
+       "e": 71.84
+      },
+      {
+       "w": "is",
+       "s": 72.0,
+       "e": 72.16
+      },
+      {
+       "w": "three.",
+       "s": 72.24,
+       "e": 72.88
+      }
+     ]
+    },
+    {
+     "id": "C2-L6",
+     "start": 73.18,
+     "end": 78.38,
+     "text": "That was al-Khwarizmi, and his al-jabr gave algebra its name.",
+     "display": "That was al-Khwarizmi, and his al-jabr gave algebra its name.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "The master's name inks in beneath the figure; on 'al-jabr' the word unfolds into 'algebra'.",
+     "words": [
+      {
+       "w": "That",
+       "s": 73.18,
+       "e": 73.42
+      },
+      {
+       "w": "was",
+       "s": 73.5,
+       "e": 73.66
+      },
+      {
+       "w": "al-Khwarizmi,",
+       "s": 73.74,
+       "e": 75.02
+      },
+      {
+       "w": "and",
+       "s": 75.1,
+       "e": 75.18
+      },
+      {
+       "w": "his",
+       "s": 75.3,
+       "e": 75.42
+      },
+      {
+       "w": "al-jabr",
+       "s": 75.58,
+       "e": 76.3
+      },
+      {
+       "w": "gave",
+       "s": 76.54,
+       "e": 76.78
+      },
+      {
+       "w": "algebra",
+       "s": 76.94,
+       "e": 77.5
+      },
+      {
+       "w": "its",
+       "s": 77.58,
+       "e": 77.74
+      },
+      {
+       "w": "name.",
+       "s": 77.82,
+       "e": 78.38
+      }
+     ]
+    },
+    {
+     "id": "C2-L7",
+     "start": 78.68,
+     "end": 84.52,
+     "text": "He wrote it all in words. Centuries later, the picture became a formula.",
+     "display": "He wrote it all in words. Centuries later, the picture became a formula.",
+     "refs": [],
+     "short": {
+      "id": "S03",
+      "hook_title": "The 1,200-year-old trick behind the quadratic formula",
+      "edge": "end"
+     },
+     "hold": 0.8,
+     "visual": "A 'centuries later' caption first; only then does the figure morph into symbols, and on 'formula' the quadratic formula assembles. Pull-back to the film strip.",
+     "words": [
+      {
+       "w": "He",
+       "s": 78.68,
+       "e": 78.84
+      },
+      {
+       "w": "wrote",
+       "s": 78.88,
+       "e": 79.08
+      },
+      {
+       "w": "it",
+       "s": 79.16,
+       "e": 79.32
+      },
+      {
+       "w": "all",
+       "s": 79.4,
+       "e": 79.64
+      },
+      {
+       "w": "in",
+       "s": 79.72,
+       "e": 79.96
+      },
+      {
+       "w": "words.",
+       "s": 80.48,
+       "e": 81.04
+      },
+      {
+       "w": "Centuries",
+       "s": 81.08,
+       "e": 81.56
+      },
+      {
+       "w": "later,",
+       "s": 81.64,
+       "e": 82.32
+      },
+      {
+       "w": "the",
+       "s": 82.36,
+       "e": 82.52
+      },
+      {
+       "w": "picture",
+       "s": 82.76,
+       "e": 83.0
+      },
+      {
+       "w": "became",
+       "s": 83.12,
+       "e": 83.4
+      },
+      {
+       "w": "a",
+       "s": 83.56,
+       "e": 83.6
+      },
+      {
+       "w": "formula.",
+       "s": 83.64,
+       "e": 84.6
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "title": "P versus NP",
+   "start": 86.22,
+   "end": 119.32,
+   "lines": [
+    {
+     "id": "C3-L1",
+     "start": 86.22,
+     "end": 89.98,
+     "text": "P versus NP. Make it hurt.",
+     "display": "P versus NP. Make it hurt.",
+     "refs": [],
+     "short": {
+      "id": "S04",
+      "hook_title": "Checking is easy. Is finding easy?",
+      "edge": "start"
+     },
+     "hold": 0,
+     "visual": "Dark math look. The prompt types; the background dims a step on 'hurt'.",
+     "words": [
+      {
+       "w": "P",
+       "s": 86.22,
+       "e": 86.62
+      },
+      {
+       "w": "versus",
+       "s": 86.78,
+       "e": 87.18
+      },
+      {
+       "w": "NP.",
+       "s": 87.42,
+       "e": 88.06
+      },
+      {
+       "w": "Make",
+       "s": 88.7,
+       "e": 88.94
+      },
+      {
+       "w": "it",
+       "s": 89.02,
+       "e": 89.1
+      },
+      {
+       "w": "hurt.",
+       "s": 89.26,
+       "e": 90.06
+      }
+     ]
+    },
+    {
+     "id": "C3-L2",
+     "start": 90.28,
+     "end": 95.08,
+     "text": "Checking a finished puzzle takes a second. Finding the answer may not.",
+     "display": "Checking a finished puzzle takes a second. Finding the answer may not.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "A filled sudoku grid ticks green row by row within one second; beside it a search tree starts branching. No 'NP-complete' caption.",
+     "words": [
+      {
+       "w": "Checking",
+       "s": 90.28,
+       "e": 90.68
+      },
+      {
+       "w": "a",
+       "s": 90.72,
+       "e": 90.76
+      },
+      {
+       "w": "finished",
+       "s": 90.92,
+       "e": 91.24
+      },
+      {
+       "w": "puzzle",
+       "s": 91.32,
+       "e": 91.72
+      },
+      {
+       "w": "takes",
+       "s": 91.84,
+       "e": 91.96
+      },
+      {
+       "w": "a",
+       "s": 92.0,
+       "e": 92.04
+      },
+      {
+       "w": "second.",
+       "s": 92.12,
+       "e": 93.0
+      },
+      {
+       "w": "Finding",
+       "s": 93.08,
+       "e": 93.4
+      },
+      {
+       "w": "the",
+       "s": 93.44,
+       "e": 93.48
+      },
+      {
+       "w": "answer",
+       "s": 93.64,
+       "e": 94.12
+      },
+      {
+       "w": "may",
+       "s": 94.36,
+       "e": 94.52
+      },
+      {
+       "w": "not.",
+       "s": 94.6,
+       "e": 95.08
+      }
+     ]
+    },
+    {
+     "id": "C3-L3",
+     "start": 95.38,
+     "end": 99.38,
+     "text": "As the puzzle grows, the search explodes.",
+     "display": "As the puzzle grows, the search explodes.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "The grid grows larger; a plot race of n squared, n cubed and 2 to the n; on 'explodes' the 2^n curve goes vertical and the tree fills the frame.",
+     "words": [
+      {
+       "w": "As",
+       "s": 95.38,
+       "e": 95.62
+      },
+      {
+       "w": "the",
+       "s": 95.7,
+       "e": 95.78
+      },
+      {
+       "w": "puzzle",
+       "s": 95.82,
+       "e": 96.1
+      },
+      {
+       "w": "grows,",
+       "s": 96.26,
+       "e": 97.06
+      },
+      {
+       "w": "the",
+       "s": 97.14,
+       "e": 97.22
+      },
+      {
+       "w": "search",
+       "s": 97.3,
+       "e": 97.7
+      },
+      {
+       "w": "explodes.",
+       "s": 97.78,
+       "e": 99.38
+      }
+     ]
+    },
+    {
+     "id": "C3-L4",
+     "start": 99.68,
+     "end": 107.92,
+     "text": "P equals NP would mean anything checkable in polynomial time is also solvable in polynomial time.",
+     "display": "P equals NP would mean anything checkable in polynomial time is also solvable in polynomial time.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On-screen definition in LaTeX, 'polynomial time' on both sides; on 'solvable' the two halves of the definition link with an equals sign and a question mark.",
+     "words": [
+      {
+       "w": "P",
+       "s": 99.68,
+       "e": 100.0
+      },
+      {
+       "w": "equals",
+       "s": 100.08,
+       "e": 100.48
+      },
+      {
+       "w": "NP",
+       "s": 100.64,
+       "e": 101.36
+      },
+      {
+       "w": "would",
+       "s": 101.44,
+       "e": 101.52
+      },
+      {
+       "w": "mean",
+       "s": 101.6,
+       "e": 101.92
+      },
+      {
+       "w": "anything",
+       "s": 102.0,
+       "e": 102.4
+      },
+      {
+       "w": "checkable",
+       "s": 102.48,
+       "e": 102.96
+      },
+      {
+       "w": "in",
+       "s": 103.04,
+       "e": 103.2
+      },
+      {
+       "w": "polynomial",
+       "s": 103.28,
+       "e": 103.92
+      },
+      {
+       "w": "time",
+       "s": 104.0,
+       "e": 104.64
+      },
+      {
+       "w": "is",
+       "s": 104.72,
+       "e": 104.88
+      },
+      {
+       "w": "also",
+       "s": 104.96,
+       "e": 105.36
+      },
+      {
+       "w": "solvable",
+       "s": 105.44,
+       "e": 106.08
+      },
+      {
+       "w": "in",
+       "s": 106.16,
+       "e": 106.24
+      },
+      {
+       "w": "polynomial",
+       "s": 106.32,
+       "e": 106.96
+      },
+      {
+       "w": "time.",
+       "s": 107.4,
+       "e": 107.92
+      }
+     ]
+    },
+    {
+     "id": "C3-L5",
+     "start": 108.22,
+     "end": 112.7,
+     "text": "Nobody knows. A proof is worth a million dollars.",
+     "display": "Nobody knows. A proof is worth a million dollars.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'million' a card: '$1,000,000 Millennium Prize'.",
+     "words": [
+      {
+       "w": "Nobody",
+       "s": 108.22,
+       "e": 108.62
+      },
+      {
+       "w": "knows.",
+       "s": 108.78,
+       "e": 109.74
+      },
+      {
+       "w": "A",
+       "s": 109.82,
+       "e": 109.9
+      },
+      {
+       "w": "proof",
+       "s": 110.14,
+       "e": 110.38
+      },
+      {
+       "w": "is",
+       "s": 110.46,
+       "e": 110.62
+      },
+      {
+       "w": "worth",
+       "s": 110.7,
+       "e": 110.94
+      },
+      {
+       "w": "a",
+       "s": 111.02,
+       "e": 111.18
+      },
+      {
+       "w": "million",
+       "s": 111.26,
+       "e": 111.66
+      },
+      {
+       "w": "dollars.",
+       "s": 111.74,
+       "e": 112.7
+      }
+     ]
+    },
+    {
+     "id": "C3-L6",
+     "start": 113.0,
+     "end": 119.32,
+     "text": "AI might help find that proof. On other problems, it has already found new mathematics.",
+     "display": "AI might help find that proof. On other problems, it has already found new mathematics.",
+     "refs": [],
+     "short": {
+      "id": "S04",
+      "hook_title": "Checking is easy. Is finding easy?",
+      "edge": "end"
+     },
+     "hold": 0.8,
+     "visual": "Two small cards on 'mathematics': 'FunSearch: new cap-set constructions (2023)' and 'AlphaEvolve: improved algorithms (2025)', each stamped 'not P vs NP'. Pull-back to the film strip.",
+     "words": [
+      {
+       "w": "AI",
+       "s": 113.0,
+       "e": 113.48
+      },
+      {
+       "w": "might",
+       "s": 113.56,
+       "e": 113.8
+      },
+      {
+       "w": "help",
+       "s": 113.88,
+       "e": 114.12
+      },
+      {
+       "w": "find",
+       "s": 114.2,
+       "e": 114.44
+      },
+      {
+       "w": "that",
+       "s": 114.52,
+       "e": 114.68
+      },
+      {
+       "w": "proof.",
+       "s": 114.76,
+       "e": 115.64
+      },
+      {
+       "w": "On",
+       "s": 115.72,
+       "e": 115.8
+      },
+      {
+       "w": "other",
+       "s": 115.92,
+       "e": 116.04
+      },
+      {
+       "w": "problems,",
+       "s": 116.32,
+       "e": 116.76
+      },
+      {
+       "w": "it",
+       "s": 116.84,
+       "e": 116.92
+      },
+      {
+       "w": "has",
+       "s": 116.96,
+       "e": 117.0
+      },
+      {
+       "w": "already",
+       "s": 117.08,
+       "e": 117.56
+      },
+      {
+       "w": "found",
+       "s": 117.72,
+       "e": 117.88
+      },
+      {
+       "w": "new",
+       "s": 118.04,
+       "e": 118.2
+      },
+      {
+       "w": "mathematics.",
+       "s": 118.28,
+       "e": 119.4
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C4",
+   "title": "Kepler's page",
+   "start": 121.02,
+   "end": 143.76,
+   "lines": [
+    {
+     "id": "C4-L1",
+     "start": 121.02,
+     "end": 123.98,
+     "text": "Kepler. Show me the actual page.",
+     "display": "Kepler. Show me the actual page.",
+     "refs": [
+      "Harmonices Mundi (Linz, 1619), Book V ch. III, p. 189"
+     ],
+     "short": {
+      "id": "S05",
+      "hook_title": "Kepler's sentence that ran the solar system",
+      "edge": "start"
+     },
+     "hold": 0,
+     "visual": "Engraved-plate style. On 'page' the real 1619 scan slides in (public-domain scan; rights of the archive.org scan still to confirm).",
+     "words": [
+      {
+       "w": "Kepler.",
+       "s": 121.02,
+       "e": 121.66
+      },
+      {
+       "w": "Show",
+       "s": 122.06,
+       "e": 122.22
+      },
+      {
+       "w": "me",
+       "s": 122.3,
+       "e": 122.38
+      },
+      {
+       "w": "the",
+       "s": 122.46,
+       "e": 122.54
+      },
+      {
+       "w": "actual",
+       "s": 122.7,
+       "e": 123.1
+      },
+      {
+       "w": "page.",
+       "s": 123.26,
+       "e": 124.06
+      }
+     ]
+    },
+    {
+     "id": "C4-L2",
+     "start": 124.28,
+     "end": 130.68,
+     "text": "In 1619, Kepler wrote a sentence he called most certain and most exact.",
+     "display": "In 1619, Kepler wrote a sentence he called most certain and most exact.",
+     "refs": [
+      "Harmonices Mundi p. 189"
+     ],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'sentence' an amber highlight sweeps the Latin 'Sed res est certissima exactissimaque ...'; a translation panel slides in.",
+     "words": [
+      {
+       "w": "In",
+       "s": 124.28,
+       "e": 124.44
+      },
+      {
+       "w": "1619,",
+       "s": 124.52,
+       "e": 125.96
+      },
+      {
+       "w": "Kepler",
+       "s": 126.04,
+       "e": 126.36
+      },
+      {
+       "w": "wrote",
+       "s": 126.4,
+       "e": 126.6
+      },
+      {
+       "w": "a",
+       "s": 126.64,
+       "e": 126.68
+      },
+      {
+       "w": "sentence",
+       "s": 126.76,
+       "e": 127.24
+      },
+      {
+       "w": "he",
+       "s": 127.32,
+       "e": 127.4
+      },
+      {
+       "w": "called",
+       "s": 127.56,
+       "e": 127.72
+      },
+      {
+       "w": "most",
+       "s": 128.12,
+       "e": 128.44
+      },
+      {
+       "w": "certain",
+       "s": 128.6,
+       "e": 129.08
+      },
+      {
+       "w": "and",
+       "s": 129.16,
+       "e": 129.4
+      },
+      {
+       "w": "most",
+       "s": 129.48,
+       "e": 129.8
+      },
+      {
+       "w": "exact.",
+       "s": 129.88,
+       "e": 130.68
+      }
+     ]
+    },
+    {
+     "id": "C4-L3",
+     "start": 130.98,
+     "end": 136.18,
+     "text": "A planet's period grows with its distance to the power of one and a half.",
+     "display": "A planet's period grows with its distance to the power of one and a half.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Translation panel: 'the ratio of the periods is precisely the 3/2 power of the ratio of the mean distances'. Optional (first cut if tight): the equal-areas wedge sweeps, labeled '2nd law, 1609'.",
+     "words": [
+      {
+       "w": "A",
+       "s": 130.98,
+       "e": 131.06
+      },
+      {
+       "w": "planet's",
+       "s": 131.14,
+       "e": 131.62
+      },
+      {
+       "w": "period",
+       "s": 131.9,
+       "e": 132.18
+      },
+      {
+       "w": "grows",
+       "s": 132.34,
+       "e": 132.66
+      },
+      {
+       "w": "with",
+       "s": 132.74,
+       "e": 132.82
+      },
+      {
+       "w": "its",
+       "s": 132.9,
+       "e": 133.06
+      },
+      {
+       "w": "distance",
+       "s": 133.14,
+       "e": 133.62
+      },
+      {
+       "w": "to",
+       "s": 133.7,
+       "e": 133.78
+      },
+      {
+       "w": "the",
+       "s": 133.86,
+       "e": 133.94
+      },
+      {
+       "w": "power",
+       "s": 134.02,
+       "e": 134.42
+      },
+      {
+       "w": "of",
+       "s": 134.54,
+       "e": 134.66
+      },
+      {
+       "w": "one",
+       "s": 134.74,
+       "e": 134.82
+      },
+      {
+       "w": "and",
+       "s": 134.9,
+       "e": 134.98
+      },
+      {
+       "w": "a",
+       "s": 135.06,
+       "e": 135.14
+      },
+      {
+       "w": "half.",
+       "s": 135.38,
+       "e": 136.18
+      }
+     ]
+    },
+    {
+     "id": "C4-L4",
+     "start": 136.48,
+     "end": 143.76,
+     "text": "Plot the six planets he knew, and they fall on one straight line. His word for it: exactly.",
+     "display": "Plot the six planets he knew, and they fall on one straight line. His word for it: exactly.",
+     "refs": [
+      "NASA NSSDCA Planetary Fact Sheet"
+     ],
+     "short": {
+      "id": "S05",
+      "hook_title": "Kepler's sentence that ran the solar system",
+      "edge": "end"
+     },
+     "hold": 0.8,
+     "visual": "Log-log axes, period vs distance; Mercury to Saturn drop dots; on 'exactly' they snap to a straight line, slope 1.5 (insight sting). Pull-back to the film strip.",
+     "words": [
+      {
+       "w": "Plot",
+       "s": 136.48,
+       "e": 136.8
+      },
+      {
+       "w": "the",
+       "s": 136.88,
+       "e": 136.96
+      },
+      {
+       "w": "six",
+       "s": 137.04,
+       "e": 137.28
+      },
+      {
+       "w": "planets",
+       "s": 137.36,
+       "e": 137.76
+      },
+      {
+       "w": "he",
+       "s": 137.88,
+       "e": 138.0
+      },
+      {
+       "w": "knew,",
+       "s": 138.04,
+       "e": 138.667
+      },
+      {
+       "w": "and",
+       "s": 138.693,
+       "e": 138.72
+      },
+      {
+       "w": "they",
+       "s": 138.8,
+       "e": 138.96
+      },
+      {
+       "w": "fall",
+       "s": 139.04,
+       "e": 139.28
+      },
+      {
+       "w": "on",
+       "s": 139.36,
+       "e": 139.6
+      },
+      {
+       "w": "one",
+       "s": 139.68,
+       "e": 139.92
+      },
+      {
+       "w": "straight",
+       "s": 140.0,
+       "e": 140.32
+      },
+      {
+       "w": "line.",
+       "s": 140.4,
+       "e": 141.32
+      },
+      {
+       "w": "His",
+       "s": 141.36,
+       "e": 141.52
+      },
+      {
+       "w": "word",
+       "s": 141.64,
+       "e": 141.76
+      },
+      {
+       "w": "for",
+       "s": 141.84,
+       "e": 141.92
+      },
+      {
+       "w": "it:",
+       "s": 142.24,
+       "e": 142.64
+      },
+      {
+       "w": "exactly.",
+       "s": 142.72,
+       "e": 143.84
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C5",
+   "title": "How it's made",
+   "start": 145.46,
+   "end": 167.3,
+   "lines": [
+    {
+     "id": "C5-L1",
+     "start": 145.46,
+     "end": 147.46,
+     "text": "Now show them how it's made.",
+     "display": "Now show them how it's made.",
+     "refs": [],
+     "short": {
+      "id": "S06",
+      "hook_title": "How 9 AI agents edit a documentary",
+      "edge": "start"
+     },
+     "hold": 0,
+     "visual": "Engraved-plate style. The prompt types; the orchestrator node appears on 'made'.",
+     "words": [
+      {
+       "w": "Now",
+       "s": 145.46,
+       "e": 145.7
+      },
+      {
+       "w": "show",
+       "s": 145.86,
+       "e": 146.02
+      },
+      {
+       "w": "them",
+       "s": 146.1,
+       "e": 146.26
+      },
+      {
+       "w": "how",
+       "s": 146.34,
+       "e": 146.42
+      },
+      {
+       "w": "it's",
+       "s": 146.5,
+       "e": 146.66
+      },
+      {
+       "w": "made.",
+       "s": 146.74,
+       "e": 147.46
+      }
+     ]
+    },
+    {
+     "id": "C5-L2",
+     "start": 147.76,
+     "end": 153.84,
+     "text": "One orchestrator writes the plan. Nine builder agents make the scenes at the same time.",
+     "display": "One orchestrator writes the plan. Nine builder agents make the scenes at the same time.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'Nine' the orchestrator fans out to 9 agent nodes. Generic owner numbers tick in on screen only: ~1.1M tokens per finished minute, 54 % fewer than the previous pipeline, chapters render in 1-3 minutes, 9 builder agents in parallel.",
+     "words": [
+      {
+       "w": "One",
+       "s": 147.76,
+       "e": 148.0
+      },
+      {
+       "w": "orchestrator",
+       "s": 148.08,
+       "e": 148.8
+      },
+      {
+       "w": "writes",
+       "s": 148.96,
+       "e": 149.28
+      },
+      {
+       "w": "the",
+       "s": 149.36,
+       "e": 149.44
+      },
+      {
+       "w": "plan.",
+       "s": 149.68,
+       "e": 150.2
+      },
+      {
+       "w": "Nine",
+       "s": 150.48,
+       "e": 150.8
+      },
+      {
+       "w": "builder",
+       "s": 150.88,
+       "e": 151.2
+      },
+      {
+       "w": "agents",
+       "s": 151.28,
+       "e": 151.68
+      },
+      {
+       "w": "make",
+       "s": 151.76,
+       "e": 151.92
+      },
+      {
+       "w": "the",
+       "s": 152.0,
+       "e": 152.08
+      },
+      {
+       "w": "scenes",
+       "s": 152.16,
+       "e": 152.56
+      },
+      {
+       "w": "at",
+       "s": 152.6,
+       "e": 152.64
+      },
+      {
+       "w": "the",
+       "s": 152.72,
+       "e": 152.88
+      },
+      {
+       "w": "same",
+       "s": 152.96,
+       "e": 153.2
+      },
+      {
+       "w": "time.",
+       "s": 153.28,
+       "e": 153.84
+      }
+     ]
+    },
+    {
+     "id": "C5-L3",
+     "start": 154.14,
+     "end": 160.06,
+     "text": "A deterministic GPU render stitches them together, cued to every word.",
+     "display": "A deterministic GPU render stitches them together, cued to every word.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Scene tiles slot into a timeline; a word-level waveform runs under them and each tile snaps to its word on 'word'.",
+     "words": [
+      {
+       "w": "A",
+       "s": 154.14,
+       "e": 154.22
+      },
+      {
+       "w": "deterministic",
+       "s": 154.26,
+       "e": 155.1
+      },
+      {
+       "w": "GPU",
+       "s": 155.26,
+       "e": 155.98
+      },
+      {
+       "w": "render",
+       "s": 156.06,
+       "e": 156.46
+      },
+      {
+       "w": "stitches",
+       "s": 156.62,
+       "e": 157.02
+      },
+      {
+       "w": "them",
+       "s": 157.1,
+       "e": 157.26
+      },
+      {
+       "w": "together,",
+       "s": 157.34,
+       "e": 158.1
+      },
+      {
+       "w": "cued",
+       "s": 158.14,
+       "e": 158.54
+      },
+      {
+       "w": "to",
+       "s": 158.62,
+       "e": 158.78
+      },
+      {
+       "w": "every",
+       "s": 158.86,
+       "e": 159.18
+      },
+      {
+       "w": "word.",
+       "s": 159.26,
+       "e": 160.14
+      }
+     ]
+    },
+    {
+     "id": "C5-L4",
+     "start": 160.36,
+     "end": 163.0,
+     "text": "Then the cutting room makes its cut.",
+     "display": "Then the cutting room makes its cut.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "Cutting room (~12 s across L4-L5): the strip stops on a light table; on 'cut' a splicer cuts this trailer's own P vs NP frame.",
+     "words": [
+      {
+       "w": "Then",
+       "s": 160.36,
+       "e": 160.6
+      },
+      {
+       "w": "the",
+       "s": 160.68,
+       "e": 160.84
+      },
+      {
+       "w": "cutting",
+       "s": 160.92,
+       "e": 161.16
+      },
+      {
+       "w": "room",
+       "s": 161.24,
+       "e": 161.56
+      },
+      {
+       "w": "makes",
+       "s": 161.72,
+       "e": 161.88
+      },
+      {
+       "w": "its",
+       "s": 162.0,
+       "e": 162.12
+      },
+      {
+       "w": "cut.",
+       "s": 162.28,
+       "e": 163.0
+      }
+     ]
+    },
+    {
+     "id": "C5-L5",
+     "start": 163.3,
+     "end": 167.3,
+     "text": "Each chapter stands up as a Short, framed and captioned.",
+     "display": "Each chapter stands up as a Short, framed and captioned.",
+     "refs": [],
+     "short": {
+      "id": "S06",
+      "hook_title": "How 9 AI agents edit a documentary",
+      "edge": "end"
+     },
+     "hold": 1.5,
+     "visual": "The frame stands vertical, a crop square locks on, captions write in on 'captioned'; it drops into a generic phone (no platform UI or logos) and a thumb swipes through 3 Shorts from this trailer. Pull-back to the film strip.",
+     "words": [
+      {
+       "w": "Each",
+       "s": 163.3,
+       "e": 163.54
+      },
+      {
+       "w": "chapter",
+       "s": 163.62,
+       "e": 164.02
+      },
+      {
+       "w": "stands",
+       "s": 164.1,
+       "e": 164.5
+      },
+      {
+       "w": "up",
+       "s": 164.58,
+       "e": 164.74
+      },
+      {
+       "w": "as",
+       "s": 164.82,
+       "e": 164.9
+      },
+      {
+       "w": "a",
+       "s": 164.98,
+       "e": 165.06
+      },
+      {
+       "w": "Short,",
+       "s": 165.14,
+       "e": 165.7
+      },
+      {
+       "w": "framed",
+       "s": 165.78,
+       "e": 166.34
+      },
+      {
+       "w": "and",
+       "s": 166.42,
+       "e": 166.5
+      },
+      {
+       "w": "captioned.",
+       "s": 166.58,
+       "e": 167.38
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "C6",
+   "title": "The repo",
+   "start": 169.7,
+   "end": 184.8,
+   "lines": [
+    {
+     "id": "C6-L1",
+     "start": 169.7,
+     "end": 171.3,
+     "text": "End on the repo.",
+     "display": "End on the repo.",
+     "refs": [],
+     "short": {
+      "id": "S07",
+      "hook_title": "One repo, every frame",
+      "edge": "start"
+     },
+     "hold": 2.5,
+     "visual": "The strip winds onto a reel; the reel's spokes become Fourier epicycles that trace the logo.",
+     "words": [
+      {
+       "w": "End",
+       "s": 169.7,
+       "e": 170.1
+      },
+      {
+       "w": "on",
+       "s": 170.26,
+       "e": 170.42
+      },
+      {
+       "w": "the",
+       "s": 170.46,
+       "e": 170.5
+      },
+      {
+       "w": "repo.",
+       "s": 170.58,
+       "e": 171.38
+      }
+     ]
+    },
+    {
+     "id": "C6-L2",
+     "start": 174.1,
+     "end": 177.22,
+     "text": "Every frame you just saw was made with this repo.",
+     "display": "Every frame you just saw was made with this repo.",
+     "refs": [],
+     "short": null,
+     "hold": 0,
+     "visual": "On 'repo' github.com/Fr4nzz/vibe-animator writes in under the logo.",
+     "words": [
+      {
+       "w": "Every",
+       "s": 174.1,
+       "e": 174.42
+      },
+      {
+       "w": "frame",
+       "s": 174.5,
+       "e": 174.74
+      },
+      {
+       "w": "you",
+       "s": 174.82,
+       "e": 174.9
+      },
+      {
+       "w": "just",
+       "s": 174.98,
+       "e": 175.14
+      },
+      {
+       "w": "saw",
+       "s": 175.22,
+       "e": 175.54
+      },
+      {
+       "w": "was",
+       "s": 175.66,
+       "e": 175.78
+      },
+      {
+       "w": "made",
+       "s": 175.86,
+       "e": 176.1
+      },
+      {
+       "w": "with",
+       "s": 176.22,
+       "e": 176.34
+      },
+      {
+       "w": "this",
+       "s": 176.46,
+       "e": 176.58
+      },
+      {
+       "w": "repo.",
+       "s": 176.66,
+       "e": 177.22
+      }
+     ]
+    },
+    {
+     "id": "C6-L3",
+     "start": 177.52,
+     "end": 184.8,
+     "text": "Describe the explainer you want. The agents build the rest: script, voices, scenes and Shorts.",
+     "display": "Describe the explainer you want. The agents build the rest: script, voices, scenes and Shorts.",
+     "refs": [],
+     "short": {
+      "id": "S07",
+      "hook_title": "One repo, every frame",
+      "edge": "end"
+     },
+     "hold": 3.0,
+     "visual": "End card: 'Every frame you just saw was made with this repo. Built with Claude Code + ElevenLabs.' Credits: manim-web, ElevenLabs, Claude Code, Kepler scan source.",
+     "words": [
+      {
+       "w": "Describe",
+       "s": 177.52,
+       "e": 178.0
+      },
+      {
+       "w": "the",
+       "s": 178.04,
+       "e": 178.08
+      },
+      {
+       "w": "explainer",
+       "s": 178.16,
+       "e": 178.8
+      },
+      {
+       "w": "you",
+       "s": 178.88,
+       "e": 178.96
+      },
+      {
+       "w": "want.",
+       "s": 179.04,
+       "e": 179.76
+      },
+      {
+       "w": "The",
+       "s": 179.84,
+       "e": 179.92
+      },
+      {
+       "w": "agents",
+       "s": 180.16,
+       "e": 180.4
+      },
+      {
+       "w": "build",
+       "s": 180.48,
+       "e": 180.72
+      },
+      {
+       "w": "the",
+       "s": 180.76,
+       "e": 180.8
+      },
+      {
+       "w": "rest:",
+       "s": 180.88,
+       "e": 181.6
+      },
+      {
+       "w": "script,",
+       "s": 181.68,
+       "e": 182.4
+      },
+      {
+       "w": "voices,",
+       "s": 182.68,
+       "e": 183.2
+      },
+      {
+       "w": "scenes",
+       "s": 183.48,
+       "e": 183.76
+      },
+      {
+       "w": "and",
+       "s": 183.84,
+       "e": 184.0
+      },
+      {
+       "w": "Shorts.",
+       "s": 184.08,
+       "e": 184.88
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

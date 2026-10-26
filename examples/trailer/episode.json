@@ -1,0 +1,165 @@
+{
+  "id": "trailer",
+  "title": "vibe-animator: launch trailer",
+  "language": "en",
+  "voice": {
+    "provider": "elevenlabs",
+    "voice_id": "",
+    "voice_id_env": "ELEVENLABS_VOICE_ID",
+    "model": "eleven_v4",
+    "api_key_env": "ELEVENLABS_API_KEY",
+    "pronounce": {
+      "AI": "Ay-eye"
+    },
+    "tempo": 1.1,
+    "gap": 0.3,
+    "chapter_gap": 0.9,
+    "language_code": "en",
+    "voices": {
+      "NARRATOR": "QngvLQR8bsLR5bzoa6Vv",
+      "DIRECTOR": "aGv5jHWKBy8K5xKvYeSX",
+      "KHWARIZMI": "puDRtQWF8NtQiPMJygTb",
+      "STUDENT": "8KVwlbLHGvmAEpy5b8PM"
+    },
+    "default_role": "NARRATOR"
+  },
+  "captions": {
+    "numbers": "none",
+    "acronyms": {},
+    "fixes": []
+  },
+  "render": {
+    "lock": "/tmp/vibe-animator-render.lock",
+    "min_free_gb": 3,
+    "gpu_env": {
+      "DRI_PRIME": "1"
+    },
+    "private_ports": [
+      5600,
+      5900
+    ],
+    "review_dir": null
+  },
+  "shorts": {
+    "brand_line": "VIBE-ANIMATOR"
+  },
+  "music": {
+    "mode": "reuse",
+    "bed_db": -10.0,
+    "duck_db": 5.0,
+    "fade_out": 1.5,
+    "true_peak": -1.5,
+    "elevenlabs": {
+      "styles": [
+        "instrumental documentary score",
+        "background music under narration",
+        "clean modern mix",
+        "restrained",
+        "consistent instrumentation",
+        "one recurring main motif"
+      ],
+      "negative_styles": [
+        "vocals",
+        "singing",
+        "lyrics",
+        "choir",
+        "spoken word",
+        "EDM drop",
+        "trailer braams",
+        "dubstep",
+        "heavy percussion",
+        "drum kit",
+        "loud drums",
+        "lo-fi hiss"
+      ],
+      "mood_styles": {
+        "wonder": [
+          "sparse felt piano",
+          "soft celesta",
+          "warm string pad",
+          "slow 70 bpm pulse",
+          "curious and open",
+          "a gentle rising motif that repeats and builds",
+          "light shimmer"
+        ],
+        "struggle": [
+          "low cello ostinato",
+          "minor key",
+          "ticking pizzicato like a clock",
+          "unresolved",
+          "restrained"
+        ],
+        "hope": [
+          "hopeful build",
+          "steady 90 bpm pulse",
+          "muted piano eighths",
+          "warm strings swelling",
+          "light mallets",
+          "forward momentum",
+          "major key"
+        ]
+      },
+      "section_styles": {
+        "C2-L8": [
+          "the same motif re-voiced warmer",
+          "plucked strings",
+          "soft hand-drum heartbeat",
+          "Dorian modal colour",
+          "intimate and patient",
+          "a lesson in a quiet courtyard",
+          "understated"
+        ],
+        "C2-L14": [
+          "bright resolving chord swell",
+          "strings and a bell tone open into a major chord",
+          "then settle",
+          "same tempo"
+        ],
+        "C2-L7": [
+          "the story motif resolves and thins",
+          "felt piano returns",
+          "a sense of a long time passing",
+          "gentle hand-off",
+          "slow 70 bpm"
+        ],
+        "C3-L12": [
+          "low cello ostinato",
+          "minor key",
+          "denser ticking pizzicato",
+          "a rising tension layer grows",
+          "holds unresolved",
+          "restrained dynamics"
+        ],
+        "C3-L6": [
+          "low cello ostinato",
+          "minor key",
+          "a slight lift, not a release",
+          "tension held",
+          "restrained"
+        ],
+        "C4-L5": [
+          "return to the opening motif",
+          "airy and spacious",
+          "high strings",
+          "celesta",
+          "slow orbit-like arpeggio",
+          "reverent",
+          "archival"
+        ],
+        "C4-L9": [
+          "a clean click into place",
+          "harp glissando",
+          "warm swell, no brass",
+          "lands on one sustained major chord"
+        ],
+        "C6-L6": [
+          "broad final statement of the main motif",
+          "warm full strings and piano",
+          "major key",
+          "final cadence",
+          "ends on a held chord with a 3 second tail"
+        ]
+      }
+    }
+  }
+}

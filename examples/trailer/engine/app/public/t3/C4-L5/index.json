@@ -1,0 +1,636 @@
+{
+ "line": "C4-L5",
+ "prompt": "Show Kepler's third law on his page from 1619.",
+ "chars": 46,
+ "size": [
+  1920,
+  1080
+ ],
+ "format": "webp q90",
+ "composer_bbox": [
+  721,
+  469,
+  734,
+  142
+ ],
+ "text_origin": [
+  737,
+  486
+ ],
+ "note": "frames[k] shows the first k characters typed (k = 0..chars), then 3 settle frames (chars = all). caret = [x, top, height] of the text end in frame px (screenshots hide the real caret; draw your own). Isolated T3 instance, new-thread draft page, prompt re-typed for this trailer, never sent.",
+ "frames": [
+  {
+   "file": "000.webp",
+   "chars": 0,
+   "caret": null,
+   "sha1": "712ab825ff7c",
+   "hi": "hi/000.webp",
+   "hi_sha1": "f5d320e9ebe6"
+  },
+  {
+   "file": "001.webp",
+   "chars": 1,
+   "caret": [
+    745,
+    486,
+    19
+   ],
+   "sha1": "600e9fecf5e8",
+   "hi": "hi/001.webp",
+   "hi_sha1": "dd8fa7689aa1"
+  },
+  {
+   "file": "002.webp",
+   "chars": 2,
+   "caret": [
+    753,
+    486,
+    19
+   ],
+   "sha1": "6d509d6244c2",
+   "hi": "hi/002.webp",
+   "hi_sha1": "df29c4369a4f"
+  },
+  {
+   "file": "003.webp",
+   "chars": 3,
+   "caret": [
+    762,
+    486,
+    19
+   ],
+   "sha1": "35493e29789f",
+   "hi": "hi/003.webp",
+   "hi_sha1": "0fb7322b9466"
+  },
+  {
+   "file": "004.webp",
+   "chars": 4,
+   "caret": [
+    773,
+    486,
+    19
+   ],
+   "sha1": "4cd17ffea6b4",
+   "hi": "hi/004.webp",
+   "hi_sha1": "93760f40757e"
+  },
+  {
+   "file": "005.webp",
+   "chars": 5,
+   "caret": [
+    776,
+    486,
+    19
+   ],
+   "sha1": "4cd17ffea6b4",
+   "hi": "hi/005.webp",
+   "hi_sha1": "93760f40757e"
+  },
+  {
+   "file": "006.webp",
+   "chars": 6,
+   "caret": [
+    785,
+    486,
+    19
+   ],
+   "sha1": "c37ef2296ae9",
+   "hi": "hi/006.webp",
+   "hi_sha1": "d10aa1393607"
+  },
+  {
+   "file": "007.webp",
+   "chars": 7,
+   "caret": [
+    793,
+    486,
+    19
+   ],
+   "sha1": "05a547bcdae7",
+   "hi": "hi/007.webp",
+   "hi_sha1": "88bc9a5510f3"
+  },
+  {
+   "file": "008.webp",
+   "chars": 8,
+   "caret": [
+    801,
+    486,
+    19
+   ],
+   "sha1": "6fc804357b20",
+   "hi": "hi/008.webp",
+   "hi_sha1": "63267580dc72"
+  },
+  {
+   "file": "009.webp",
+   "chars": 9,
+   "caret": [
+    805,
+    486,
+    19
+   ],
+   "sha1": "9e3079328d50",
+   "hi": "hi/009.webp",
+   "hi_sha1": "1a3689396f36"
+  },
+  {
+   "file": "010.webp",
+   "chars": 10,
+   "caret": [
+    813,
+    486,
+    19
+   ],
+   "sha1": "69b5555aeb6d",
+   "hi": "hi/010.webp",
+   "hi_sha1": "c7eb83f99b7c"
+  },
+  {
+   "file": "011.webp",
+   "chars": 11,
+   "caret": [
+    819,
+    486,
+    19
+   ],
+   "sha1": "aa55c086e1f4",
+   "hi": "hi/011.webp",
+   "hi_sha1": "916cdd497e65"
+  },
+  {
+   "file": "012.webp",
+   "chars": 12,
+   "caret": [
+    822,
+    486,
+    19
+   ],
+   "sha1": "94e5d5d9c8c2",
+   "hi": "hi/012.webp",
+   "hi_sha1": "e565f75a21cd"
+  },
+  {
+   "file": "013.webp",
+   "chars": 13,
+   "caret": [
+    829,
+    486,
+    19
+   ],
+   "sha1": "5e09160bc793",
+   "hi": "hi/013.webp",
+   "hi_sha1": "83f134ff2bc5"
+  },
+  {
+   "file": "014.webp",
+   "chars": 14,
+   "caret": [
+    832,
+    486,
+    19
+   ],
+   "sha1": "5e09160bc793",
+   "hi": "hi/014.webp",
+   "hi_sha1": "83f134ff2bc5"
+  },
+  {
+   "file": "015.webp",
+   "chars": 15,
+   "caret": [
+    837,
+    486,
+    19
+   ],
+   "sha1": "d009453e2588",
+   "hi": "hi/015.webp",
+   "hi_sha1": "16d6cf8728f2"
+  },
+  {
+   "file": "016.webp",
+   "chars": 16,
+   "caret": [
+    846,
+    486,
+    19
+   ],
+   "sha1": "691bd4602abf",
+   "hi": "hi/016.webp",
+   "hi_sha1": "2a0ffa1f5195"
+  },
+  {
+   "file": "017.webp",
+   "chars": 17,
+   "caret": [
+    850,
+    486,
+    19
+   ],
+   "sha1": "e4e269552c6c",
+   "hi": "hi/017.webp",
+   "hi_sha1": "d04bdbea7d5f"
+  },
+  {
+   "file": "018.webp",
+   "chars": 18,
+   "caret": [
+    855,
+    486,
+    19
+   ],
+   "sha1": "a0ad560833d6",
+   "hi": "hi/018.webp",
+   "hi_sha1": "f177b5b13b50"
+  },
+  {
+   "file": "019.webp",
+   "chars": 19,
+   "caret": [
+    864,
+    486,
+    19
+   ],
+   "sha1": "5b34ee215d56",
+   "hi": "hi/019.webp",
+   "hi_sha1": "2eb5f097eef4"
+  },
+  {
+   "file": "020.webp",
+   "chars": 20,
+   "caret": [
+    867,
+    486,
+    19
+   ],
+   "sha1": "5b34ee215d56",
+   "hi": "hi/020.webp",
+   "hi_sha1": "2eb5f097eef4"
+  },
+  {
+   "file": "021.webp",
+   "chars": 21,
+   "caret": [
+    871,
+    486,
+    19
+   ],
+   "sha1": "24ad0474fc23",
+   "hi": "hi/021.webp",
+   "hi_sha1": "fc69ffa61fd2"
+  },
+  {
+   "file": "022.webp",
+   "chars": 22,
+   "caret": [
+    879,
+    486,
+    19
+   ],
+   "sha1": "6d8330f84cb8",
+   "hi": "hi/022.webp",
+   "hi_sha1": "2eb2e45125a8"
+  },
+  {
+   "file": "023.webp",
+   "chars": 23,
+   "caret": [
+    890,
+    486,
+    19
+   ],
+   "sha1": "1c80c100f562",
+   "hi": "hi/023.webp",
+   "hi_sha1": "e8ce13401459"
+  },
+  {
+   "file": "024.webp",
+   "chars": 24,
+   "caret": [
+    893,
+    486,
+    19
+   ],
+   "sha1": "1c80c100f562",
+   "hi": "hi/024.webp",
+   "hi_sha1": "e8ce13401459"
+  },
+  {
+   "file": "025.webp",
+   "chars": 25,
+   "caret": [
+    902,
+    486,
+    19
+   ],
+   "sha1": "208b32326f1e",
+   "hi": "hi/025.webp",
+   "hi_sha1": "681bd200440f"
+  },
+  {
+   "file": "026.webp",
+   "chars": 26,
+   "caret": [
+    911,
+    486,
+    19
+   ],
+   "sha1": "c2c127e0f7d5",
+   "hi": "hi/026.webp",
+   "hi_sha1": "8d69036415bd"
+  },
+  {
+   "file": "027.webp",
+   "chars": 27,
+   "caret": [
+    914,
+    486,
+    19
+   ],
+   "sha1": "c2c127e0f7d5",
+   "hi": "hi/027.webp",
+   "hi_sha1": "8d69036415bd"
+  },
+  {
+   "file": "028.webp",
+   "chars": 28,
+   "caret": [
+    923,
+    486,
+    19
+   ],
+   "sha1": "e2a5a631dfb0",
+   "hi": "hi/028.webp",
+   "hi_sha1": "838e139627e2"
+  },
+  {
+   "file": "029.webp",
+   "chars": 29,
+   "caret": [
+    926,
+    486,
+    19
+   ],
+   "sha1": "3a4d357b1b4b",
+   "hi": "hi/029.webp",
+   "hi_sha1": "4f58d3538e9a"
+  },
+  {
+   "file": "030.webp",
+   "chars": 30,
+   "caret": [
+    933,
+    486,
+    19
+   ],
+   "sha1": "1f5abc6015e7",
+   "hi": "hi/030.webp",
+   "hi_sha1": "0938160a33be"
+  },
+  {
+   "file": "031.webp",
+   "chars": 31,
+   "caret": [
+    937,
+    486,
+    19
+   ],
+   "sha1": "1f5abc6015e7",
+   "hi": "hi/031.webp",
+   "hi_sha1": "0938160a33be"
+  },
+  {
+   "file": "032.webp",
+   "chars": 32,
+   "caret": [
+    945,
+    486,
+    19
+   ],
+   "sha1": "813cee823794",
+   "hi": "hi/032.webp",
+   "hi_sha1": "394bbf5cc198"
+  },
+  {
+   "file": "033.webp",
+   "chars": 33,
+   "caret": [
+    953,
+    486,
+    19
+   ],
+   "sha1": "0d535e88732a",
+   "hi": "hi/033.webp",
+   "hi_sha1": "e033f49284de"
+  },
+  {
+   "file": "034.webp",
+   "chars": 34,
+   "caret": [
+    962,
+    486,
+    19
+   ],
+   "sha1": "c4c0998d6c03",
+   "hi": "hi/034.webp",
+   "hi_sha1": "417f10ca75aa"
+  },
+  {
+   "file": "035.webp",
+   "chars": 35,
+   "caret": [
+    970,
+    486,
+    19
+   ],
+   "sha1": "53cb0fd2fb92",
+   "hi": "hi/035.webp",
+   "hi_sha1": "89851a0f88b3"
+  },
+  {
+   "file": "036.webp",
+   "chars": 36,
+   "caret": [
+    973,
+    486,
+    19
+   ],
+   "sha1": "53cb0fd2fb92",
+   "hi": "hi/036.webp",
+   "hi_sha1": "89851a0f88b3"
+  },
+  {
+   "file": "037.webp",
+   "chars": 37,
+   "caret": [
+    978,
+    486,
+    19
+   ],
+   "sha1": "b6e6d3a1ac09",
+   "hi": "hi/037.webp",
+   "hi_sha1": "531ce1b05b59"
+  },
+  {
+   "file": "038.webp",
+   "chars": 38,
+   "caret": [
+    984,
+    486,
+    19
+   ],
+   "sha1": "8f47463d844c",
+   "hi": "hi/038.webp",
+   "hi_sha1": "aace4c5f9f01"
+  },
+  {
+   "file": "039.webp",
+   "chars": 39,
+   "caret": [
+    992,
+    486,
+    19
+   ],
+   "sha1": "34df876c2047",
+   "hi": "hi/039.webp",
+   "hi_sha1": "ee8c46ef9f18"
+  },
+  {
+   "file": "040.webp",
+   "chars": 40,
+   "caret": [
+    1005,
+    486,
+    19
+   ],
+   "sha1": "c4faf875ac21",
+   "hi": "hi/040.webp",
+   "hi_sha1": "dda748166916"
+  },
+  {
+   "file": "041.webp",
+   "chars": 41,
+   "caret": [
+    1009,
+    486,
+    19
+   ],
+   "sha1": "c4faf875ac21",
+   "hi": "hi/041.webp",
+   "hi_sha1": "dda748166916"
+  },
+  {
+   "file": "042.webp",
+   "chars": 42,
+   "caret": [
+    1017,
+    486,
+    19
+   ],
+   "sha1": "ddb3620e59f9",
+   "hi": "hi/042.webp",
+   "hi_sha1": "c5127410f34a"
+  },
+  {
+   "file": "043.webp",
+   "chars": 43,
+   "caret": [
+    1025,
+    486,
+    19
+   ],
+   "sha1": "229a7adb3111",
+   "hi": "hi/043.webp",
+   "hi_sha1": "6c9cb69b76c6"
+  },
+  {
+   "file": "044.webp",
+   "chars": 44,
+   "caret": [
+    1033,
+    486,
+    19
+   ],
+   "sha1": "a4d2009cb0a0",
+   "hi": "hi/044.webp",
+   "hi_sha1": "3fd5d2098a2d"
+  },
+  {
+   "file": "045.webp",
+   "chars": 45,
+   "caret": [
+    1041,
+    486,
+    19
+   ],
+   "sha1": "f24d7cd6a1bf",
+   "hi": "hi/045.webp",
+   "hi_sha1": "30119899c868"
+  },
+  {
+   "file": "046.webp",
+   "chars": 46,
+   "caret": [
+    1045,
+    486,
+    19
+   ],
+   "sha1": "59ad396d8952",
+   "hi": "hi/046.webp",
+   "hi_sha1": "bf53c09b47d4"
+  },
+  {
+   "file": "047.webp",
+   "chars": 46,
+   "caret": [
+    1045,
+    486,
+    19
+   ],
+   "sha1": "59ad396d8952",
+   "hi": "hi/047.webp",
+   "hi_sha1": "bf53c09b47d4"
+  },
+  {
+   "file": "048.webp",
+   "chars": 46,
+   "caret": [
+    1045,
+    486,
+    19
+   ],
+   "sha1": "59ad396d8952",
+   "hi": "hi/048.webp",
+   "hi_sha1": "bf53c09b47d4"
+  },
+  {
+   "file": "049.webp",
+   "chars": 46,
+   "caret": [
+    1045,
+    486,
+    19
+   ],
+   "sha1": "59ad396d8952",
+   "hi": "hi/049.webp",
+   "hi_sha1": "bf53c09b47d4"
+  }
+ ],
+ "hi": {
+  "scale": 2,
+  "bg": [
+   380,
+   180,
+   1140,
+   640
+  ],
+  "clip": [
+   711,
+   459,
+   754,
+   162
+  ],
+  "bg_sha1": "e66a7fa7b956",
+  "note": "deviceScaleFactor 2 re-capture (same isolated instance, same layout, never sent): hi/bg.webp = static region around the composer, hi/NNN.webp = composer region per typed prefix; draw over the 1x frame"
+ }
+}

@@ -1,0 +1,2027 @@
+{
+ "lines": [
+  {
+   "text": "This is vibe-animator.",
+   "start": 0.5,
+   "end": 2.391,
+   "id": "C0-L6",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "This",
+     "start": 0.5,
+     "end": 0.791
+    },
+    {
+     "w": "is",
+     "start": 0.936,
+     "end": 1.082
+    },
+    {
+     "w": "vibe-animator.",
+     "start": 1.227,
+     "end": 2.391
+    }
+   ]
+  },
+  {
+   "text": "You describe a video, and Claude Code agents make it: the script, the voices, the animation and the Shorts.",
+   "start": 3.191,
+   "end": 10.536,
+   "id": "C0-L7",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "You",
+     "start": 3.191,
+     "end": 3.336
+    },
+    {
+     "w": "describe",
+     "start": 3.555,
+     "end": 3.773
+    },
+    {
+     "w": "a",
+     "start": 3.809,
+     "end": 3.845
+    },
+    {
+     "w": "video,",
+     "start": 3.918,
+     "end": 4.5
+    },
+    {
+     "w": "and",
+     "start": 4.609,
+     "end": 4.718
+    },
+    {
+     "w": "Claude",
+     "start": 4.791,
+     "end": 5.009
+    },
+    {
+     "w": "Code",
+     "start": 5.082,
+     "end": 5.3
+    },
+    {
+     "w": "agents",
+     "start": 5.445,
+     "end": 5.809
+    },
+    {
+     "w": "make",
+     "start": 5.955,
+     "end": 6.1
+    },
+    {
+     "w": "it:",
+     "start": 6.173,
+     "end": 6.682
+    },
+    {
+     "w": "the",
+     "start": 6.755,
+     "end": 6.827
+    },
+    {
+     "w": "script,",
+     "start": 7.009,
+     "end": 7.409
+    },
+    {
+     "w": "the",
+     "start": 7.482,
+     "end": 7.518
+    },
+    {
+     "w": "voices,",
+     "start": 7.555,
+     "end": 8.282
+    },
+    {
+     "w": "the",
+     "start": 8.318,
+     "end": 8.355
+    },
+    {
+     "w": "animation",
+     "start": 8.5,
+     "end": 9.155
+    },
+    {
+     "w": "and",
+     "start": 9.227,
+     "end": 9.445
+    },
+    {
+     "w": "the",
+     "start": 9.518,
+     "end": 9.591
+    },
+    {
+     "w": "Shorts.",
+     "start": 9.773,
+     "end": 10.536
+    }
+   ]
+  },
+  {
+   "text": "You are about to see four examples Claude animated: a chatbot's next word, completing the square, P versus NP, and Kepler's third law.",
+   "start": 11.136,
+   "end": 21.391,
+   "id": "C0-L10",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "You",
+     "start": 11.136,
+     "end": 11.282
+    },
+    {
+     "w": "are",
+     "start": 11.318,
+     "end": 11.355
+    },
+    {
+     "w": "about",
+     "start": 11.427,
+     "end": 11.645
+    },
+    {
+     "w": "to",
+     "start": 11.718,
+     "end": 11.791
+    },
+    {
+     "w": "see",
+     "start": 11.864,
+     "end": 12.082
+    },
+    {
+     "w": "four",
+     "start": 12.155,
+     "end": 12.373
+    },
+    {
+     "w": "examples",
+     "start": 12.7,
+     "end": 13.027
+    },
+    {
+     "w": "Claude",
+     "start": 13.1,
+     "end": 13.464
+    },
+    {
+     "w": "animated:",
+     "start": 13.536,
+     "end": 14.518
+    },
+    {
+     "w": "a",
+     "start": 14.555,
+     "end": 14.627
+    },
+    {
+     "w": "chatbot's",
+     "start": 14.773,
+     "end": 15.209
+    },
+    {
+     "w": "next",
+     "start": 15.282,
+     "end": 15.5
+    },
+    {
+     "w": "word,",
+     "start": 15.573,
+     "end": 16.264
+    },
+    {
+     "w": "completing",
+     "start": 16.3,
+     "end": 16.736
+    },
+    {
+     "w": "the",
+     "start": 16.809,
+     "end": 16.882
+    },
+    {
+     "w": "square,",
+     "start": 16.955,
+     "end": 17.791
+    },
+    {
+     "w": "P",
+     "start": 17.827,
+     "end": 18.118
+    },
+    {
+     "w": "versus",
+     "start": 18.191,
+     "end": 18.627
+    },
+    {
+     "w": "NP,",
+     "start": 18.845,
+     "end": 19.5
+    },
+    {
+     "w": "and",
+     "start": 19.573,
+     "end": 19.936
+    },
+    {
+     "w": "Kepler's",
+     "start": 20.009,
+     "end": 20.518
+    },
+    {
+     "w": "third",
+     "start": 20.664,
+     "end": 20.809
+    },
+    {
+     "w": "law.",
+     "start": 20.882,
+     "end": 21.464
+    }
+   ]
+  },
+  {
+   "text": "Explain how a chatbot picks its next word.",
+   "start": 23.091,
+   "end": 26.073,
+   "id": "C1-L8",
+   "voice": "DIRECTOR",
+   "typed": "Explain how a chatbot picks its next word.",
+   "words": [
+    {
+     "w": "Explain",
+     "start": 23.091,
+     "end": 23.6
+    },
+    {
+     "w": "how",
+     "start": 23.673,
+     "end": 23.818
+    },
+    {
+     "w": "a",
+     "start": 23.891,
+     "end": 23.964
+    },
+    {
+     "w": "chatbot",
+     "start": 24.036,
+     "end": 24.545
+    },
+    {
+     "w": "picks",
+     "start": 24.691,
+     "end": 24.909
+    },
+    {
+     "w": "its",
+     "start": 25.018,
+     "end": 25.127
+    },
+    {
+     "w": "next",
+     "start": 25.2,
+     "end": 25.418
+    },
+    {
+     "w": "word.",
+     "start": 25.491,
+     "end": 26.145
+    }
+   ]
+  },
+  {
+   "text": "A language model turns each word into a point in space, where related meanings sit close together.",
+   "start": 27.173,
+   "end": 33.209,
+   "id": "C1-L2",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "A",
+     "start": 27.173,
+     "end": 27.318
+    },
+    {
+     "w": "language",
+     "start": 27.5,
+     "end": 27.682
+    },
+    {
+     "w": "model",
+     "start": 27.755,
+     "end": 28.045
+    },
+    {
+     "w": "turns",
+     "start": 28.118,
+     "end": 28.482
+    },
+    {
+     "w": "each",
+     "start": 28.555,
+     "end": 28.7
+    },
+    {
+     "w": "word",
+     "start": 28.845,
+     "end": 29.136
+    },
+    {
+     "w": "into",
+     "start": 29.209,
+     "end": 29.355
+    },
+    {
+     "w": "a",
+     "start": 29.427,
+     "end": 29.573
+    },
+    {
+     "w": "point",
+     "start": 29.718,
+     "end": 29.864
+    },
+    {
+     "w": "in",
+     "start": 29.936,
+     "end": 30.082
+    },
+    {
+     "w": "space,",
+     "start": 30.336,
+     "end": 30.882
+    },
+    {
+     "w": "where",
+     "start": 30.955,
+     "end": 31.027
+    },
+    {
+     "w": "related",
+     "start": 31.1,
+     "end": 31.536
+    },
+    {
+     "w": "meanings",
+     "start": 31.609,
+     "end": 32.045
+    },
+    {
+     "w": "sit",
+     "start": 32.155,
+     "end": 32.264
+    },
+    {
+     "w": "close",
+     "start": 32.336,
+     "end": 32.555
+    },
+    {
+     "w": "together.",
+     "start": 32.627,
+     "end": 33.209
+    }
+   ]
+  },
+  {
+   "text": "To know what \"it\" means, the model looks back and pays most attention to \"the cat\".",
+   "start": 33.509,
+   "end": 39.109,
+   "id": "C1-L6",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "To",
+     "start": 33.509,
+     "end": 33.655
+    },
+    {
+     "w": "know",
+     "start": 33.764,
+     "end": 33.873
+    },
+    {
+     "w": "what",
+     "start": 34.018,
+     "end": 34.164
+    },
+    {
+     "w": "\"it\"",
+     "start": 34.236,
+     "end": 34.6
+    },
+    {
+     "w": "means,",
+     "start": 34.818,
+     "end": 35.327
+    },
+    {
+     "w": "the",
+     "start": 35.364,
+     "end": 35.4
+    },
+    {
+     "w": "model",
+     "start": 35.473,
+     "end": 35.691
+    },
+    {
+     "w": "looks",
+     "start": 35.764,
+     "end": 35.982
+    },
+    {
+     "w": "back",
+     "start": 36.055,
+     "end": 36.418
+    },
+    {
+     "w": "and",
+     "start": 36.491,
+     "end": 36.564
+    },
+    {
+     "w": "pays",
+     "start": 36.636,
+     "end": 36.855
+    },
+    {
+     "w": "most",
+     "start": 36.927,
+     "end": 37.145
+    },
+    {
+     "w": "attention",
+     "start": 37.436,
+     "end": 37.727
+    },
+    {
+     "w": "to",
+     "start": 37.909,
+     "end": 38.091
+    },
+    {
+     "w": "\"the",
+     "start": 38.127,
+     "end": 38.236
+    },
+    {
+     "w": "cat\".",
+     "start": 38.309,
+     "end": 39.109
+    }
+   ]
+  },
+  {
+   "text": "Then the model weighs every possible next word by probability and picks one.",
+   "start": 39.409,
+   "end": 44.427,
+   "id": "C1-L7",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Then",
+     "start": 39.409,
+     "end": 39.627
+    },
+    {
+     "w": "the",
+     "start": 39.7,
+     "end": 39.736
+    },
+    {
+     "w": "model",
+     "start": 39.773,
+     "end": 40.064
+    },
+    {
+     "w": "weighs",
+     "start": 40.136,
+     "end": 40.573
+    },
+    {
+     "w": "every",
+     "start": 40.755,
+     "end": 40.936
+    },
+    {
+     "w": "possible",
+     "start": 41.009,
+     "end": 41.445
+    },
+    {
+     "w": "next",
+     "start": 41.591,
+     "end": 41.882
+    },
+    {
+     "w": "word",
+     "start": 42.064,
+     "end": 42.245
+    },
+    {
+     "w": "by",
+     "start": 42.355,
+     "end": 42.464
+    },
+    {
+     "w": "probability",
+     "start": 42.936,
+     "end": 43.409
+    },
+    {
+     "w": "and",
+     "start": 43.482,
+     "end": 43.627
+    },
+    {
+     "w": "picks",
+     "start": 43.664,
+     "end": 43.918
+    },
+    {
+     "w": "one.",
+     "start": 43.991,
+     "end": 44.5
+    }
+   ]
+  },
+  {
+   "text": "Show how al-Khwarizmi completed the square.",
+   "start": 46.127,
+   "end": 48.964,
+   "id": "C2-L8",
+   "voice": "DIRECTOR",
+   "typed": "Show how al-Khwarizmi completed the square.",
+   "words": [
+    {
+     "w": "Show",
+     "start": 46.127,
+     "end": 46.418
+    },
+    {
+     "w": "how",
+     "start": 46.491,
+     "end": 46.709
+    },
+    {
+     "w": "al-Khwarizmi",
+     "start": 46.782,
+     "end": 47.582
+    },
+    {
+     "w": "completed",
+     "start": 47.655,
+     "end": 48.164
+    },
+    {
+     "w": "the",
+     "start": 48.2,
+     "end": 48.236
+    },
+    {
+     "w": "square.",
+     "start": 48.309,
+     "end": 49.036
+    }
+   ]
+  },
+  {
+   "text": "A square plus ten of its sides makes thirty-nine. What is the side?",
+   "start": 50.064,
+   "end": 54.355,
+   "id": "C2-L9",
+   "voice": "STUDENT",
+   "words": [
+    {
+     "w": "A",
+     "start": 50.064,
+     "end": 50.209
+    },
+    {
+     "w": "square",
+     "start": 50.282,
+     "end": 50.645
+    },
+    {
+     "w": "plus",
+     "start": 50.791,
+     "end": 51.009
+    },
+    {
+     "w": "ten",
+     "start": 51.082,
+     "end": 51.227
+    },
+    {
+     "w": "of",
+     "start": 51.3,
+     "end": 51.336
+    },
+    {
+     "w": "its",
+     "start": 51.373,
+     "end": 51.518
+    },
+    {
+     "w": "sides",
+     "start": 51.555,
+     "end": 51.955
+    },
+    {
+     "w": "makes",
+     "start": 52.027,
+     "end": 52.245
+    },
+    {
+     "w": "thirty-nine.",
+     "start": 52.318,
+     "end": 53.336
+    },
+    {
+     "w": "What",
+     "start": 53.409,
+     "end": 53.482
+    },
+    {
+     "w": "is",
+     "start": 53.555,
+     "end": 53.627
+    },
+    {
+     "w": "the",
+     "start": 53.7,
+     "end": 53.736
+    },
+    {
+     "w": "side?",
+     "start": 53.773,
+     "end": 54.427
+    }
+   ]
+  },
+  {
+   "text": "Make one perfect square. Then the side is easy: area sixty-four, side eight.",
+   "start": 54.655,
+   "end": 60.473,
+   "id": "C2-L12",
+   "voice": "KHWARIZMI",
+   "words": [
+    {
+     "w": "Make",
+     "start": 54.655,
+     "end": 54.945
+    },
+    {
+     "w": "one",
+     "start": 55.091,
+     "end": 55.236
+    },
+    {
+     "w": "perfect",
+     "start": 55.382,
+     "end": 55.745
+    },
+    {
+     "w": "square.",
+     "start": 55.818,
+     "end": 56.255
+    },
+    {
+     "w": "Then",
+     "start": 56.691,
+     "end": 56.836
+    },
+    {
+     "w": "the",
+     "start": 56.873,
+     "end": 56.909
+    },
+    {
+     "w": "side",
+     "start": 56.982,
+     "end": 57.2
+    },
+    {
+     "w": "is",
+     "start": 57.273,
+     "end": 57.345
+    },
+    {
+     "w": "easy:",
+     "start": 57.418,
+     "end": 58.073
+    },
+    {
+     "w": "area",
+     "start": 58.145,
+     "end": 58.436
+    },
+    {
+     "w": "sixty-four,",
+     "start": 58.509,
+     "end": 59.455
+    },
+    {
+     "w": "side",
+     "start": 59.527,
+     "end": 59.818
+    },
+    {
+     "w": "eight.",
+     "start": 60.036,
+     "end": 60.473
+    }
+   ]
+  },
+  {
+   "text": "The ten does not fit. Split it: five on two sides. A corner is missing, five by five.",
+   "start": 60.773,
+   "end": 67.755,
+   "id": "C2-L13",
+   "voice": "KHWARIZMI",
+   "words": [
+    {
+     "w": "The",
+     "start": 60.773,
+     "end": 60.845
+    },
+    {
+     "w": "ten",
+     "start": 60.991,
+     "end": 61.209
+    },
+    {
+     "w": "does",
+     "start": 61.282,
+     "end": 61.427
+    },
+    {
+     "w": "not",
+     "start": 61.5,
+     "end": 61.645
+    },
+    {
+     "w": "fit.",
+     "start": 61.791,
+     "end": 62.445
+    },
+    {
+     "w": "Split",
+     "start": 62.591,
+     "end": 62.736
+    },
+    {
+     "w": "it:",
+     "start": 62.809,
+     "end": 63.318
+    },
+    {
+     "w": "five",
+     "start": 63.5,
+     "end": 63.682
+    },
+    {
+     "w": "on",
+     "start": 63.755,
+     "end": 63.973
+    },
+    {
+     "w": "two",
+     "start": 64.045,
+     "end": 64.118
+    },
+    {
+     "w": "sides.",
+     "start": 64.191,
+     "end": 65.064
+    },
+    {
+     "w": "A",
+     "start": 65.136,
+     "end": 65.209
+    },
+    {
+     "w": "corner",
+     "start": 65.391,
+     "end": 65.573
+    },
+    {
+     "w": "is",
+     "start": 65.645,
+     "end": 65.718
+    },
+    {
+     "w": "missing,",
+     "start": 65.936,
+     "end": 66.445
+    },
+    {
+     "w": "five",
+     "start": 66.591,
+     "end": 66.736
+    },
+    {
+     "w": "by",
+     "start": 66.809,
+     "end": 66.955
+    },
+    {
+     "w": "five.",
+     "start": 67.027,
+     "end": 67.755
+    }
+   ]
+  },
+  {
+   "text": "Fill it, and the area is sixty-four. Side eight. Take away five: three.",
+   "start": 68.055,
+   "end": 73.873,
+   "id": "C2-L14",
+   "voice": "KHWARIZMI",
+   "words": [
+    {
+     "w": "Fill",
+     "start": 68.055,
+     "end": 68.273
+    },
+    {
+     "w": "it,",
+     "start": 68.382,
+     "end": 68.709
+    },
+    {
+     "w": "and",
+     "start": 68.782,
+     "end": 68.855
+    },
+    {
+     "w": "the",
+     "start": 68.927,
+     "end": 69.0
+    },
+    {
+     "w": "area",
+     "start": 69.073,
+     "end": 69.364
+    },
+    {
+     "w": "is",
+     "start": 69.436,
+     "end": 69.582
+    },
+    {
+     "w": "sixty-four.",
+     "start": 69.691,
+     "end": 70.745
+    },
+    {
+     "w": "Side",
+     "start": 70.927,
+     "end": 71.109
+    },
+    {
+     "w": "eight.",
+     "start": 71.182,
+     "end": 71.836
+    },
+    {
+     "w": "Take",
+     "start": 71.909,
+     "end": 71.982
+    },
+    {
+     "w": "away",
+     "start": 72.055,
+     "end": 72.345
+    },
+    {
+     "w": "five:",
+     "start": 72.745,
+     "end": 73.182
+    },
+    {
+     "w": "three.",
+     "start": 73.218,
+     "end": 73.945
+    }
+   ]
+  },
+  {
+   "text": "He wrote it all in words. Centuries later, the picture became a formula.",
+   "start": 74.173,
+   "end": 79.191,
+   "id": "C2-L7",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "He",
+     "start": 74.173,
+     "end": 74.318
+    },
+    {
+     "w": "wrote",
+     "start": 74.391,
+     "end": 74.609
+    },
+    {
+     "w": "it",
+     "start": 74.682,
+     "end": 74.755
+    },
+    {
+     "w": "all",
+     "start": 74.827,
+     "end": 75.045
+    },
+    {
+     "w": "in",
+     "start": 75.118,
+     "end": 75.264
+    },
+    {
+     "w": "words.",
+     "start": 75.336,
+     "end": 76.1
+    },
+    {
+     "w": "Centuries",
+     "start": 76.355,
+     "end": 76.791
+    },
+    {
+     "w": "later,",
+     "start": 76.864,
+     "end": 77.445
+    },
+    {
+     "w": "the",
+     "start": 77.518,
+     "end": 77.591
+    },
+    {
+     "w": "picture",
+     "start": 77.809,
+     "end": 78.027
+    },
+    {
+     "w": "became",
+     "start": 78.1,
+     "end": 78.318
+    },
+    {
+     "w": "a",
+     "start": 78.391,
+     "end": 78.464
+    },
+    {
+     "w": "formula.",
+     "start": 78.718,
+     "end": 79.264
+    }
+   ]
+  },
+  {
+   "text": "Explain P versus NP with a sudoku.",
+   "start": 80.891,
+   "end": 84.382,
+   "id": "C3-L7",
+   "voice": "DIRECTOR",
+   "typed": "Explain P versus NP with a sudoku.",
+   "words": [
+    {
+     "w": "Explain",
+     "start": 80.891,
+     "end": 81.473
+    },
+    {
+     "w": "P",
+     "start": 81.618,
+     "end": 81.982
+    },
+    {
+     "w": "versus",
+     "start": 82.127,
+     "end": 82.491
+    },
+    {
+     "w": "NP",
+     "start": 82.709,
+     "end": 83.218
+    },
+    {
+     "w": "with",
+     "start": 83.364,
+     "end": 83.509
+    },
+    {
+     "w": "a",
+     "start": 83.545,
+     "end": 83.582
+    },
+    {
+     "w": "sudoku.",
+     "start": 83.618,
+     "end": 84.455
+    }
+   ]
+  },
+  {
+   "text": "Checking a finished sudoku takes a second. Is finding the answer always that fast?",
+   "start": 85.482,
+   "end": 90.573,
+   "id": "C3-L11",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Checking",
+     "start": 85.482,
+     "end": 85.845
+    },
+    {
+     "w": "a",
+     "start": 85.882,
+     "end": 85.918
+    },
+    {
+     "w": "finished",
+     "start": 86.064,
+     "end": 86.355
+    },
+    {
+     "w": "sudoku",
+     "start": 86.427,
+     "end": 86.936
+    },
+    {
+     "w": "takes",
+     "start": 87.045,
+     "end": 87.155
+    },
+    {
+     "w": "a",
+     "start": 87.227,
+     "end": 87.3
+    },
+    {
+     "w": "second.",
+     "start": 87.373,
+     "end": 88.1
+    },
+    {
+     "w": "Is",
+     "start": 88.209,
+     "end": 88.318
+    },
+    {
+     "w": "finding",
+     "start": 88.464,
+     "end": 88.609
+    },
+    {
+     "w": "the",
+     "start": 88.682,
+     "end": 88.755
+    },
+    {
+     "w": "answer",
+     "start": 88.973,
+     "end": 89.191
+    },
+    {
+     "w": "always",
+     "start": 89.409,
+     "end": 89.627
+    },
+    {
+     "w": "that",
+     "start": 89.736,
+     "end": 89.845
+    },
+    {
+     "w": "fast?",
+     "start": 90.027,
+     "end": 90.573
+    }
+   ]
+  },
+  {
+   "text": "Finding it can mean trying combinations, and they multiply with every empty square.",
+   "start": 90.873,
+   "end": 96.182,
+   "id": "C3-L12",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Finding",
+     "start": 90.873,
+     "end": 91.236
+    },
+    {
+     "w": "it",
+     "start": 91.309,
+     "end": 91.455
+    },
+    {
+     "w": "can",
+     "start": 91.527,
+     "end": 91.6
+    },
+    {
+     "w": "mean",
+     "start": 91.673,
+     "end": 91.891
+    },
+    {
+     "w": "trying",
+     "start": 91.964,
+     "end": 92.255
+    },
+    {
+     "w": "combinations,",
+     "start": 92.327,
+     "end": 93.37
+    },
+    {
+     "w": "and",
+     "start": 93.394,
+     "end": 93.418
+    },
+    {
+     "w": "they",
+     "start": 93.527,
+     "end": 93.636
+    },
+    {
+     "w": "multiply",
+     "start": 93.709,
+     "end": 94.218
+    },
+    {
+     "w": "with",
+     "start": 94.327,
+     "end": 94.436
+    },
+    {
+     "w": "every",
+     "start": 94.582,
+     "end": 94.873
+    },
+    {
+     "w": "empty",
+     "start": 94.945,
+     "end": 95.236
+    },
+    {
+     "w": "square.",
+     "start": 95.309,
+     "end": 96.255
+    }
+   ]
+  },
+  {
+   "text": "Fast means time that grows gently, like n squared: polynomial time. If P equals NP, then yes, finding is fast too.",
+   "start": 96.482,
+   "end": 106.591,
+   "id": "C3-L13",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Fast",
+     "start": 96.482,
+     "end": 96.918
+    },
+    {
+     "w": "means",
+     "start": 97.136,
+     "end": 97.355
+    },
+    {
+     "w": "time",
+     "start": 97.427,
+     "end": 97.718
+    },
+    {
+     "w": "that",
+     "start": 97.791,
+     "end": 97.936
+    },
+    {
+     "w": "grows",
+     "start": 98.009,
+     "end": 98.3
+    },
+    {
+     "w": "gently,",
+     "start": 98.445,
+     "end": 99.173
+    },
+    {
+     "w": "like",
+     "start": 99.245,
+     "end": 99.464
+    },
+    {
+     "w": "n",
+     "start": 99.536,
+     "end": 99.682
+    },
+    {
+     "w": "squared:",
+     "start": 99.755,
+     "end": 100.627
+    },
+    {
+     "w": "polynomial",
+     "start": 100.7,
+     "end": 101.282
+    },
+    {
+     "w": "time.",
+     "start": 101.355,
+     "end": 102.227
+    },
+    {
+     "w": "If",
+     "start": 102.3,
+     "end": 102.445
+    },
+    {
+     "w": "P",
+     "start": 102.518,
+     "end": 102.809
+    },
+    {
+     "w": "equals",
+     "start": 102.882,
+     "end": 103.245
+    },
+    {
+     "w": "NP,",
+     "start": 103.391,
+     "end": 104.191
+    },
+    {
+     "w": "then",
+     "start": 104.264,
+     "end": 104.336
+    },
+    {
+     "w": "yes,",
+     "start": 104.627,
+     "end": 104.955
+    },
+    {
+     "w": "finding",
+     "start": 104.991,
+     "end": 105.355
+    },
+    {
+     "w": "is",
+     "start": 105.427,
+     "end": 105.5
+    },
+    {
+     "w": "fast",
+     "start": 105.573,
+     "end": 105.864
+    },
+    {
+     "w": "too.",
+     "start": 105.936,
+     "end": 106.664
+    }
+   ]
+  },
+  {
+   "text": "Nobody knows. A proof either way wins a million dollars.",
+   "start": 106.891,
+   "end": 111.255,
+   "id": "C3-L10",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Nobody",
+     "start": 106.891,
+     "end": 107.255
+    },
+    {
+     "w": "knows.",
+     "start": 107.4,
+     "end": 108.2
+    },
+    {
+     "w": "A",
+     "start": 108.273,
+     "end": 108.345
+    },
+    {
+     "w": "proof",
+     "start": 108.418,
+     "end": 108.709
+    },
+    {
+     "w": "either",
+     "start": 108.855,
+     "end": 109.073
+    },
+    {
+     "w": "way",
+     "start": 109.145,
+     "end": 109.436
+    },
+    {
+     "w": "wins",
+     "start": 109.509,
+     "end": 109.727
+    },
+    {
+     "w": "a",
+     "start": 109.836,
+     "end": 109.945
+    },
+    {
+     "w": "million",
+     "start": 110.127,
+     "end": 110.309
+    },
+    {
+     "w": "dollars.",
+     "start": 110.382,
+     "end": 111.255
+    }
+   ]
+  },
+  {
+   "text": "AI might help find that proof. On other problems, it has already found new mathematics.",
+   "start": 111.555,
+   "end": 117.155,
+   "id": "C3-L6",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "AI",
+     "start": 111.555,
+     "end": 111.991
+    },
+    {
+     "w": "might",
+     "start": 112.064,
+     "end": 112.282
+    },
+    {
+     "w": "help",
+     "start": 112.391,
+     "end": 112.5
+    },
+    {
+     "w": "find",
+     "start": 112.573,
+     "end": 112.864
+    },
+    {
+     "w": "that",
+     "start": 112.973,
+     "end": 113.082
+    },
+    {
+     "w": "proof.",
+     "start": 113.264,
+     "end": 113.882
+    },
+    {
+     "w": "On",
+     "start": 113.955,
+     "end": 114.027
+    },
+    {
+     "w": "other",
+     "start": 114.136,
+     "end": 114.245
+    },
+    {
+     "w": "problems,",
+     "start": 114.5,
+     "end": 114.9
+    },
+    {
+     "w": "it",
+     "start": 114.973,
+     "end": 115.009
+    },
+    {
+     "w": "has",
+     "start": 115.045,
+     "end": 115.118
+    },
+    {
+     "w": "already",
+     "start": 115.191,
+     "end": 115.555
+    },
+    {
+     "w": "found",
+     "start": 115.627,
+     "end": 115.918
+    },
+    {
+     "w": "new",
+     "start": 115.991,
+     "end": 116.136
+    },
+    {
+     "w": "mathematics.",
+     "start": 116.209,
+     "end": 117.227
+    }
+   ]
+  },
+  {
+   "text": "Show Kepler's third law on his page from 1619.",
+   "start": 118.855,
+   "end": 122.491,
+   "id": "C4-L5",
+   "voice": "DIRECTOR",
+   "typed": "Show Kepler's third law on his page from 1619.",
+   "words": [
+    {
+     "w": "Show",
+     "start": 118.855,
+     "end": 119.145
+    },
+    {
+     "w": "Kepler's",
+     "start": 119.218,
+     "end": 119.655
+    },
+    {
+     "w": "third",
+     "start": 119.8,
+     "end": 119.945
+    },
+    {
+     "w": "law",
+     "start": 120.018,
+     "end": 120.309
+    },
+    {
+     "w": "on",
+     "start": 120.382,
+     "end": 120.455
+    },
+    {
+     "w": "his",
+     "start": 120.564,
+     "end": 120.673
+    },
+    {
+     "w": "page",
+     "start": 120.818,
+     "end": 120.964
+    },
+    {
+     "w": "from",
+     "start": 121.073,
+     "end": 121.182
+    },
+    {
+     "w": "1619.",
+     "start": 121.255,
+     "end": 122.564
+    }
+   ]
+  },
+  {
+   "text": "Is there a rule linking a planet's distance to the length of its year?",
+   "start": 123.591,
+   "end": 127.445,
+   "id": "C4-L7",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Is",
+     "start": 123.591,
+     "end": 123.809
+    },
+    {
+     "w": "there",
+     "start": 123.882,
+     "end": 123.955
+    },
+    {
+     "w": "a",
+     "start": 124.027,
+     "end": 124.1
+    },
+    {
+     "w": "rule",
+     "start": 124.245,
+     "end": 124.609
+    },
+    {
+     "w": "linking",
+     "start": 124.682,
+     "end": 124.973
+    },
+    {
+     "w": "a",
+     "start": 125.009,
+     "end": 125.045
+    },
+    {
+     "w": "planet's",
+     "start": 125.118,
+     "end": 125.555
+    },
+    {
+     "w": "distance",
+     "start": 125.809,
+     "end": 126.064
+    },
+    {
+     "w": "to",
+     "start": 126.136,
+     "end": 126.209
+    },
+    {
+     "w": "the",
+     "start": 126.245,
+     "end": 126.282
+    },
+    {
+     "w": "length",
+     "start": 126.355,
+     "end": 126.573
+    },
+    {
+     "w": "of",
+     "start": 126.609,
+     "end": 126.645
+    },
+    {
+     "w": "its",
+     "start": 126.755,
+     "end": 126.864
+    },
+    {
+     "w": "year?",
+     "start": 126.936,
+     "end": 127.445
+    }
+   ]
+  },
+  {
+   "text": "His answer, in 1619: the year grows as distance to the power of one and a half. Four times farther, eight times longer.",
+   "start": 127.745,
+   "end": 137.127,
+   "id": "C4-L8",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "His",
+     "start": 127.745,
+     "end": 127.964
+    },
+    {
+     "w": "answer,",
+     "start": 128.036,
+     "end": 128.545
+    },
+    {
+     "w": "in",
+     "start": 128.618,
+     "end": 128.764
+    },
+    {
+     "w": "1619:",
+     "start": 128.836,
+     "end": 130.436
+    },
+    {
+     "w": "the",
+     "start": 130.509,
+     "end": 130.582
+    },
+    {
+     "w": "year",
+     "start": 130.655,
+     "end": 130.873
+    },
+    {
+     "w": "grows",
+     "start": 130.945,
+     "end": 131.382
+    },
+    {
+     "w": "as",
+     "start": 131.455,
+     "end": 131.673
+    },
+    {
+     "w": "distance",
+     "start": 131.927,
+     "end": 132.182
+    },
+    {
+     "w": "to",
+     "start": 132.218,
+     "end": 132.255
+    },
+    {
+     "w": "the",
+     "start": 132.327,
+     "end": 132.4
+    },
+    {
+     "w": "power",
+     "start": 132.473,
+     "end": 132.764
+    },
+    {
+     "w": "of",
+     "start": 132.836,
+     "end": 133.055
+    },
+    {
+     "w": "one",
+     "start": 133.127,
+     "end": 133.2
+    },
+    {
+     "w": "and",
+     "start": 133.236,
+     "end": 133.273
+    },
+    {
+     "w": "a",
+     "start": 133.345,
+     "end": 133.418
+    },
+    {
+     "w": "half.",
+     "start": 133.818,
+     "end": 134.255
+    },
+    {
+     "w": "Four",
+     "start": 134.291,
+     "end": 134.509
+    },
+    {
+     "w": "times",
+     "start": 134.582,
+     "end": 134.873
+    },
+    {
+     "w": "farther,",
+     "start": 134.945,
+     "end": 135.636
+    },
+    {
+     "w": "eight",
+     "start": 135.673,
+     "end": 135.891
+    },
+    {
+     "w": "times",
+     "start": 136.073,
+     "end": 136.255
+    },
+    {
+     "w": "longer.",
+     "start": 136.327,
+     "end": 137.2
+    }
+   ]
+  },
+  {
+   "text": "On this kind of plot, his rule is a straight line. His six planets sit on it.",
+   "start": 137.427,
+   "end": 142.882,
+   "id": "C4-L9",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "On",
+     "start": 137.427,
+     "end": 137.573
+    },
+    {
+     "w": "this",
+     "start": 137.645,
+     "end": 137.791
+    },
+    {
+     "w": "kind",
+     "start": 137.864,
+     "end": 138.009
+    },
+    {
+     "w": "of",
+     "start": 138.082,
+     "end": 138.227
+    },
+    {
+     "w": "plot,",
+     "start": 138.373,
+     "end": 138.736
+    },
+    {
+     "w": "his",
+     "start": 138.809,
+     "end": 138.955
+    },
+    {
+     "w": "rule",
+     "start": 139.027,
+     "end": 139.391
+    },
+    {
+     "w": "is",
+     "start": 139.427,
+     "end": 139.464
+    },
+    {
+     "w": "a",
+     "start": 139.536,
+     "end": 139.682
+    },
+    {
+     "w": "straight",
+     "start": 139.755,
+     "end": 140.045
+    },
+    {
+     "w": "line.",
+     "start": 140.118,
+     "end": 140.882
+    },
+    {
+     "w": "His",
+     "start": 140.918,
+     "end": 141.064
+    },
+    {
+     "w": "six",
+     "start": 141.136,
+     "end": 141.355
+    },
+    {
+     "w": "planets",
+     "start": 141.427,
+     "end": 141.864
+    },
+    {
+     "w": "sit",
+     "start": 141.936,
+     "end": 142.082
+    },
+    {
+     "w": "on",
+     "start": 142.118,
+     "end": 142.155
+    },
+    {
+     "w": "it.",
+     "start": 142.227,
+     "end": 142.955
+    }
+   ]
+  },
+  {
+   "text": "One agent writes the plan, and nine more build the scenes at the same time.",
+   "start": 144.582,
+   "end": 149.236,
+   "id": "C5-L6",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "One",
+     "start": 144.582,
+     "end": 144.727
+    },
+    {
+     "w": "agent",
+     "start": 144.8,
+     "end": 145.164
+    },
+    {
+     "w": "writes",
+     "start": 145.236,
+     "end": 145.527
+    },
+    {
+     "w": "the",
+     "start": 145.6,
+     "end": 145.673
+    },
+    {
+     "w": "plan,",
+     "start": 145.964,
+     "end": 146.327
+    },
+    {
+     "w": "and",
+     "start": 146.4,
+     "end": 146.473
+    },
+    {
+     "w": "nine",
+     "start": 146.545,
+     "end": 146.836
+    },
+    {
+     "w": "more",
+     "start": 147.018,
+     "end": 147.2
+    },
+    {
+     "w": "build",
+     "start": 147.309,
+     "end": 147.418
+    },
+    {
+     "w": "the",
+     "start": 147.491,
+     "end": 147.564
+    },
+    {
+     "w": "scenes",
+     "start": 147.636,
+     "end": 147.927
+    },
+    {
+     "w": "at",
+     "start": 148.0,
+     "end": 148.036
+    },
+    {
+     "w": "the",
+     "start": 148.073,
+     "end": 148.145
+    },
+    {
+     "w": "same",
+     "start": 148.218,
+     "end": 148.436
+    },
+    {
+     "w": "time.",
+     "start": 148.509,
+     "end": 149.309
+    }
+   ]
+  },
+  {
+   "text": "Then each example is cut into a vertical Short, with captions.",
+   "start": 149.536,
+   "end": 153.827,
+   "id": "C5-L9",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Then",
+     "start": 149.536,
+     "end": 149.827
+    },
+    {
+     "w": "each",
+     "start": 150.045,
+     "end": 150.191
+    },
+    {
+     "w": "example",
+     "start": 150.445,
+     "end": 150.7
+    },
+    {
+     "w": "is",
+     "start": 150.809,
+     "end": 150.918
+    },
+    {
+     "w": "cut",
+     "start": 151.027,
+     "end": 151.136
+    },
+    {
+     "w": "into",
+     "start": 151.209,
+     "end": 151.427
+    },
+    {
+     "w": "a",
+     "start": 151.5,
+     "end": 151.573
+    },
+    {
+     "w": "vertical",
+     "start": 151.645,
+     "end": 152.009
+    },
+    {
+     "w": "Short,",
+     "start": 152.155,
+     "end": 152.712
+    },
+    {
+     "w": "with",
+     "start": 152.761,
+     "end": 152.809
+    },
+    {
+     "w": "captions.",
+     "start": 152.882,
+     "end": 153.9
+    }
+   ]
+  },
+  {
+   "text": "Every animation here was made with vibe-animator, and it is free on GitHub.",
+   "start": 156.227,
+   "end": 161.173,
+   "id": "C6-L6",
+   "voice": "NARRATOR",
+   "words": [
+    {
+     "w": "Every",
+     "start": 156.227,
+     "end": 156.518
+    },
+    {
+     "w": "animation",
+     "start": 156.773,
+     "end": 157.027
+    },
+    {
+     "w": "here",
+     "start": 157.1,
+     "end": 157.391
+    },
+    {
+     "w": "was",
+     "start": 157.464,
+     "end": 157.609
+    },
+    {
+     "w": "made",
+     "start": 157.682,
+     "end": 157.9
+    },
+    {
+     "w": "with",
+     "start": 157.973,
+     "end": 158.118
+    },
+    {
+     "w": "vibe-animator,",
+     "start": 158.191,
+     "end": 159.427
+    },
+    {
+     "w": "and",
+     "start": 159.5,
+     "end": 159.718
+    },
+    {
+     "w": "it",
+     "start": 159.755,
+     "end": 159.791
+    },
+    {
+     "w": "is",
+     "start": 159.9,
+     "end": 160.009
+    },
+    {
+     "w": "free",
+     "start": 160.082,
+     "end": 160.373
+    },
+    {
+     "w": "on",
+     "start": 160.445,
+     "end": 160.518
+    },
+    {
+     "w": "GitHub.",
+     "start": 160.591,
+     "end": 161.245
+    }
+   ]
+  }
+ ]
+}

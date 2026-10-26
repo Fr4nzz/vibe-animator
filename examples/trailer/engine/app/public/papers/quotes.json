@@ -1,0 +1,50 @@
+{
+  "kepler1619": {
+    "citation": "J. Kepler, Harmonices Mundi Libri V (Linz, 1619), Book V, ch. III, pp. 189-190",
+    "license": "Public domain (PD-old-100; Wikimedia Commons, Smithsonian Libraries scan)",
+    "oa": "https://commons.wikimedia.org/wiki/File:Johannes_Kepler_-_Harmonices_Mundi_Libri_V.pdf",
+    "pages": [
+      {
+        "img": "papers/kepler1619/hm1619_p189.jpg",
+        "w": 1846,
+        "h": 3042
+      },
+      {
+        "img": "papers/kepler1619/hm1619_p190.jpg",
+        "w": 1846,
+        "h": 3042
+      }
+    ],
+    "quotes": [
+      {
+        "id": "third-law",
+        "page": 0,
+        "text": "Sed res est certissima exactissimaque, quod proportio quae est inter binorum quorumcunque Planetarum tempora periodica, sit praecise sesquialtera proportionis mediarum distantiarum",
+        "lines": [
+          [
+            896,
+            2702,
+            706,
+            44
+          ],
+          [
+            141,
+            2756,
+            1462,
+            46
+          ],
+          [
+            144,
+            2810,
+            1408,
+            46
+          ]
+        ],
+        "tr": "But it is most certain and most exact that the ratio between the periodic times of any two planets is precisely the sesquialterate (the 3/2 power) of the ratio of their mean distances.",
+        "tr_panel": "Most certain, most exact: periods go precisely as the 3/2 power of the distances.",
+        "tr_short": "Most certain, most exact: periods go precisely as the 3/2 power of the distances.",
+        "note": "Book V ch. III, p. 189 (sentence runs on to p. 190 with 'id est Orbium ipsorum'). 'sesquialtera proportio' = ratio to the 3/2 power. Box coordinates from pdftotext -bbox on the Commons PDF (page 281), x 4.167 px/pt, checked by eye."
+      }
+    ]
+  }
+}

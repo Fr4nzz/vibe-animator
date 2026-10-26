@@ -1,0 +1,15 @@
+node_modules/
+renders/
+work/
+shorts/raw/
+shorts/ass/
+engine/audio/*
+!engine/audio/.gitkeep
+vo/*.mp3
+vo/*.wav
+vo/*.json
+!vo/.gitkeep
+*.mp4
+*.env
+*token*.json
+*credentials*.json
