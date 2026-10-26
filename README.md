@@ -1,5 +1,10 @@
 # vibe-animator
 
+[![Watch the vibe-animator trailer on YouTube](https://img.youtube.com/vi/ToCa9712bxg/maxresdefault.jpg)](https://youtu.be/ToCa9712bxg)
+
+▶ **[Watch the trailer](https://youtu.be/ToCa9712bxg)** (2:44, English · Español). Every frame in it was made with this
+repo; its source is in [`examples/trailer/`](examples/trailer/).
+
 **Agentic narrated explainer videos.** You give a prompt; Claude Code agents turn it into a script; ElevenLabs voices
 it with word-level timings; parallel agents build one chapter each as a canvas/WebGL scene in which every visual hit
 is cued to a spoken word; a deterministic GPU renderer turns the chapters into a 16:9 master; and the vertical Shorts
