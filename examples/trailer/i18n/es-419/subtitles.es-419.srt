@@ -1,0 +1,179 @@
+1
+00:00:00,500 --> 00:00:02,880
+Esto es vibe-animator.
+
+2
+00:00:03,191 --> 00:00:06,808
+Describes un video, y agentes de Claude Code lo crean:
+
+3
+00:00:06,828 --> 00:00:10,915
+el guion, las voces, la animación y los Shorts.
+
+4
+00:00:11,136 --> 00:00:13,757
+Vas a ver cuatro ejemplos que animó Claude:
+
+5
+00:00:13,777 --> 00:00:16,513
+la siguiente palabra de un chatbot, completar el
+
+6
+00:00:16,533 --> 00:00:21,269
+cuadrado, P versus NP y la tercera ley de Kepler.
+
+7
+00:00:23,091 --> 00:00:26,991
+Explica cómo elige un chatbot su siguiente palabra.
+
+8
+00:00:27,173 --> 00:00:31,724
+Un modelo de lenguaje convierte cada palabra en un punto del espacio, con los
+
+9
+00:00:31,744 --> 00:00:33,489
+significados afines juntos.
+
+10
+00:00:33,509 --> 00:00:36,322
+Para entender «it», el modelo mira hacia
+
+11
+00:00:36,342 --> 00:00:39,389
+atrás y presta más atención a «the cat».
+
+12
+00:00:39,409 --> 00:00:42,269
+Luego el modelo pondera cada posible palabra
+
+13
+00:00:42,289 --> 00:00:45,696
+siguiente según su probabilidad, y elige una.
+
+14
+00:00:46,127 --> 00:00:49,480
+Muestra cómo al-Juarismi completó el cuadrado.
+
+15
+00:00:50,064 --> 00:00:52,499
+Un cuadrado más diez de sus lados suman
+
+16
+00:00:52,519 --> 00:00:54,635
+treinta y nueve. ¿Cuánto mide el lado?
+
+17
+00:00:54,655 --> 00:00:56,734
+Haz un cuadrado perfecto.
+
+18
+00:00:56,754 --> 00:00:58,114
+Así el lado es fácil:
+
+19
+00:00:58,134 --> 00:01:00,753
+área sesenta y cuatro, lado ocho.
+
+20
+00:01:00,773 --> 00:01:03,440
+El diez no encaja. Divídelo:
+
+21
+00:01:03,460 --> 00:01:05,192
+cinco en dos lados.
+
+22
+00:01:05,212 --> 00:01:08,035
+Falta una esquina, de cinco por cinco.
+
+23
+00:01:08,055 --> 00:01:11,277
+Complétala, y el área es sesenta y cuatro.
+
+24
+00:01:11,297 --> 00:01:14,153
+Lado ocho. Quita cinco: tres.
+
+25
+00:01:14,173 --> 00:01:16,598
+Él lo escribió todo con palabras.
+
+26
+00:01:16,618 --> 00:01:20,118
+Siglos después, el dibujo se volvió fórmula.
+
+27
+00:01:20,891 --> 00:01:24,711
+Explica P versus NP con un sudoku.
+
+28
+00:01:25,482 --> 00:01:28,335
+Comprobar un sudoku resuelto toma un segundo.
+
+29
+00:01:28,355 --> 00:01:30,853
+¿Resolverlo siempre es igual de rápido?
+
+30
+00:01:30,873 --> 00:01:35,865
+Puede exigir probar combinaciones, que se multiplican con cada casilla vacía.
+
+31
+00:01:36,482 --> 00:01:40,823
+Rápido es un tiempo que crece despacio, como n al cuadrado:
+
+32
+00:01:40,843 --> 00:01:44,858
+tiempo polinomial. Si P es igual a NP, sí:
+
+33
+00:01:44,878 --> 00:01:46,871
+resolver también es rápido.
+
+34
+00:01:46,891 --> 00:01:51,535
+Nadie lo sabe. Probarlo o refutarlo vale un millón de dólares.
+
+35
+00:01:51,555 --> 00:01:55,335
+La inteligencia artificial podría ayudar a hallar esa prueba.
+
+36
+00:01:55,355 --> 00:01:58,835
+En otros problemas, ya encontró matemáticas nuevas.
+
+37
+00:01:58,855 --> 00:02:03,571
+Muestra la tercera ley de Kepler en su página de 1619.
+
+38
+00:02:03,591 --> 00:02:07,491
+¿Hay una regla que una la distancia de un planeta con su año?
+
+39
+00:02:07,745 --> 00:02:13,485
+En 1619: el año crece como la distancia elevada a uno y medio.
+
+40
+00:02:13,505 --> 00:02:16,999
+Cuatro veces más lejos, ocho veces más largo.
+
+41
+00:02:17,427 --> 00:02:21,332
+En este tipo de gráfica, su regla es una línea recta.
+
+42
+00:02:21,352 --> 00:02:23,935
+Sus seis planetas caen sobre ella.
+
+43
+00:02:24,582 --> 00:02:29,516
+Un agente escribe el plan, y otros nueve arman las escenas al mismo tiempo.
+
+44
+00:02:29,536 --> 00:02:34,161
+Luego cada ejemplo se corta en un Short vertical, con subtítulos.
+
+45
+00:02:36,227 --> 00:02:41,789
+Cada animación de este video se hizo con vibe-animator, y es gratis en GitHub.

@@ -1,0 +1,408 @@
+{
+ "title": "vibe-animator: tráiler de lanzamiento (doblaje es-419)",
+ "language": "es-419",
+ "source_script": "../../script.json",
+ "notes": "Spanish (Latin America) dub of the trailer, audio only. Same line ids as the English script. Each Spanish line starts at its English line's start time (timing.json) and ends before the next English line starts, so the picture, cued to the English words, still lines up. On-screen text stays English, including the DIRECTOR prompts typed into the composer; the dub speaks them in Spanish. Fit order: condense the translation, re-voice if needed, shorten inner pauses longer than 0.32 s to 0.26 s and trim trailing silence, then ffmpeg atempo (cap 1.12). Each clip leveled to -20 LUFS (true peak <= -1 dBTP), mixed to -14 LUFS, then the same cached music bed (tools/music.py mix logic, mode reuse, bed_db -10, duck_db 5) to -14 LUFS / true peak <= -1.5 dBTP. No music generated.",
+ "tts": {
+  "provider": "elevenlabs",
+  "model": "eleven_v4",
+  "language_code": "es",
+  "voices": {
+   "NARRATOR": "QngvLQR8bsLR5bzoa6Vv",
+   "DIRECTOR": "aGv5jHWKBy8K5xKvYeSX",
+   "KHWARIZMI": "puDRtQWF8NtQiPMJygTb",
+   "STUDENT": "8KVwlbLHGvmAEpy5b8PM"
+  },
+  "voice_test": "The four English voices were kept. Test: one real line per role voiced in Spanish and checked with faster-whisper medium against three native LatAm library-voice previews: language id es 0.99+ for all, Spanish avg log-prob -0.22..-0.32 (natives -0.22..-0.24), and c/z fricatives as loud and as high as /s/ (seseo, not the Castilian theta; whisper even hears 'Haz' as 'has'). KHWARIZMI and STUDENT score slightly lower, a light accent that suits the Baghdad scene."
+ },
+ "chapters": [
+  {
+   "id": "C0",
+   "title": "What vibe-animator does",
+   "lines": [
+    {
+     "id": "C0-L6",
+     "voice": "NARRATOR",
+     "text": "This is vibe-animator.",
+     "text_es": "Esto es vibe-animator.",
+     "dub": {
+      "start": 0.5,
+      "end": 2.58,
+      "next_start": 3.191,
+      "tempo": 1.0,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C0-L7",
+     "voice": "NARRATOR",
+     "text": "You describe a video, and Claude Code agents make it: the script, the voices, the animation and the Shorts.",
+     "text_es": "Describes un video, y agentes de Claude Code lo crean: el guion, las voces, la animación y los Shorts.",
+     "dub": {
+      "start": 3.191,
+      "end": 10.615,
+      "next_start": 11.136,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.36
+     }
+    },
+    {
+     "id": "C0-L10",
+     "voice": "NARRATOR",
+     "text": "You are about to see four examples Claude animated: a chatbot's next word, completing the square, P versus NP, and Kepler's third law.",
+     "text_es": "Vas a ver cuatro ejemplos que animó Claude: la siguiente palabra de un chatbot, completar el cuadrado, P versus NP y la tercera ley de Kepler.",
+     "dub": {
+      "start": 11.136,
+      "end": 20.969,
+      "next_start": 23.091,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.65
+     }
+    }
+   ]
+  },
+  {
+   "id": "C1",
+   "title": "A chatbot's next word",
+   "lines": [
+    {
+     "id": "C1-L8",
+     "voice": "DIRECTOR",
+     "text": "Explain how a chatbot picks its next word.",
+     "text_es": "Explica cómo elige un chatbot su siguiente palabra.",
+     "typed": true,
+     "on_screen": "English (typed prompt), spoken in Spanish",
+     "dub": {
+      "start": 23.091,
+      "end": 26.691,
+      "next_start": 27.173,
+      "tempo": 1.0,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C1-L2",
+     "voice": "NARRATOR",
+     "text": "A language model turns each word into a point in space, where related meanings sit close together.",
+     "text_es": "Un modelo de lenguaje convierte cada palabra en un punto del espacio, con los significados afines juntos.",
+     "dub": {
+      "start": 27.173,
+      "end": 33.388,
+      "next_start": 33.509,
+      "tempo": 1.0795,
+      "pauses_cut_s": 0.19
+     }
+    },
+    {
+     "id": "C1-L6",
+     "voice": "NARRATOR",
+     "text": "To know what \"it\" means, the model looks back and pays most attention to \"the cat\".",
+     "text_es": "Para entender «it», el modelo mira hacia atrás y presta más atención a «the cat».",
+     "dub": {
+      "start": 33.509,
+      "end": 39.291,
+      "next_start": 39.409,
+      "tempo": 1.0564,
+      "pauses_cut_s": 0.13
+     }
+    },
+    {
+     "id": "C1-L7",
+     "voice": "NARRATOR",
+     "text": "Then the model weighs every possible next word by probability and picks one.",
+     "text_es": "Luego el modelo pondera cada posible palabra siguiente según su probabilidad, y elige una.",
+     "dub": {
+      "start": 39.409,
+      "end": 45.396,
+      "next_start": 46.127,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.17
+     }
+    }
+   ]
+  },
+  {
+   "id": "C2",
+   "title": "Completing the square",
+   "lines": [
+    {
+     "id": "C2-L8",
+     "voice": "DIRECTOR",
+     "text": "Show how al-Khwarizmi completed the square.",
+     "text_es": "Muestra cómo al-Juarismi completó el cuadrado.",
+     "typed": true,
+     "on_screen": "English (typed prompt), spoken in Spanish",
+     "dub": {
+      "start": 46.127,
+      "end": 49.18,
+      "next_start": 50.064,
+      "tempo": 1.0,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C2-L9",
+     "voice": "STUDENT",
+     "text": "A square plus ten of its sides makes thirty-nine. What is the side?",
+     "text_es": "Un cuadrado más diez de sus lados suman treinta y nueve. ¿Cuánto mide el lado?",
+     "dub": {
+      "start": 50.064,
+      "end": 54.539,
+      "next_start": 54.655,
+      "tempo": 1.0752,
+      "pauses_cut_s": 0.32
+     }
+    },
+    {
+     "id": "C2-L12",
+     "voice": "KHWARIZMI",
+     "text": "Make one perfect square. Then the side is easy: area sixty-four, side eight.",
+     "text_es": "Haz un cuadrado perfecto. Así el lado es fácil: área sesenta y cuatro, lado ocho.",
+     "dub": {
+      "start": 54.655,
+      "end": 60.515,
+      "next_start": 60.773,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.2
+     }
+    },
+    {
+     "id": "C2-L13",
+     "voice": "KHWARIZMI",
+     "text": "The ten does not fit. Split it: five on two sides. A corner is missing, five by five.",
+     "text_es": "El diez no encaja. Divídelo: cinco en dos lados. Falta una esquina, de cinco por cinco.",
+     "dub": {
+      "start": 60.773,
+      "end": 67.94,
+      "next_start": 68.055,
+      "tempo": 1.0273,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C2-L14",
+     "voice": "KHWARIZMI",
+     "text": "Fill it, and the area is sixty-four. Side eight. Take away five: three.",
+     "text_es": "Complétala, y el área es sesenta y cuatro. Lado ocho. Quita cinco: tres.",
+     "dub": {
+      "start": 68.055,
+      "end": 74.066,
+      "next_start": 74.173,
+      "tempo": 1.0676,
+      "pauses_cut_s": 0.4
+     }
+    },
+    {
+     "id": "C2-L7",
+     "voice": "NARRATOR",
+     "text": "He wrote it all in words. Centuries later, the picture became a formula.",
+     "text_es": "Él lo escribió todo con palabras. Siglos después, el dibujo se volvió fórmula.",
+     "dub": {
+      "start": 74.173,
+      "end": 79.818,
+      "next_start": 80.891,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.2
+     }
+    }
+   ]
+  },
+  {
+   "id": "C3",
+   "title": "P versus NP",
+   "lines": [
+    {
+     "id": "C3-L7",
+     "voice": "DIRECTOR",
+     "text": "Explain P versus NP with a sudoku.",
+     "text_es": "Explica P versus NP con un sudoku.",
+     "typed": true,
+     "on_screen": "English (typed prompt), spoken in Spanish",
+     "dub": {
+      "start": 80.891,
+      "end": 84.411,
+      "next_start": 85.482,
+      "tempo": 1.0,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C3-L11",
+     "voice": "NARRATOR",
+     "text": "Checking a finished sudoku takes a second. Is finding the answer always that fast?",
+     "text_es": "Comprobar un sudoku resuelto toma un segundo. ¿Resolverlo siempre es igual de rápido?",
+     "dub": {
+      "start": 85.482,
+      "end": 90.675,
+      "next_start": 90.873,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.33
+     }
+    },
+    {
+     "id": "C3-L12",
+     "voice": "NARRATOR",
+     "text": "Finding it can mean trying combinations, and they multiply with every empty square.",
+     "text_es": "Puede exigir probar combinaciones, que se multiplican con cada casilla vacía.",
+     "dub": {
+      "start": 90.873,
+      "end": 95.565,
+      "next_start": 96.482,
+      "tempo": 1.0,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C3-L13",
+     "voice": "NARRATOR",
+     "text": "Fast means time that grows gently, like n squared: polynomial time. If P equals NP, then yes, finding is fast too.",
+     "text_es": "Rápido es un tiempo que crece despacio, como n al cuadrado: tiempo polinomial. Si P es igual a NP, sí: resolver también es rápido.",
+     "dub": {
+      "start": 96.482,
+      "end": 106.766,
+      "next_start": 106.891,
+      "tempo": 1.0467,
+      "pauses_cut_s": 1.08
+     }
+    },
+    {
+     "id": "C3-L10",
+     "voice": "NARRATOR",
+     "text": "Nobody knows. A proof either way wins a million dollars.",
+     "text_es": "Nadie lo sabe. Probarlo o refutarlo vale un millón de dólares.",
+     "dub": {
+      "start": 106.891,
+      "end": 111.443,
+      "next_start": 111.555,
+      "tempo": 1.0209,
+      "pauses_cut_s": 0.14
+     }
+    },
+    {
+     "id": "C3-L6",
+     "voice": "NARRATOR",
+     "text": "AI might help find that proof. On other problems, it has already found new mathematics.",
+     "text_es": "La inteligencia artificial podría ayudar a hallar esa prueba. En otros problemas, ya encontró matemáticas nuevas.",
+     "dub": {
+      "start": 111.555,
+      "end": 118.57,
+      "next_start": 118.855,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.32
+     }
+    }
+   ]
+  },
+  {
+   "id": "C4",
+   "title": "Kepler's page",
+   "lines": [
+    {
+     "id": "C4-L5",
+     "voice": "DIRECTOR",
+     "text": "Show Kepler's third law on his page from 1619.",
+     "text_es": "Muestra la tercera ley de Kepler en su página de 1619.",
+     "typed": true,
+     "on_screen": "English (typed prompt), spoken in Spanish",
+     "dub": {
+      "start": 118.855,
+      "end": 123.483,
+      "next_start": 123.591,
+      "tempo": 1.075,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C4-L7",
+     "voice": "NARRATOR",
+     "text": "Is there a rule linking a planet's distance to the length of its year?",
+     "text_es": "¿Hay una regla que una la distancia de un planeta con su año?",
+     "dub": {
+      "start": 123.591,
+      "end": 127.191,
+      "next_start": 127.745,
+      "tempo": 1.0,
+      "pauses_cut_s": 0
+     }
+    },
+    {
+     "id": "C4-L8",
+     "voice": "NARRATOR",
+     "text": "His answer, in 1619: the year grows as distance to the power of one and a half. Four times farther, eight times longer.",
+     "text_es": "En 1619: el año crece como la distancia elevada a uno y medio. Cuatro veces más lejos, ocho veces más largo.",
+     "dub": {
+      "start": 127.745,
+      "end": 136.699,
+      "next_start": 137.427,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.64
+     }
+    },
+    {
+     "id": "C4-L9",
+     "voice": "NARRATOR",
+     "text": "On this kind of plot, his rule is a straight line. His six planets sit on it.",
+     "text_es": "En este tipo de gráfica, su regla es una línea recta. Sus seis planetas caen sobre ella.",
+     "dub": {
+      "start": 137.427,
+      "end": 143.635,
+      "next_start": 144.582,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.31
+     }
+    }
+   ]
+  },
+  {
+   "id": "C5",
+   "title": "How it's made",
+   "lines": [
+    {
+     "id": "C5-L6",
+     "voice": "NARRATOR",
+     "text": "One agent writes the plan, and nine more build the scenes at the same time.",
+     "text_es": "Un agente escribe el plan, y otros nueve arman las escenas al mismo tiempo.",
+     "dub": {
+      "start": 144.582,
+      "end": 149.407,
+      "next_start": 149.536,
+      "tempo": 1.0371,
+      "pauses_cut_s": 0.12
+     }
+    },
+    {
+     "id": "C5-L9",
+     "voice": "NARRATOR",
+     "text": "Then each example is cut into a vertical Short, with captions.",
+     "text_es": "Luego cada ejemplo se corta en un Short vertical, con subtítulos.",
+     "dub": {
+      "start": 149.536,
+      "end": 153.861,
+      "next_start": 156.227,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.07
+     }
+    }
+   ]
+  },
+  {
+   "id": "C6",
+   "title": "Try it",
+   "lines": [
+    {
+     "id": "C6-L6",
+     "voice": "NARRATOR",
+     "text": "Every animation here was made with vibe-animator, and it is free on GitHub.",
+     "text_es": "Cada animación de este video se hizo con vibe-animator, y es gratis en GitHub.",
+     "dub": {
+      "start": 156.227,
+      "end": 161.489,
+      "next_start": 164.252,
+      "tempo": 1.0,
+      "pauses_cut_s": 0.1
+     }
+    }
+   ]
+  }
+ ]
+}

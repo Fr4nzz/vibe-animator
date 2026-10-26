@@ -46,3 +46,6 @@ doi_cache.jsonl
 **/music/*.receipt.json
 # trailer publish receipts
 examples/trailer/publish/
+
+# dub working files (per-line TTS clips and alignments)
+examples/trailer/i18n/*/vo/
