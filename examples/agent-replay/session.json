@@ -1,0 +1,1397 @@
+{
+ "version": 1,
+ "source": "claude-code",
+ "label": "Trailer builder C1 LLM",
+ "prompt": "Make me a trailer.",
+ "prompt_source": "override",
+ "duration": 12.0,
+ "real_seconds": 470.6,
+ "time_map": "sqrt",
+ "events": [
+  {
+   "t": 0.122,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "List docs and read the agent workflow",
+   "arg": "ls docs examples/trailer examples/manim-curve && cat docs/AGENT_WORKFLOW.md && git status…",
+   "result": "165 lines",
+   "status": "ok",
+   "t_end": 0.144
+  },
+  {
+   "t": 0.215,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read build brief and chapter pack",
+   "arg": "cat examples/trailer/BUILD_BRIEF.md && ls examples/trailer/packs && cat examples/trailer/…",
+   "result": "199 lines",
+   "status": "ok",
+   "t_end": 0.237
+  },
+  {
+   "t": 0.323,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read the style guide and find manim docs",
+   "arg": "cat docs/STYLE_GUIDE.md | head -200; ls docs/*manim* engine/ 2>/dev/null; grep -ril \"mani…",
+   "result": "100 lines",
+   "status": "ok",
+   "t_end": 0.346
+  },
+  {
+   "t": 0.441,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read the manim adapter and list examples",
+   "arg": "E=examples/trailer/engine/app/src/scenes; cat $E/_manim.ts; ls examples/manim-curve/scene…",
+   "result": "141 lines",
+   "status": "ok",
+   "t_end": 0.463
+  },
+  {
+   "t": 0.512,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read example scenes",
+   "arg": "cat examples/manim-curve/scenes/c0.ts examples/lens/scenes/c1.ts examples/lens/scenes/c0.…",
+   "result": "187 lines",
+   "status": "ok",
+   "t_end": 0.534
+  },
+  {
+   "t": 0.693,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read ShotScene and kit exports",
+   "arg": "sed -n 1,140p scenes/_shots.ts; grep -n \"export\" scenes/_devices.ts scenes/_kit.ts | head…",
+   "result": "186 lines",
+   "status": "ok",
+   "t_end": 0.715
+  },
+  {
+   "t": 0.816,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read render loop, devices, palette, timeline",
+   "arg": "sed -n 140,200p scenes/_shots.ts; sed -n 30,85p scenes/_devices.ts; sed -n 1,10p scenes/_…",
+   "result": "208 lines",
+   "status": "ok",
+   "t_end": 0.838
+  },
+  {
+   "t": 0.957,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Find how scenes are registered",
+   "arg": "ls; grep -rn \"c1\\b\\|scenes/c\\|import.meta.glob\\|_placeholder\" --include=*.ts . | grep -v…",
+   "result": "36 lines",
+   "status": "ok",
+   "t_end": 0.979
+  },
+  {
+   "t": 1.096,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read timeline and C1 word timings",
+   "arg": "cat app/src/timeline.ts; python3 -c \"",
+   "result": "43 lines",
+   "status": "ok",
+   "t_end": 1.119
+  },
+  {
+   "t": 2.712,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Check kit presence and helper signatures",
+   "arg": "ls scenes; grep -n \"export\" engine/type.ts | head; grep -n \"mulberry32\" engine/util.ts; g…",
+   "result": "23 lines",
+   "status": "ok",
+   "t_end": 2.734
+  },
+  {
+   "t": 3.546,
+   "kind": "tool",
+   "name": "Write",
+   "title": "Write c1.ts",
+   "arg": "vibe-animator/examples/trailer/engine/app/src/scenes/c1.ts",
+   "result": "+422 lines",
+   "status": "ok",
+   "t_end": 3.569
+  },
+  {
+   "t": 3.642,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Tidy and run qa on C1",
+   "arg": "python3 - <<'EOF'",
+   "result": "TOTAL 0 · C1 · 4 lines, 12 samples",
+   "status": "ok",
+   "t_end": 3.681
+  },
+  {
+   "t": 3.72,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Make the C1 contact sheet",
+   "arg": "timeout 400 tools/nx sheet examples/trailer C1 --url http://localhost:5730 --at 30,60,end…",
+   "result": "1 lines",
+   "status": "ok",
+   "t_end": 3.753
+  },
+  {
+   "t": 3.803,
+   "kind": "tool",
+   "name": "Read",
+   "title": "Read sheet_C1_30-60-end.png",
+   "arg": "vibe-animator/examples/trailer/engine/work/qa/sheet_C1_30-60-end.png",
+   "result": "image",
+   "status": "ok",
+   "t_end": 3.826
+  },
+  {
+   "t": 3.907,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Render a full-size still of C1-L4 end",
+   "arg": "timeout 300 tools/nx qa examples/trailer --still C1-L4 --at end --url http://localhost:57…",
+   "result": "1 lines",
+   "status": "ok",
+   "t_end": 3.941
+  },
+  {
+   "t": 3.973,
+   "kind": "tool",
+   "name": "Read",
+   "title": "Read still_C1-L4_48.80.png",
+   "arg": "vibe-animator/examples/trailer/engine/work/qa/still_C1-L4_48.80.png",
+   "result": "image",
+   "status": "ok",
+   "t_end": 3.996
+  },
+  {
+   "t": 4.127,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Apply fixes and rerun qa every second",
+   "arg": "python3 - <<'EOF'",
+   "result": "TOTAL 16 (size 16) · C1 · 4 lines, 37 samples",
+   "status": "ok",
+   "t_end": 4.163
+  },
+  {
+   "t": 4.23,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Inspect the film-strip kit API",
+   "arg": "grep -n \"export\\|^ \\*\\|^/\\*\\*\\|^//\" trailer_filmstrip_kit.ts | head -60; ls; grep -n \"fil…",
+   "result": "52 lines",
+   "status": "ok",
+   "t_end": 4.253
+  },
+  {
+   "t": 4.287,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read kit geometry and window helpers",
+   "arg": "sed -n 20,72p trailer_filmstrip_kit.ts; sed -n 145,182p trailer_filmstrip_kit.ts",
+   "result": "82 lines",
+   "status": "ok",
+   "t_end": 4.31
+  },
+  {
+   "t": 4.66,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Read drawStrip body",
+   "arg": "sed -n 73,145p trailer_filmstrip_kit.ts",
+   "result": "73 lines",
+   "status": "ok",
+   "t_end": 4.682
+  },
+  {
+   "t": 4.924,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Locate sections to restructure",
+   "arg": "grep -n \"HOOK\\|STRIP\\|outroWin\\|hud:\\|draw: (o: SC) => {\\|const cam\\|K(t0\\|underlay\\|this…",
+   "result": "24 lines",
+   "status": "ok",
+   "t_end": 4.946
+  },
+  {
+   "t": 5.187,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Wire the film-strip kit and rerun qa",
+   "arg": "python3 - <<'EOF'",
+   "result": "TOTAL 16 (size 16) · C1 · 4 lines, 37 samples",
+   "status": "ok",
+   "t_end": 5.227
+  },
+  {
+   "t": 5.399,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Retry the strip wiring and rerun qa",
+   "arg": "python3 - <<'EOF'",
+   "result": "TOTAL 19 (size 19) · C1 · 4 lines, 37 samples",
+   "status": "ok",
+   "t_end": 5.436
+  },
+  {
+   "t": 5.473,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Group size findings by time",
+   "arg": "timeout 400 tools/nx qa examples/trailer --chapter C1 --url http://localhost:5730 --every…",
+   "result": "2 lines",
+   "status": "ok",
+   "t_end": 5.506
+  },
+  {
+   "t": 5.553,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Strip of L4 and still of L2 end",
+   "arg": "timeout 400 tools/nx qa examples/trailer --strip C1-L4 --n 6 --url http://localhost:5730…",
+   "result": "2 lines",
+   "status": "ok",
+   "t_end": 5.617
+  },
+  {
+   "t": 5.649,
+   "kind": "tool",
+   "name": "Read",
+   "title": "Read strip_C1-L4.png",
+   "arg": "vibe-animator/examples/trailer/engine/work/qa/strip_C1-L4.png",
+   "result": "image",
+   "status": "ok",
+   "t_end": 5.671
+  },
+  {
+   "t": 5.694,
+   "kind": "tool",
+   "name": "Read",
+   "title": "Read still_C1-L2_36.44.png",
+   "arg": "vibe-animator/examples/trailer/engine/work/qa/still_C1-L2_36.44.png",
+   "result": "image",
+   "status": "ok",
+   "t_end": 5.716
+  },
+  {
+   "t": 5.868,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Fix cloud labels, rerun qa and re-sheet",
+   "arg": "python3 - <<'EOF'",
+   "result": "TOTAL 19 (size 19) · C1 · 4 lines, 37 samples",
+   "status": "ok",
+   "t_end": 5.984
+  },
+  {
+   "t": 6.056,
+   "kind": "tool",
+   "name": "Read",
+   "title": "Read sheet_C1_sel.png",
+   "arg": "vibe-animator/examples/trailer/engine/work/qa/sheet_C1_sel.png",
+   "result": "image",
+   "status": "ok",
+   "t_end": 6.078
+  },
+  {
+   "t": 6.193,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Scale label offsets with the move and rerun qa",
+   "arg": "python3 - <<'EOF'",
+   "result": "TOTAL 19 (size 19) · C1 · 4 lines, 37 samples",
+   "status": "ok",
+   "t_end": 6.227
+  },
+  {
+   "t": 6.303,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Run default qa for the ready total",
+   "arg": "timeout 400 tools/nx qa examples/trailer --chapter C1 --url http://localhost:5730 2>&1 |…",
+   "result": "TOTAL 19 (size 19) · C1 · 4 lines, 12 samples",
+   "status": "ok",
+   "t_end": 6.337
+  },
+  {
+   "t": 6.562,
+   "kind": "tool",
+   "name": "Bash",
+   "title": "Mark C1 ready and write build notes",
+   "arg": "mkdir -p renders && echo \"TOTAL 19 (size 19, all at C1-L4 48.95 s: text shrinking in the…",
+   "result": "done",
+   "status": "ok",
+   "t_end": 6.585
+  },
+  {
+   "t": 6.686,
+   "kind": "thinking",
+   "secs": 5.6
+  },
+  {
+   "t": 6.708,
+   "kind": "text",
+   "text": "1. C1 is built in `examples/trailer/engine/app/src/scenes/c1.ts`. The prompt types with the voice, then the sentence comes in as word token…"
+  }
+ ],
+ "lanes": [
+  {
+   "label": "Trailer builder C0 + filmstrip kit",
+   "t0": 0.0,
+   "t1": 8.096,
+   "steps": [
+    {
+     "t": 0.038,
+     "title": "Survey trailer example and docs"
+    },
+    {
+     "t": 0.088,
+     "title": "Read workflow, brief, and C0 pack"
+    },
+    {
+     "t": 0.17,
+     "title": "List engine scenes and style guide"
+    },
+    {
+     "t": 0.295,
+     "title": "Read timeline and shots API"
+    },
+    {
+     "t": 0.413,
+     "title": "Read rest of render and example scene"
+    },
+    {
+     "t": 2.481,
+     "title": "Inspect lyrics timings and devices kit"
+    },
+    {
+     "t": 2.564,
+     "title": "Grep helper signatures"
+    },
+    {
+     "t": 2.608,
+     "title": "Check easing list and tw"
+    },
+    {
+     "t": 3.366,
+     "title": "Write trailer_filmstrip_kit.ts"
+    },
+    {
+     "t": 3.781,
+     "title": "Check layer compositing and Kepler sentence"
+    },
+    {
+     "t": 5.121,
+     "title": "Add plate option and table helper to kit"
+    },
+    {
+     "t": 6.25,
+     "title": "Write c0.ts"
+    },
+    {
+     "t": 6.438,
+     "title": "Edit c0.ts"
+    },
+    {
+     "t": 6.461,
+     "title": "Run qa on C0"
+    },
+    {
+     "t": 6.54,
+     "title": "Fix, rerun qa and build contact sheet"
+    },
+    {
+     "t": 6.631,
+     "title": "Read sheet_C0_30-60-end.png"
+    },
+    {
+     "t": 6.953,
+     "title": "Enlarge layout and fix next-frame fill"
+    },
+    {
+     "t": 7.017,
+     "title": "Find still/at parsing in qa"
+    },
+    {
+     "t": 7.094,
+     "title": "Rerun qa and take flash stills"
+    },
+    {
+     "t": 7.238,
+     "title": "Lower opening zoom; montage flash stills"
+    },
+    {
+     "t": 7.27,
+     "title": "Read c0_flashes.jpg"
+    },
+    {
+     "t": 7.491,
+     "title": "Fix flash layering, qa, and take handoff stills"
+    },
+    {
+     "t": 7.586,
+     "title": "Read c0_l5.jpg"
+    },
+    {
+     "t": 7.863,
+     "title": "Soften glow, document hand-off, qa and re-sheet"
+    },
+    {
+     "t": 7.912,
+     "title": "Read sheet_C0_sel.png"
+    },
+    {
+     "t": 8.018,
+     "title": "Write ready marker and build notes"
+    }
+   ],
+   "main": false
+  },
+  {
+   "label": "Trailer builder C1 LLM",
+   "t0": 0.066,
+   "t1": 6.708,
+   "steps": [
+    {
+     "t": 0.122,
+     "title": "List docs and read the agent workflow"
+    },
+    {
+     "t": 0.215,
+     "title": "Read build brief and chapter pack"
+    },
+    {
+     "t": 0.323,
+     "title": "Read the style guide and find manim docs"
+    },
+    {
+     "t": 0.441,
+     "title": "Read the manim adapter and list examples"
+    },
+    {
+     "t": 0.512,
+     "title": "Read example scenes"
+    },
+    {
+     "t": 0.693,
+     "title": "Read ShotScene and kit exports"
+    },
+    {
+     "t": 0.816,
+     "title": "Read render loop, devices, palette, timeline"
+    },
+    {
+     "t": 0.957,
+     "title": "Find how scenes are registered"
+    },
+    {
+     "t": 1.096,
+     "title": "Read timeline and C1 word timings"
+    },
+    {
+     "t": 2.712,
+     "title": "Check kit presence and helper signatures"
+    },
+    {
+     "t": 3.546,
+     "title": "Write c1.ts"
+    },
+    {
+     "t": 3.642,
+     "title": "Tidy and run qa on C1"
+    },
+    {
+     "t": 3.72,
+     "title": "Make the C1 contact sheet"
+    },
+    {
+     "t": 3.803,
+     "title": "Read sheet_C1_30-60-end.png"
+    },
+    {
+     "t": 3.907,
+     "title": "Render a full-size still of C1-L4 end"
+    },
+    {
+     "t": 3.973,
+     "title": "Read still_C1-L4_48.80.png"
+    },
+    {
+     "t": 4.127,
+     "title": "Apply fixes and rerun qa every second"
+    },
+    {
+     "t": 4.23,
+     "title": "Inspect the film-strip kit API"
+    },
+    {
+     "t": 4.287,
+     "title": "Read kit geometry and window helpers"
+    },
+    {
+     "t": 4.66,
+     "title": "Read drawStrip body"
+    },
+    {
+     "t": 4.924,
+     "title": "Locate sections to restructure"
+    },
+    {
+     "t": 5.187,
+     "title": "Wire the film-strip kit and rerun qa"
+    },
+    {
+     "t": 5.399,
+     "title": "Retry the strip wiring and rerun qa"
+    },
+    {
+     "t": 5.473,
+     "title": "Group size findings by time"
+    },
+    {
+     "t": 5.553,
+     "title": "Strip of L4 and still of L2 end"
+    },
+    {
+     "t": 5.649,
+     "title": "Read strip_C1-L4.png"
+    },
+    {
+     "t": 5.694,
+     "title": "Read still_C1-L2_36.44.png"
+    },
+    {
+     "t": 5.868,
+     "title": "Fix cloud labels, rerun qa and re-sheet"
+    },
+    {
+     "t": 6.056,
+     "title": "Read sheet_C1_sel.png"
+    },
+    {
+     "t": 6.193,
+     "title": "Scale label offsets with the move and rerun qa"
+    },
+    {
+     "t": 6.303,
+     "title": "Run default qa for the ready total"
+    },
+    {
+     "t": 6.562,
+     "title": "Mark C1 ready and write build notes"
+    }
+   ],
+   "main": true
+  },
+  {
+   "label": "Trailer builder C2 Khwarizmi",
+   "t0": 0.193,
+   "t1": 8.375,
+   "steps": [
+    {
+     "t": 0.273,
+     "title": "List repo and read agent workflow doc"
+    },
+    {
+     "t": 0.368,
+     "title": "Read style guide, build brief, chapter pack"
+    },
+    {
+     "t": 0.556,
+     "title": "List manim example, scenes, refs and manim docs"
+    },
+    {
+     "t": 0.648,
+     "title": "Read manim example, adapter, placeholder"
+    },
+    {
+     "t": 0.671,
+     "title": "Skim manim-web spike doc"
+    },
+    {
+     "t": 0.793,
+     "title": "Read spike caveats, timeline, kit index"
+    },
+    {
+     "t": 0.934,
+     "title": "Read ShotScene core"
+    },
+    {
+     "t": 1.163,
+     "title": "Read refart loaders and nx help"
+    },
+    {
+     "t": 1.23,
+     "title": "Show refart tool usage"
+    },
+    {
+     "t": 1.337,
+     "title": "Search Commons for PD Baghdad scholar art"
+    },
+    {
+     "t": 1.46,
+     "title": "Search Commons for more candidate art"
+    },
+    {
+     "t": 1.583,
+     "title": "Search for Maqamat library scene"
+    },
+    {
+     "t": 1.698,
+     "title": "Download three candidate PD miniatures"
+    },
+    {
+     "t": 1.782,
+     "title": "Montage candidates into one preview"
+    },
+    {
+     "t": 1.852,
+     "title": "Read c2_cands.jpg"
+    },
+    {
+     "t": 2.21,
+     "title": "Inspect Layers, palette, composite"
+    },
+    {
+     "t": 2.385,
+     "title": "Check OpenCV availability"
+    },
+    {
+     "t": 2.424,
+     "title": "Check numpy, scipy, skimage"
+    },
+    {
+     "t": 2.652,
+     "title": "Write wash.py"
+    },
+    {
+     "t": 2.916,
+     "title": "Generate washed figure PNGs and preview"
+    },
+    {
+     "t": 2.991,
+     "title": "Read c2_wash.jpg"
+    },
+    {
+     "t": 3.101,
+     "title": "Check SOURCES format and chapters"
+    },
+    {
+     "t": 3.151,
+     "title": "Log asset source; dump C2 word timings"
+    },
+    {
+     "t": 4.205,
+     "title": "Check image loading, fonts, fig2"
+    },
+    {
+     "t": 4.332,
+     "title": "Check whether film-strip kit exists"
+    },
+    {
+     "t": 4.37,
+     "title": "Read film-strip kit and C1 usage"
+    },
+    {
+     "t": 7.141,
+     "title": "Write c2.ts"
+    },
+    {
+     "t": 7.206,
+     "title": "Check scene ctx fields and easings"
+    },
+    {
+     "t": 7.324,
+     "title": "Fix helpers and typecheck c2"
+    },
+    {
+     "t": 7.382,
+     "title": "Run qa for chapter C2"
+    },
+    {
+     "t": 7.629,
+     "title": "Hide geometry labels during L6 pan, rerun qa"
+    },
+    {
+     "t": 7.757,
+     "title": "Render C2 contact sheet"
+    },
+    {
+     "t": 7.819,
+     "title": "Read sheet_C2.png"
+    },
+    {
+     "t": 8.074,
+     "title": "Regenerate wash, retime formula, take L7 still"
+    },
+    {
+     "t": 8.158,
+     "title": "Read still_C2-L7_83.75.png"
+    },
+    {
+     "t": 8.24,
+     "title": "Typecheck and final qa for C2"
+    },
+    {
+     "t": 8.319,
+     "title": "Write ready marker and build notes"
+    }
+   ],
+   "main": false
+  },
+  {
+   "label": "Trailer builder C3 P vs NP",
+   "t0": 0.39,
+   "t1": 6.822,
+   "steps": [
+    {
+     "t": 0.486,
+     "title": "List repo and read workflow doc"
+    },
+    {
+     "t": 0.579,
+     "title": "Read build brief and C3 pack"
+    },
+    {
+     "t": 0.626,
+     "title": "Read style guide and list scenes"
+    },
+    {
+     "t": 0.771,
+     "title": "Find manim docs, read lens c1"
+    },
+    {
+     "t": 0.905,
+     "title": "Read manim example, adapter, spike doc"
+    },
+    {
+     "t": 1.074,
+     "title": "Read kit index and shots exports"
+    },
+    {
+     "t": 1.208,
+     "title": "Read ShotScene core and timeline"
+    },
+    {
+     "t": 1.364,
+     "title": "Inspect manim-web Axes typings"
+    },
+    {
+     "t": 1.438,
+     "title": "List Axes and FunctionGraph API"
+    },
+    {
+     "t": 2.344,
+     "title": "Check scenes and C3 word timings"
+    },
+    {
+     "t": 2.504,
+     "title": "Locate Create implementation"
+    },
+    {
+     "t": 2.541,
+     "title": "Read Create and UpdateFromAlphaFunc typings"
+    },
+    {
+     "t": 3.474,
+     "title": "Check palette, rgba, fonts, fig2"
+    },
+    {
+     "t": 4.48,
+     "title": "Write c3.ts"
+    },
+    {
+     "t": 4.564,
+     "title": "Check easing names, kit presence"
+    },
+    {
+     "t": 4.599,
+     "title": "Read filmstrip kit exports and docs"
+    },
+    {
+     "t": 4.638,
+     "title": "Read kit details and C1 usage"
+    },
+    {
+     "t": 4.837,
+     "title": "See how other chapters use the strip"
+    },
+    {
+     "t": 5.076,
+     "title": "Wire filmstrip kit into C3"
+    },
+    {
+     "t": 5.153,
+     "title": "Run qa on chapter C3"
+    },
+    {
+     "t": 5.277,
+     "title": "Make C3 contact sheet"
+    },
+    {
+     "t": 5.329,
+     "title": "Read sheet_C3_30-60-end.png"
+    },
+    {
+     "t": 5.76,
+     "title": "Restack definition, drop n label"
+    },
+    {
+     "t": 5.814,
+     "title": "Re-run qa and take two stills"
+    },
+    {
+     "t": 6.029,
+     "title": "Check --at semantics"
+    },
+    {
+     "t": 6.1,
+     "title": "Still of C3-L6 before pull-back"
+    },
+    {
+     "t": 6.148,
+     "title": "Read still_C3-L6_117.85.png"
+    },
+    {
+     "t": 6.171,
+     "title": "Read still_C3-L4_107.62.png"
+    },
+    {
+     "t": 6.383,
+     "title": "Fix definition text and re-still L4"
+    },
+    {
+     "t": 6.49,
+     "title": "Read still_C3-L4_107.62.png"
+    },
+    {
+     "t": 6.653,
+     "title": "Final qa, add build notes, write ready file"
+    }
+   ],
+   "main": false
+  },
+  {
+   "label": "Trailer builder C4 Kepler",
+   "t0": 0.604,
+   "t1": 7.953,
+   "steps": [
+    {
+     "t": 0.749,
+     "title": "Inspect repo and read the binding workflow doc"
+    },
+    {
+     "t": 0.883,
+     "title": "Read build brief, chapter pack, list scenes"
+    },
+    {
+     "t": 1.029,
+     "title": "Read style guide and outline fact table"
+    },
+    {
+     "t": 1.141,
+     "title": "Find fact table in outline"
+    },
+    {
+     "t": 1.292,
+     "title": "Search Wikimedia Commons for Harmonices Mundi f…"
+    },
+    {
+     "t": 1.416,
+     "title": "Fetch Commons PDF license metadata and wikitext"
+    },
+    {
+     "t": 1.512,
+     "title": "Download candidate page renders from Commons PDF"
+    },
+    {
+     "t": 1.634,
+     "title": "Montage candidates and try a large render"
+    },
+    {
+     "t": 1.656,
+     "title": "Read m.jpg"
+    },
+    {
+     "t": 1.733,
+     "title": "Download Commons PDF and extract page 189 image"
+    },
+    {
+     "t": 1.804,
+     "title": "Crop the bottom of page 189 to see the sentence"
+    },
+    {
+     "t": 1.827,
+     "title": "Read bottom.jpg"
+    },
+    {
+     "t": 1.9,
+     "title": "Read paper-beat helper and kit index"
+    },
+    {
+     "t": 1.948,
+     "title": "Read PaperView and find example quotes.json"
+    },
+    {
+     "t": 2.038,
+     "title": "Read manim adapter, list scenes and data"
+    },
+    {
+     "t": 2.11,
+     "title": "Read lens example c1 for the manim and ShotScen…"
+    },
+    {
+     "t": 2.236,
+     "title": "Check scene registration and lyrics format"
+    },
+    {
+     "t": 2.259,
+     "title": "Read ShotScene definition and lyrics API"
+    },
+    {
+     "t": 2.322,
+     "title": "Read rest of ShotScene render and C4 word timin…"
+    },
+    {
+     "t": 2.805,
+     "title": "Check timeline windows and sources files"
+    },
+    {
+     "t": 2.857,
+     "title": "Find THIRD_PARTY convention and paper docs"
+    },
+    {
+     "t": 2.894,
+     "title": "Read paper page docs and THIRD_PARTY"
+    },
+    {
+     "t": 3.041,
+     "title": "Get word bounding boxes from PDF text layer"
+    },
+    {
+     "t": 3.073,
+     "title": "Show words around the quote lines"
+    },
+    {
+     "t": 3.173,
+     "title": "Install the page image into the episode papers…"
+    },
+    {
+     "t": 3.265,
+     "title": "Write quotes index and page source log"
+    },
+    {
+     "t": 3.311,
+     "title": "Check for filmstrip kit and helper signatures"
+    },
+    {
+     "t": 3.619,
+     "title": "Verify fitted slope of planet data"
+    },
+    {
+     "t": 4.415,
+     "title": "Write c4.ts"
+    },
+    {
+     "t": 4.531,
+     "title": "Check ease functions and font helper"
+    },
+    {
+     "t": 4.729,
+     "title": "Apply fixes and run qa on C4"
+    },
+    {
+     "t": 4.876,
+     "title": "Replace small citation with 24px own lower-third"
+    },
+    {
+     "t": 4.972,
+     "title": "Check for kit and current imports"
+    },
+    {
+     "t": 5.009,
+     "title": "Read filmstrip kit exports and docs"
+    },
+    {
+     "t": 5.048,
+     "title": "Read kit API details and how C1/C3 use it"
+    },
+    {
+     "t": 5.351,
+     "title": "Read drawStrip body"
+    },
+    {
+     "t": 5.575,
+     "title": "Wire filmstrip intro/outro and rerun qa"
+    },
+    {
+     "t": 5.845,
+     "title": "Fade plot text during pull-back and rerun qa"
+    },
+    {
+     "t": 5.927,
+     "title": "Render C4 contact sheet"
+    },
+    {
+     "t": 6.006,
+     "title": "Read sheet_C4_30-60-end.png"
+    },
+    {
+     "t": 6.738,
+     "title": "Move formula, delay pull-back, size-aware fades…"
+    },
+    {
+     "t": 6.8,
+     "title": "Render motion strip for C4-L4"
+    },
+    {
+     "t": 6.868,
+     "title": "Read strip_C4-L4.png"
+    },
+    {
+     "t": 6.923,
+     "title": "Check --at syntax for qa still"
+    },
+    {
+     "t": 6.977,
+     "title": "Full-size still at the snap moment"
+    },
+    {
+     "t": 7.041,
+     "title": "Read still_C4-L4_143.25.png"
+    },
+    {
+     "t": 7.179,
+     "title": "Fix label collisions, rerun qa and still"
+    },
+    {
+     "t": 7.302,
+     "title": "Downscale still for a cheap look"
+    },
+    {
+     "t": 7.347,
+     "title": "Read still_small.png"
+    },
+    {
+     "t": 7.422,
+     "title": "Still of the page highlight moment"
+    },
+    {
+     "t": 7.444,
+     "title": "Read s2.png"
+    },
+    {
+     "t": 7.513,
+     "title": "Downscale page still"
+    },
+    {
+     "t": 7.535,
+     "title": "Read s2.png"
+    },
+    {
+     "t": 7.66,
+     "title": "Add p.190 below p.189 so the page window is fil…"
+    },
+    {
+     "t": 7.713,
+     "title": "Rerun qa and page still after adding p.190"
+    },
+    {
+     "t": 7.735,
+     "title": "Read s3.png"
+    },
+    {
+     "t": 7.841,
+     "title": "Write C4 ready marker"
+    }
+   ],
+   "main": false
+  },
+  {
+   "label": "Trailer builder C5+C6 agents finale",
+   "t0": 0.86,
+   "t1": 12.0,
+   "steps": [
+    {
+     "t": 1.001,
+     "title": "Survey repo layout and status"
+    },
+    {
+     "t": 1.052,
+     "title": "Read workflow, brief, and pack list"
+    },
+    {
+     "t": 1.186,
+     "title": "Read C5/C6 packs and list scenes"
+    },
+    {
+     "t": 1.264,
+     "title": "Read style guide and list examples"
+    },
+    {
+     "t": 1.314,
+     "title": "Read example scene and timeline"
+    },
+    {
+     "t": 1.387,
+     "title": "Read ShotScene implementation"
+    },
+    {
+     "t": 1.54,
+     "title": "Read Scene base and kit exports"
+    },
+    {
+     "t": 2.06,
+     "title": "Inspect word timings for C5/C6"
+    },
+    {
+     "t": 2.132,
+     "title": "Read device helpers, Layers, palette, fonts"
+    },
+    {
+     "t": 2.187,
+     "title": "Check how qa hooks text drawing"
+    },
+    {
+     "t": 2.295,
+     "title": "Read Layer2D scaling and manim layer"
+    },
+    {
+     "t": 2.678,
+     "title": "Inspect engine render pipeline"
+    },
+    {
+     "t": 2.757,
+     "title": "Read makeRT and readback code"
+    },
+    {
+     "t": 2.955,
+     "title": "Check for film-strip kit and tools"
+    },
+    {
+     "t": 3.019,
+     "title": "List Short hook titles"
+    },
+    {
+     "t": 4.053,
+     "title": "Read FSPass and post tone mapping"
+    },
+    {
+     "t": 4.792,
+     "title": "Write kit_c5c6.ts"
+    },
+    {
+     "t": 6.36,
+     "title": "Edit kit_c5c6.ts"
+    },
+    {
+     "t": 6.416,
+     "title": "Edit kit_c5c6.ts"
+    },
+    {
+     "t": 8.195,
+     "title": "Write c5.ts"
+    },
+    {
+     "t": 8.397,
+     "title": "Apply cleanup edits to c5.ts"
+    },
+    {
+     "t": 8.559,
+     "title": "Let C5 thumbnails load other chapters"
+    },
+    {
+     "t": 8.718,
+     "title": "Write c6.ts"
+    },
+    {
+     "t": 8.775,
+     "title": "Typecheck my scene files"
+    },
+    {
+     "t": 8.822,
+     "title": "Fix ease names and type, re-typecheck"
+    },
+    {
+     "t": 8.862,
+     "title": "Run qa on C5"
+    },
+    {
+     "t": 8.921,
+     "title": "Read film-strip kit API"
+    },
+    {
+     "t": 8.96,
+     "title": "Read kit details and neighbour usage"
+    },
+    {
+     "t": 9.029,
+     "title": "Read drawStrip body and C3 notes"
+    },
+    {
+     "t": 9.097,
+     "title": "Look for C3 builder's frame suggestion"
+    },
+    {
+     "t": 9.175,
+     "title": "Check C4 outro timing"
+    },
+    {
+     "t": 9.326,
+     "title": "Switch kit to the shared film-strip kit"
+    },
+    {
+     "t": 9.371,
+     "title": "Read c5.ts"
+    },
+    {
+     "t": 9.475,
+     "title": "Rewire C5 onto the shared strip kit"
+    },
+    {
+     "t": 9.598,
+     "title": "Update C5 camera and C6 strip, typecheck"
+    },
+    {
+     "t": 9.675,
+     "title": "Run qa on C5 and C6"
+    },
+    {
+     "t": 9.769,
+     "title": "Hide squashed edge numbers, rerun qa"
+    },
+    {
+     "t": 9.835,
+     "title": "Make contact sheets for C5 and C6"
+    },
+    {
+     "t": 9.898,
+     "title": "Read sheet_C5.png"
+    },
+    {
+     "t": 9.955,
+     "title": "Read sheet_C6.png"
+    },
+    {
+     "t": 10.038,
+     "title": "Fix wordmark timing; sheet C5 cutting room"
+    },
+    {
+     "t": 10.092,
+     "title": "Read sheet_C5_sel_20-45-70-end.png"
+    },
+    {
+     "t": 10.141,
+     "title": "Check the --at flag format"
+    },
+    {
+     "t": 10.205,
+     "title": "Full-size stills of key C5 moments"
+    },
+    {
+     "t": 10.268,
+     "title": "Montage the four stills"
+    },
+    {
+     "t": 10.303,
+     "title": "Read m5.png"
+    },
+    {
+     "t": 10.408,
+     "title": "Crop C1 frame used for the phone Short"
+    },
+    {
+     "t": 10.457,
+     "title": "Downscale crop for viewing"
+    },
+    {
+     "t": 10.49,
+     "title": "Read c1s.png"
+    },
+    {
+     "t": 10.642,
+     "title": "Redraw splicer and thumb; fix thumbnail times"
+    },
+    {
+     "t": 10.695,
+     "title": "Stills of cut, swipe, winding, epicycles"
+    },
+    {
+     "t": 10.775,
+     "title": "Fix syntax, redo stills montage"
+    },
+    {
+     "t": 10.838,
+     "title": "Read m6.png"
+    },
+    {
+     "t": 10.974,
+     "title": "Check C5 for render errors"
+    },
+    {
+     "t": 11.027,
+     "title": "Read c5.ts"
+    },
+    {
+     "t": 11.135,
+     "title": "Single thumb; offscreen warp for reel feed"
+    },
+    {
+     "t": 11.185,
+     "title": "Rename offscreen canvas, typecheck"
+    },
+    {
+     "t": 11.243,
+     "title": "Re-shoot the four key stills"
+    },
+    {
+     "t": 11.31,
+     "title": "Read m7.png"
+    },
+    {
+     "t": 11.42,
+     "title": "Temporary debug log for the splicer"
+    },
+    {
+     "t": 11.49,
+     "title": "Crop the cut still for inspection"
+    },
+    {
+     "t": 11.522,
+     "title": "Read dbg.png"
+    },
+    {
+     "t": 11.605,
+     "title": "Fix the cut cue word, re-shoot"
+    },
+    {
+     "t": 11.66,
+     "title": "Read m8.png"
+    },
+    {
+     "t": 11.734,
+     "title": "Kicker backing; qa both chapters every second"
+    },
+    {
+     "t": 11.81,
+     "title": "Re-sheet C6"
+    },
+    {
+     "t": 11.859,
+     "title": "Read sheet_C6_0.5-end.png"
+    },
+    {
+     "t": 11.937,
+     "title": "Write ready markers and build notes"
+    }
+   ],
+   "main": false
+  }
+ ],
+ "dropped": 0
+}

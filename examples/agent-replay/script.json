@@ -1,0 +1,17 @@
+{
+ "title": "Agent replay",
+ "chapters": [
+  {
+   "id": "C0",
+   "title": "Watch the agents work",
+   "lines": [
+    {"id": "C0-L1", "text": "Make me a trailer.", "refs": [], "typed": "Make me a trailer.",
+     "visual": "A prompt box in the centre; the prompt types itself with the voice."},
+    {"id": "C0-L2", "text": "The orchestrator hands out the chapters, and six builder agents start at once.", "refs": [],
+     "visual": "The prompt rises to the top; the fan-out panel opens: an orchestrator node and six builder lanes, each spinning while it works."},
+    {"id": "C0-L3", "text": "This one reads its brief, writes the scene, runs the checks, looks at the stills, and reports back.", "refs": [],
+     "visual": "The chat column replays the real builder session: tool cards stream in with their results; the run ends on its report."}
+   ]
+  }
+ ]
+}

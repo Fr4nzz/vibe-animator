@@ -6,7 +6,7 @@
 //                                              violations boxed in red); prints its path
 //   bun scripts/qa.ts --texts C3               every scene text drawn per line, as plain text (one line per sample:
 //                                              "C3-L2 12.34s | text | text"), for grepping required phrases
-//   --at end|<fraction>[,…]  where in each line to sample (sheet, texts, checks, stills): "end" = the line's end − 0.3 s
+//   --at end|end-0.5|<0..1>|<percent>|+<s>[,…]  where in each line to sample (sheet, texts, checks, stills): "end" = the line's end − 0.3 s
 //                            with captions off (late reveals complete); a fraction of the line (sheet/texts default 0.6)
 // Review images (print only PNG paths; at most 12 images per chapter per run; under engine/work/qa/):
 //   --still C3-L2[,C3-L5] [--t 12.5,13 | --at end]   full-resolution 1920x1080 still(s) of a line (default its 60 %)
@@ -52,9 +52,22 @@ const CROP_BOX = CROP ? argv[argv.indexOf('--crop') + 2]?.split(',').map(Number)
 const IMAGES = STILL ?? STRIP ?? CROP; // review-image modes: line ids
 const REPORT = !SHEET && !TEXTS && !IMAGES;
 const MAX_IMAGES = 12; // per chapter per run (tokens)
-/** --at: where in a line to sample ("end" = end − 0.3 s, captions off; else a fraction of the line). */
+/** --at: where in a line to sample: "end" = end − 0.3 s (captions off); 0..1 = that fraction of the line; 1 < v ≤ 100
+ *  = that percent (`--at 30,60,end`); "+1.5" = 1.5 s after the line starts; "end-0.5" = 0.5 s before it ends. For a
+ *  song time use --t. (Values > 1 used to be clamped to the fraction 1, i.e. every sample landed on the line end.) */
 const AT = opt('at')?.split(',').filter(Boolean);
-const atTimes = (l: Line, dflt: string[]) => (AT ?? dflt).map((a) => a === 'end' ? Math.max(l.start, l.end - 0.3) : l.start + Math.min(1, Math.max(0, +a)) * (l.end - l.start));
+const atTime = (l: Line, a: string): number => {
+  const s = a.trim();
+  if (s === 'end') return Math.max(l.start, l.end - 0.3);
+  const m = /^end-(\d*\.?\d+)$/.exec(s);
+  if (m) return Math.max(l.start, l.end - +m[1]!);
+  if (s.startsWith('+')) return l.start + Number(s.slice(1));
+  const v = Number(s);
+  if (!Number.isFinite(v) || v < 0 || v > 100) { console.error(`--at: cannot read "${a}" (end | end-0.5 | 0..1 | 30 (%) | +1.5; song times: --t)`); process.exit(2); }
+  const f = v > 1 ? v / 100 : v;
+  return Math.min(l.end - 1 / 60, l.start + f * (l.end - l.start));
+};
+const atTimes = (l: Line, dflt: string[]) => (AT ?? dflt).map((a) => atTime(l, a));
 const CAPTIONS_OFF = !!AT?.includes('end') || !!TEXTS || flag('no-captions');
 const MIN_PX = +opt('min-px', '24')!;
 const PANEL_PX = +opt('panel-px', '40')!;
