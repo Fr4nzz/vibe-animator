@@ -2,7 +2,9 @@
 
   python3 tools/make_engine_data.py <episode>
 
-lyrics.json: the lines in episode order with word times ({w, start, end}). audio.json: a synthetic analysis (the
+lyrics.json: the lines in episode order with word times ({w, start, end}), plus, from script.json, the speaker
+(`voice`: the line's role, or voice.default_role) and `typed` (the on-screen typed text of a line marked "typed"; true
+means the line's own text). Scenes read them with q.speaker(id) / q.typed(id, t) (scenes/_shots.ts). audio.json: a synthetic analysis (the
 engine came from a music-video engine): a 120 BPM grid, "downbeats" at line starts, one section per line, word
 onsets. chapters.json: [{id, title, start, end}].
 """
@@ -17,7 +19,20 @@ def main():
     T = ep.timing
     out = ep.engine / "data"
     flat = [l for c in T["chapters"] for l in c["lines"]]
-    save_json(out / "lyrics.json", {"lines": [{"text": l["text"], "start": l["start"], "end": l["end"], "id": l["id"],
+    src = {l["id"]: l for c in ep.script["chapters"] for l in c["lines"]}
+    default_role = ep.cfg["voice"].get("default_role")
+
+    def extra(l):
+        s, x = src.get(l["id"], {}), {}
+        role = s.get("voice") or default_role
+        if role:
+            x["voice"] = role
+        typed = s.get("typed")
+        if typed:
+            x["typed"] = l["text"] if typed is True else typed
+        return x
+
+    save_json(out / "lyrics.json", {"lines": [{"text": l["text"], "start": l["start"], "end": l["end"], "id": l["id"], **extra(l),
                                                "words": [{"w": w["w"], "start": w["s"], "end": w["e"]} for w in l["words"]]} for l in flat]})
     dur, step = T["total"], 0.5
     save_json(out / "audio.json", {"duration": dur, "bpm": 120.0, "fps": 100, "beats": [round(i * step, 4) for i in range(int(dur / step) + 1)],

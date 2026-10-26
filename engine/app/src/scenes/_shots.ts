@@ -40,6 +40,33 @@ export class Cues {
   }
   s(id: string) { return this.line(id).start; }
   end(id: string) { return this.line(id).end; }
+  /** Speaker role of line `id` (script.json `voice`, e.g. 'DIRECTOR'), or '' in a single-voice episode. */
+  speaker(id: string): string { return (this.line(id) as { voice?: string }).voice ?? ''; }
+  /** Speaker of the line being spoken at t (or of the last line that started), '' if none. */
+  speakerAt(t: number): string {
+    let best: { voice?: string; start: number } | null = null;
+    for (const l of this.ly.lines) if (l.start <= t) best = l;
+    return best?.voice ?? '';
+  }
+  /** Fraction (0..1) of line `id` spoken by t, weighted by word length: each word's letters advance while it is said. */
+  spoken(id: string, t: number): number {
+    const ws = this.line(id).words;
+    let tot = 0, done = 0;
+    for (const w of ws) {
+      const n = Math.max(1, normW(w.w).length);
+      tot += n;
+      done += n * clamp((t - w.start) / Math.max(1e-3, w.end - w.start));
+    }
+    return tot ? done / tot : 0;
+  }
+  /** On-screen typing that follows the voice: the prefix of the line's typed text (script.json `typed`; else its
+   *  text) shown at t. With the same text as the narration, each word's letters appear while that word is spoken.
+   *  Deterministic in t. `lead` (s) starts the typing that much before the voice. */
+  typed(id: string, t: number, lead = 0): string {
+    const l = this.line(id) as { typed?: string; text?: string };
+    const s = l.typed ?? l.text ?? '';
+    return s.slice(0, Math.round(this.spoken(id, t + lead) * s.length));
+  }
 }
 
 // ------------------------------------------------------------------ camera
@@ -80,6 +107,8 @@ export interface Shot {
   draw?: (o: SC) => void;
   /** screen-space drawing (headers, lower-thirds) */
   hud?: (o: SC) => void;
+  /** handheld-drift multiplier over time (default 1); 0 pins the camera exactly to its keys */
+  drift?: (t: number) => number;
 }
 
 export abstract class ShotScene extends Scene {
@@ -92,6 +121,9 @@ export abstract class ShotScene extends Scene {
     this.q = new Cues(this.ctx.lyrics as any);
     await this.build();
   }
+  /** Plate value (0 ink .. 1 paper) for the post-processing (bloom, vignette, grain, halation, caption mode); default
+   *  the shots' own plate. Override to ease post across a cut (e.g. trailer_filmstrip_kit handPost). */
+  postPaper?: (t: number, paper: number) => number;
   /** Drawn into `out` over the plate and under the ink/signal layers (e.g. a ManimLayer, see _manim.ts). */
   protected underlay(_t: number, _out: THREE.WebGLRenderTarget, _cam: Cam): void {}
   alphaOf(sh: Shot, t: number) {
@@ -109,12 +141,13 @@ export abstract class ShotScene extends Scene {
     const main = act.reduce((b, x) => (x.a > (b?.a ?? -1) ? x : b), act[0]);
     const mc = main?.sh.cam ? camAt(main.sh.cam, t) : { x: W / 2, y: H / 2, z: 1 };
     this.bg.render(renderer, out, paper, t, mc.x * mc.z * 0.06, mc.y * mc.z * 0.06);
-    this.underlay(t, out, drift(mc, t));
+    const md = main?.sh.drift ? clamp(main.sh.drift(t)) : 1, mdc = drift(mc, t);
+    this.underlay(t, out, { x: lerp(mc.x, mdc.x, md), y: lerp(mc.y, mdc.y, md), z: lerp(mc.z, mdc.z, md) });
     this.L.clear();
     const c = this.L.ink.ctx, s = this.L.sig.ctx;
     for (const { sh, a } of act) {
       let cam = sh.cam ? camAt(sh.cam, t) : { x: W / 2, y: H / 2, z: 1 };
-      cam = drift(cam, t);
+      { const d = sh.drift ? sh.drift(t) : 1; if (d > 0) { const dc = drift(cam, t); cam = { x: lerp(cam.x, dc.x, d), y: lerp(cam.y, dc.y, d), z: lerp(cam.z, dc.z, d) }; } }
       const o: SC = { c, s, t, a, cam, paper: sh.paper === 1, fg: sh.paper ? 'ink' : 'bone' };
       const set = (ctx: CanvasRenderingContext2D) => ctx.setTransform(cam.z, 0, 0, cam.z, W / 2 - cam.x * cam.z, H / 2 - cam.y * cam.z);
       if (sh.draw) {
@@ -131,10 +164,11 @@ export abstract class ShotScene extends Scene {
       }
     }
     this.L.composite(renderer, comp, out, paper, true);
+    const pp = this.postPaper ? clamp(this.postPaper(t, paper)) : paper;
     return {
-      paper: paper > 0.5 ? 1 : 0,
-      bloom: lerp(0.75, 0.25, paper), bloomThreshold: 0.9,
-      vignette: lerp(0.42, 0.25, paper), grain: lerp(0.04, 0.035, paper), halation: lerp(0.12, 0, paper), ca: lerp(0.6, 0.3, paper),
+      paper: pp > 0.5 ? 1 : 0,
+      bloom: lerp(0.75, 0.25, pp), bloomThreshold: 0.9,
+      vignette: lerp(0.42, 0.25, pp), grain: lerp(0.04, 0.035, pp), halation: lerp(0.12, 0, pp), ca: lerp(0.6, 0.3, pp),
     } as any;
   }
 }
@@ -354,16 +388,33 @@ export class PaperView {
   }
 }
 
-/** citation lower-third on ink (screen or world space) */
+/** citation lower-third on ink (screen or world space). Type at the 24 px floor (head 26 px); long lines wrap (at
+ *  most two each, ellipsised). Returns the bar's height. */
 export function citeBar(c: CanvasRenderingContext2D, x: number, y: number, w: number, head: string, l1: string, l2: string | null, a: number) {
-  if (a <= 0) return;
+  const maxW = w - 44;
+  const fit = (s: string, f: string, size: number) => {
+    const ls = wrap(c, s, f, size, maxW);
+    if (ls.length <= 2) return ls;
+    c.save(); c.font = font(f, size);
+    let last = ls[1]!;
+    while (last.length > 1 && c.measureText(last + ' …').width > maxW) last = last.slice(0, -1);
+    c.restore();
+    return [ls[0]!, last.trimEnd() + ' …'];
+  };
+  const rows: { s: string; size: number; f: string; col: string; ls: number }[] = [
+    { s: head, size: 26, f: F.mono(600), col: rgba('bone', 1), ls: 2 },
+    ...fit(l1, F.mono(400), 24).map((s) => ({ s, size: 24, f: F.mono(400), col: rgba('bone', 0.82), ls: 0 })),
+    ...(l2 ? fit(l2, F.mono(400), 24).map((s) => ({ s, size: 24, f: F.mono(400), col: rgba('bone', 0.68), ls: 0 })) : []),
+  ];
+  const hgt = 18 + rows.reduce((sum, r) => sum + r.size * 1.3, 0) + 12;
+  if (a <= 0) return hgt;
   c.save();
   c.globalAlpha *= a;
-  c.fillStyle = rgba('ink', 0.94); c.fillRect(x, y, w, l2 ? 80 : 60);
-  txt(c, head, x + 22, y + 26, { size: 15, f: F.mono(600), ls: 2, col: rgba('bone', 1) });
-  txt(c, l1, x + 22, y + 48, { size: 14, f: F.mono(400), col: rgba('bone', 0.78) });
-  if (l2) txt(c, l2, x + 22, y + 68, { size: 13, f: F.mono(400), col: rgba('bone', 0.6) });
+  c.fillStyle = rgba('ink', 0.94); c.fillRect(x, y, w, hgt);
+  let yy = y + 18;
+  for (const r of rows) { yy += r.size * 1.3; txt(c, r.s, x + 22, yy - r.size * 0.3, { size: r.size, f: r.f, ls: r.ls, col: r.col }); }
   c.restore();
+  return hgt;
 }
 
 /** wrap text to a width; returns lines */

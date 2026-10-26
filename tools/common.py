@@ -18,6 +18,8 @@ DEFAULTS = {
         "provider": "elevenlabs",
         "voice_id": "",                  # empty -> env named by voice_id_env (the voice is tied to your TTS account)
         "voice_id_env": "ELEVENLABS_VOICE_ID",
+        "voices": {},                    # several voices: role -> voice id ({"NARRATOR": "…"}); empty id -> env ELEVENLABS_VOICE_<ROLE>
+        "default_role": None,            # role of lines without a "voice" field (None: the single voice above)
         "model": "eleven_multilingual_v2",
         "language_code": None,           # None -> episode "language"
         "api_key_env": "ELEVENLABS_API_KEY",
@@ -28,6 +30,8 @@ DEFAULTS = {
         "lead_in": 0.5,                  # s before the first line
         "tail": 0.6,                     # s after the last line
         "loudness_lufs": -14.0,
+        "line_lufs": -20.0,              # each line clip leveled to this before the mix (voices differ by several dB); None: off
+        "line_peak": -1.0,               # dBTP ceiling on a leveled clip (caps its gain)
     },
     "captions": {
         "numbers": "none",               # "none" | "es" (spelled-out numbers -> digits); see tools/lang/

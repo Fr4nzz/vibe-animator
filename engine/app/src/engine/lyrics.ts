@@ -14,6 +14,11 @@ export interface Word {
 }
 export interface Line {
   i: number;
+  id?: string;
+  /** speaker role from script.json (`voice`), e.g. 'NARRATOR'; absent in single-voice episodes */
+  voice?: string;
+  /** on-screen typed text of a line marked `typed` in script.json */
+  typed?: string;
   text: string;
   start: number;
   end: number;

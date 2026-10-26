@@ -145,8 +145,14 @@ def packs(E):
             sv = vis.get(l["id"], {})
             sh = l.get("short") or sv.get("short")
             short = f" · Short {sh.get('id', '?')} {sh.get('edge', '')}".rstrip() if sh else ""
-            md.append(f"### {l['id']} · {l['start']:.2f}–{l['end']:.2f} s{short}")
+            role = sv.get("voice") or E.cfg["voice"].get("default_role")
+            md.append(f"### {l['id']} · {l['start']:.2f}–{l['end']:.2f} s{short}{f' · {role}' if role else ''}")
             md.append(f"> {l['text']}")
+            if sv.get("cue_word"):
+                md.append(f"- **Cue word:** `{sv['cue_word']}` (`this.q.w('{l['id']}', '{sv['cue_word']}')`)")
+            if sv.get("typed"):
+                typed = l["text"] if sv["typed"] is True else sv["typed"]
+                md.append(f"- **Typed on screen:** «{typed}» (follows the voice: `this.q.typed('{l['id']}', t)`)")
             if sv.get("visual"):
                 md.append(f"- **Visual:** {sv['visual']}")
                 words |= {w.lower() for w in re.findall(r"[^\W\d_]{5,}", sv["visual"])}
