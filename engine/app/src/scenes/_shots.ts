@@ -33,7 +33,10 @@ export class Cues {
   e(id: string, q: string, nth = 0): number { return this.word(id, q, nth).end; }
   word(id: string, q: string, nth = 0) {
     const nq = normW(q);
-    const hits = this.line(id).words.filter((x) => normW(x.w).startsWith(nq));
+    // An exact word wins over a prefix ('En' once prefix-matched 'entre', so a plate ended a sentence
+    // early); a prefix ('filtr') still works when no word in the line equals it.
+    const ws = this.line(id).words, exact = ws.filter((x) => normW(x.w) === nq);
+    const hits = exact.length ? exact : ws.filter((x) => normW(x.w).startsWith(nq));
     const x = hits[nth];
     if (!x) throw new Error(`word not found: ${id} "${q}" #${nth}`);
     return x;

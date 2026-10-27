@@ -123,7 +123,8 @@ function cueCheck(): Violation[] {
       nCues++;
       const l = lineById.get(id);
       if (!l) { out.push({ chapter: chapterOf(id), line: id, t: 0, kind: 'cue', text: w, detail: `no line ${id} in lyrics.json (${f}:${lineNo(m.index!)})` }); continue; }
-      const hits = l.words.filter((x) => normW(x.w).startsWith(normW(w)));
+      const ex = l.words.filter((x) => normW(x.w) === normW(w)); // same rule as Cues: an exact word wins over a prefix
+      const hits = ex.length ? ex : l.words.filter((x) => normW(x.w).startsWith(normW(w)));
       if (hits.length <= nth) out.push({ chapter: chapterOf(id), line: id, t: l.start, kind: 'cue', text: w, detail: `word not in line${nth ? ` (#${nth}, ${hits.length} found)` : ''} (${f}:${lineNo(m.index!)})` });
     }
     // bare line references

@@ -68,8 +68,11 @@ export function schematic(c: CanvasRenderingContext2D, x: number, y: number, a: 
 
 /** figure kicker (FIG. n · TITLE), 24 px, inside the Shorts square by default */
 export function fig2(c: CanvasRenderingContext2D, fig: string, title: string, a: number, ink = false, x = 432, y = 78) {
-  if (a <= 0.001) return;
-  c.save(); c.globalAlpha *= clamp(a);
+  // Crossfade-safe: a header shows only while its shot is more than half visible, so the outgoing and incoming FIG
+  // headers never overlap into garbled text.
+  const A = clamp((c.globalAlpha * clamp(a) - 0.5) * 2);
+  if (A <= 0.001) return;
+  c.save(); c.globalAlpha = A;
   const col = ink ? 'ink' : 'bone';
   c.font = font(F.mono(600), T.A); c.letterSpacing = '3px'; c.textBaseline = 'alphabetic'; c.textAlign = 'left';
   c.fillStyle = rgba(col, 0.95); c.fillText(fig, x, y);

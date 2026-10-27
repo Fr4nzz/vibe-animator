@@ -164,9 +164,12 @@ export function callout(c: CanvasRenderingContext2D, o: Callout) {
 
 /** Figure header: "FIG. 3" + title + hairline rule, top-left on the Swiss grid. `size` 24 px = the style-guide floor. */
 export function figHeader(c: CanvasRenderingContext2D, fig: string, title: string, a: number, ink = false, x = 96, y = 82, size = 24) {
-  if (a <= 0.001) return;
+  // Crossfade-safe: shown only while its shot is more than half visible, so two FIG headers never overlap during a
+  // crossfade.
+  const A = clamp((c.globalAlpha * a - 0.5) * 2);
+  if (A <= 0.001) return;
   c.save();
-  c.globalAlpha *= a;
+  c.globalAlpha = A;
   const col = ink ? 'ink' : 'bone';
   c.font = font(F.mono(600), size);
   c.letterSpacing = '3px';

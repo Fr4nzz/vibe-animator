@@ -127,3 +127,10 @@ enforced by a tool where possible, because wording alone failed.
     started from a short handoff file. *AGENT_WORKFLOW (orchestrator).*
 29. **Acronyms respelled in the script text** broke cues, captions and fact-check matching. → The script stays
     canonical; `voice.pronounce` respells only what the TTS hears, and the aligned words map back. *`tools/pron.py`.*
+30. **A plate vanished mid-sentence.** A word cue `q.w(id, 'En')` matched the first word that *started with* «en»
+    («entre»), so the shot ended a sentence early and the screen went empty while the narration went on; qa, which
+    samples three points per line, never landed on the gap, and the user found it while watching. → An exact word now
+    wins over a prefix in `Cues` and in qa's static cue check; a prefix is only the fallback. *`_shots.ts`, `qa.ts`.*
+31. **Two FIG headers crossfaded into garbled text.** Every shot drew its header with its own crossfade alpha, so for a
+    moment two titles sat on top of each other in the same spot, in every transition of the episode. → `fig2` and
+    `figHeader` draw a header only while its shot is more than half visible. *`_devices.ts`, `_kit.ts`.*
